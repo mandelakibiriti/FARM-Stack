@@ -1,7 +1,7 @@
+## Backend
 Create virtual environment and install dependencies from requirements.txt
 ```bash
 $ pipenv shell
-
 $ pipenv install -r requirements.txt
 ```
 
@@ -38,6 +38,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 ```
+Install Mongo Database on Ubuntu[https://www.mongodb.com/docs/v6.0/tutorial/install-mongodb-on-ubuntu/]
 
 Create and connect the Mongo Database using the [motor driver](https://www.mongodb.com/docs/drivers/motor/) with a specific URL that will connect and create the database and collections associated with your models.py 
 
@@ -66,9 +67,7 @@ test > show users;
 ```
 Confirm roles of the `test` as type admin user with `show roles;` command. You can also confirm creation of the user in `mongosh`:
 ```bash
-db.getUsers({
-...     showCredentials: true
-... })
+db.getUsers({showCredentials: true})
 ```
 
 - Add url to the FastAPI .env file to indicate the new user added:
@@ -99,13 +98,95 @@ class UpdateSymptom(BaseModel):
     associatedImage: Optional[list]
     associatedSound: Optional[list]
 ```
+## Frontend
+Ensure to check the node version when [installing next.js and tailwindcss](https://tailwindcss.com/docs/guides/nextjs). Experienced challenges with node 12.12. Ensure to use `nvm` to [manage node versions in use.](https://heynode.com/tutorial/install-nodejs-locally-nvm/)
+```bash
+$ nvm ls
+$ node --version
+$ nvm install --lts
+$ nvm use lts
+```
+Install [nextjs and tailwind](https://tailwindcss.com/docs/guides/nextjs)
+```bash
+$ npx create-next-app@latest frontend_project --eslint
+$ cd frontend_project
+$ npm install -D tailwindcss postcss autoprefixer
+$ npx tailwind init -p
+```
+Disable telemetry
+```bash
+$ npx next telemetry disable
+```
 
+To start with your next js project run:
+```bash
+$ npm run dev
+```
+Next JS [app file structure](https://nextjs.org/blog/layouts-rfc)
+```bash
+├── .next
+├── public
+├── src
+│   ├── components
+│   ├── pages
+│   ├── public
+│   ├── styles
+│   ├── utils
+│   ├── store
+│   └── ...
+│── next.config.js
+│── package.json
+│── package-lock.json
+│── README.md
+├── node_modules
+└── ...
+```
+- `components`: This folder contains reusable React components that can be used across multiple pages.
+- `pages`: This folder contains the individual pages of your Next.js app, which are automatically converted into server-rendered pages by Next.js. This folder can contain subfolders to group related pages together.
+- `public`: This folder contains static assets like images, which can be accessed by the client-side JavaScript code.
+
+You can create multiple pages with their own [layouts (with src/page)](https://www.codeconcisely.com/posts/nextjs-multiple-layouts/) or [layouts (with src/app)](https://vercel.com/blog/next-js-layouts-rfc-in-5-minutes) such that `index.js` files can take the RootLayout however for per page layouts you can indicate them in `page/layout.js` files.
+```bash
+├── src
+│   ├── components
+│   ├── styles
+│   ├── utils
+│   ├── store
+│   └── ...
+│   ├── pages
+│       ├── blog (can be blog/dashboard/login etc.)
+│           ├── index.js
+│           ├── error.js
+│           ├── loading.js
+│           └── settings.js 
+```
+Choosing the type of layout per page will be determined by the root `_app.js` which will call the getLayout function in `<ComponentLayout>`.
+```javascript
+export default function App({ Component, pageProps }) {
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout || ((page) => page)
+  return getLayout (
+      <Component {...pageProps} />
+  )
+}
+```
+Page `index.js` will use the getLayout function to define the layout in its page based on the `<ComponentLayout>`
+```javascript
+// define the layout on a per-page basis
+Dashboard.getLayout = function getLayout(page) {
+    return (
+        <DashboardLayout>
+            {page}
+        </DashboardLayout>
+    )
+}
+```
 FARM Stack Sources:
 1. [FARM Stack FreeCodeCamp](https://www.youtube.com/watch?v=OzUzrs8uJl8)
 
    [FARM Stack from MongoDB](https://www.youtube.com/watch?v=IKmv0AuBwp0)
 
-2. [CRUD RESTful API with FastAPI and MongoDB](https://codevoweb.com/crud-restful-api-server-with-python-fastapi-and-mongodb/)
+2. [CRUD RESTful API with FastAPI and MongoDB](https://medium.com/@wilde.consult/extensive-fastapi-with-mongodb-example-part1-ceff58e16f94)
 3. [Docker](https://www.youtube.com/watch?v=gAkwW2tuIqE)
 4. [FastAPI Mongo](https://testdriven.io/blog/fastapi-mongo/)
 5. [Environment Variables](https://www.youtube.com/watch?v=A1OA0Y9vwJY)
