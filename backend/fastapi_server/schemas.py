@@ -1,9 +1,11 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from datetime import datetime
 from typing import Optional
+import uuid
 
 # Field(...) indicates the field is required
 class Diagnosis(BaseModel):
+    id: str = Field(default_factory=uuid.uuid4, alias="_id")
     nameStd : str
     icd10 : list
     diagnosisId : str
@@ -29,13 +31,14 @@ class Diagnosis(BaseModel):
     patientInfo : str
     references : str
     citations : str
-    dateCreated : datetime
+    createDate: datetime
     publish : bool
-    update : datetime
+    updateDate : datetime
 
     class Config:
         arbitrary_types_allowed = True
         schema_extra = {
+            'id': 'unique assigned id',
             'nameStd' : 'Anthrax',
             'icd10': ['A22'],
             'diagnosisId' : 'id once added to diagnosis creator',
@@ -61,9 +64,9 @@ class Diagnosis(BaseModel):
             'patientInfo' : 'patient summary description',
             'references' : 'referenced materials',
             'citations' : 'relevant citations',
-            'dateCreated' : 'date added',
-            'publish' : 'date published into production',
-            'update' : 'date updated when changes last made'
+            'createdDate' : 'date added',
+            'publish' : 'publish state is true draft state is false',
+            'updateDate' : 'date updated when changes last made'
         }
 
 # UpdateDiagnosis allows for optional update of fields in Diagnosis Schema
@@ -94,7 +97,7 @@ class UpdateDiagnosis(BaseModel):
     references : Optional[str]
     citations : Optional[str]
     publish : Optional[bool]
-    update : datetime
+    updateDate : datetime
 
     class Config:
         arbitrary_types_allowed = True
@@ -125,14 +128,15 @@ class UpdateDiagnosis(BaseModel):
                 'patientInfo' : 'patient summary description',
                 'references' : 'referenced materials',
                 'citations' : 'relevant citations',
-                'dateCreated' : 'date added',
-                'publish' : 'date published into production',
-                'update' : 'date updated when changes last made'
+                'createDate' : 'date added',
+                'publish' : 'publish state true draft state is false',
+                'updateDate' : 'date updated when changes last made'
             }
         }
 
 
 class Symptom(BaseModel):
+    id: str = Field(default_factory=uuid.uuid4, alias="_id")
     nameStdSymptom: str
     synonyms: list
     symptomID: str
@@ -144,6 +148,7 @@ class Symptom(BaseModel):
         arbitrary_types_allowed = True
         schema_extra = {
                 "example": {
+                "id" : "unique id",
                 "nameStdSymptom": "Headache",
                 "synonyms": [
                     "migraine", "cephalagia", "head pain"

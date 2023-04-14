@@ -40,15 +40,10 @@ def diagnosis_helper(diagnosis) -> dict:
             'patientInfo' : diagnosis['patientInfo'],
             'references' : diagnosis['references'],
             'citations' : diagnosis['citations'],
-            'dateCreated' : diagnosis['dateCreated'],
             'publish' : diagnosis['publish'],
-            'update' : diagnosis['update']
+            'createDate' : diagnosis['createDate'],
+            'updateDate' : diagnosis['updateDate']
             }
-
-# Get single entry
-async def fetch_one_dx(nameStd: str) -> dict:
-    document = await diagnoses_collection.find_one({"nameStd": nameStd})
-    return document
 
 # Get all entries
 async def fetch_all_dx():
@@ -58,7 +53,18 @@ async def fetch_all_dx():
         dxs.append(schemas.Diagnosis(**document))
     return dxs
 
+# Get single entry by nameStd
+async def fetch_one_dx_by_nameStd(nameStd: str) -> dict:
+    document = await diagnoses_collection.find_one({"nameStd": nameStd})
+    return document
+
+# Get single entry
+async def fetch_one_dx_by_id(_id: str) -> dict:
+    document = await diagnoses_collection.find_one({"_id": _id})
+    return document
+
 # Create a single entry
+# TODO: Validate based on nameStd
 async def add_dx(dx:dict) -> dict:
     document = await diagnoses_collection.insert_one(dx)
     new_diagnosis_document = await diagnoses_collection.find_one({"_id":document.inserted_id})
@@ -78,10 +84,10 @@ async def update_dx(nameStd: str, data: dict):
         return False
 
 # Delete an entry
-async def remove_dx(nameStd: str):
-    document = await diagnoses_collection.find_one({"nameStd": nameStd})
+async def remove_dx(_id: str):
+    document = await diagnoses_collection.find_one({"_id": _id})
     if document:
-        await diagnoses_collection.delete_one({"nameStd": nameStd})
+        await diagnoses_collection.delete_one({"_id": _id})
         return True
 
 #-------------------------------------------------------------------------------------

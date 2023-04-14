@@ -4,7 +4,8 @@ router = APIRouter()
 
 from ..database import (
     fetch_all_dx,
-    fetch_one_dx,
+    fetch_one_dx_by_id,
+    fetch_one_dx_by_nameStd,
     fetch_all_symptom,
     fetch_one_symptom
 )
@@ -24,12 +25,20 @@ async def get_all_dx():
     response = await fetch_all_dx()
     return response
 
-@router.get("/api/dx/{nameStd}", response_model=Diagnosis)
-async def get_dx_by_nameStd(nameStd):
-    response = await fetch_one_dx(nameStd)
+@router.get("/api/dx/{id}", response_model=Diagnosis)
+async def get_dx_by_id(id):
+    response = await fetch_one_dx_by_id(id)
     if response:
         return response
-    raise HTTPException(404, f"Error with no nameStd in database with {nameStd}")
+    raise HTTPException(404, f"Error! No diagnosis found with that ID")
+
+@router.get("/api/dx/name/{nameStd}", response_model=Diagnosis)
+async def get_dx_by_nameStd(nameStd):
+    print(nameStd)
+    response = await fetch_one_dx_by_nameStd(nameStd)
+    if response:
+        return response
+    raise HTTPException(404, f"Error no nameStd in database with the name: {nameStd}")
 
 #-------------------------------------------------------------------------------------
 # SYMPTOMS

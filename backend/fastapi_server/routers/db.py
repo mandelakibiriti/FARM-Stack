@@ -31,20 +31,20 @@ async def create_dx(dx:Diagnosis = Body(...)):
         return response
     raise HTTPException(400, "Something went wrong / Bad request")
 
-@router.put("/api/dx/{nameStd}", response_model=Diagnosis, response_description="updating an existing diagnosis")
-async def update_diagnosis(nameStd: str, req: UpdateDiagnosis = Body(...)):
-    req = {k:v for k,v in req.dict().items() if v is not None}
-    update_dx_data = await update_dx(nameStd,req)
+@router.put("/api/dx/{id}", response_model=Diagnosis, response_description="updating an existing diagnosis by id")
+async def update_diagnosis(id: str, req: UpdateDiagnosis = Body(...)):
+    dx = {k:v for k,v in req.dict().items() if v is not None}
+    update_dx_data = await update_dx(id,dx)
     if update_dx_data:
         return update_dx_data
     raise HTTPException(404, f"Error occurred when updating diagnosis data")
 
-@router.delete("/api/dx/{nameStd}", response_description="deleting an exisiting diagnosis")
-async def delete_dx(nameStd):
-    response = await remove_dx(nameStd)
+@router.delete("/api/dx/{id}", response_description="deleting an exisiting diagnosis by id")
+async def delete_dx(id):
+    response = await remove_dx(id)
     if response:
-        return f"Successfully deleted {nameStd}"
-    raise HTTPException(404, f"Error with no nameStd in database with {nameStd}")
+        return f"Successfully deleted {id}"
+    raise HTTPException(404, f"Error! No id in database with the id {id}")
 
 #-------------------------------------------------------------------------------------
 # SYMPTOMS
