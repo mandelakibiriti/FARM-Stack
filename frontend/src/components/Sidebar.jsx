@@ -6,7 +6,7 @@ import { RxBarChart, RxDashboard } from "react-icons/rx"
 function Sidebar ({children}) {
     return (
         <div className="flex">
-            <div className="fixed w-20 h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between">
+            <div className="fixed w-20 h-screen p-4 bg-white bg-slate-50 shadow-lg border-2 flex flex-col justify-between">
                 <div className="flex flex-col items-center">
                     <Link href={'/'}>
                         <div className="bg-indigo-900 text-white p-3 rounded-lg inline-block">

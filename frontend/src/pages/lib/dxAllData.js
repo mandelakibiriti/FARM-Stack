@@ -1,4 +1,4 @@
-export async function getDxHandler() {
+export async function getAllDxHandler() {
     let path = '/api/dx'
     let server_url = process.env.NEXT_PUBLIC_API_URL + path
     // console.log(server_url)

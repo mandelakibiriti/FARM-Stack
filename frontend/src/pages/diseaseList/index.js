@@ -1,7 +1,7 @@
 import Header from "@/components/Header"
 import DashboardLayout from "@/components/Layouts/DashboardLayout"
 import DiseaseList from "@/pages/diseaseList/components/DiseaseList"
-import { getDxHandler } from "../lib/dxData"
+import { getAllDxHandler } from "../lib/dxAllData"
 
 export default function Diseases({server_data}) {
     return (
@@ -23,7 +23,7 @@ Diseases.getLayout = function getLayout(page) {
 
 // SSR
 export async function getServerSideProps(){
-    let data = await getDxHandler()
+    let data = await getAllDxHandler()
     return {
         props: {server_data: data}
     }

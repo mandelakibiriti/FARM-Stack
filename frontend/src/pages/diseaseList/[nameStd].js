@@ -1,17 +1,11 @@
-import React from "react"
-import { useRouter } from "next/router"
-import DiseaseDetailsForm from "./components/DiseaseDetailsForm"
+import DiseaseDetailsForm from "./components/UpdateDiseaseDetailsForm"
 import DashboardLayout from "@/components/Layouts/DashboardLayout"
 
-export default function DiseaseForm(){
-    const router = useRouter();
-    const dx = router.query
-    console.log(dx)
+export default function DiseaseForm({dx}){   
     return (
         <div className='bg-gray-100 min-h-screen space-y-4'>
             <DiseaseDetailsForm dxData={dx}/>
         </div>
-
     )
 }
 
@@ -21,4 +15,15 @@ DiseaseForm.getLayout = function getLayout(page) {
             {page}
         </DashboardLayout>
     )
+}
+
+// SSR
+export async function getServerSideProps(context){
+    const nameStd = context.query
+    let path = '/api/dx/'
+    const res = await fetch(process.env.NEXT_PUBLIC_API_URL + path + nameStd.nameStd)
+    const dx = await res.json()
+    return {
+        props: {dx}
+    }
 }
