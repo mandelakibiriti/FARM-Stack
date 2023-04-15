@@ -181,6 +181,28 @@ Dashboard.getLayout = function getLayout(page) {
     )
 }
 ```
+[Server Side Rendering](https://www.youtube.com/watch?v=3Z_vR7WASwM) in Nextjs will pre-render this page on each request using the data returned by getServerSideProps. 
+```javascript
+export async function getServerSideProps(context){
+    const nameStd = context.query
+    let path = '/api/dx/'
+    const res = await fetch(process.env.NEXT_PUBLIC_API_URL + path + nameStd.nameStd)
+    const dx = await res.json()
+    return {
+        props: {dx}
+    }
+}
+```
+For ISR allows you to create or update static pages after you’ve built your site. Incremental Static Regeneration (ISR) enables you to use static-generation on a per-page basis, without needing to rebuild the entire site.
+```javascript
+// Fetch data from external API
+    // ISR with revalidate
+    const res = await fetch(server_url, {
+        next : {
+            revalidate: 60
+        }
+    })
+```
 FARM Stack Sources:
 1. [FARM Stack FreeCodeCamp](https://www.youtube.com/watch?v=OzUzrs8uJl8)
 
