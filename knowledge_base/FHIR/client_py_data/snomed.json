@@ -1,0 +1,57 @@
+{
+  "id": "1065c809-7eea-4537-9029-4892cadfad97",
+  "meta": { "lastUpdated": "2023-04-27T06:16:17.500+00:00" },
+  "entry": [
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CodeSystem/sct",
+      "resource": {
+        "id": "sct",
+        "meta": {
+          "lastUpdated": "2023-04-04T20:16:14.951+00:00",
+          "source": "#4WnCs4LwXcPpjjAB",
+          "versionId": "1"
+        },
+        "caseSensitive": false,
+        "concept": [
+          { "code": "27113001", "display": "Body weight (observable entity)" },
+          { "code": "703421000", "display": "Temperature" },
+          {
+            "code": "162533000",
+            "display": "Dietary calorie intake (observable entity)"
+          },
+          { "code": "225908003", "display": "Pain score (observable entity)" },
+          { "code": "15220000", "display": "Laboratory test" },
+          { "code": "350810002", "display": "Lancet" },
+          { "code": "263902000", "display": "Transcutaneous method" },
+          { "code": "261373009", "display": "Implant technique" },
+          {
+            "code": "408508002",
+            "display": "Has shown no side effects from medication (finding)"
+          },
+          {
+            "code": "401207004",
+            "display": "Medication side effects present (finding)"
+          }
+        ],
+        "content": "fragment",
+        "count": 10,
+        "description": "A subset of SNOMED-CT codes for VA PGHD local use",
+        "name": "SNOMED-CT",
+        "status": "active",
+        "title": "SNOMED CT",
+        "url": "http://snomed.info/sct",
+        "resourceType": "CodeSystem"
+      },
+      "search": { "mode": "match" }
+    }
+  ],
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://hapi.fhir.org/baseR4/CodeSystem?system=http%3A%2F%2Fsnomed.info%2Fsct"
+    }
+  ],
+  "total": 1,
+  "type": "searchset",
+  "resourceType": "Bundle"
+}

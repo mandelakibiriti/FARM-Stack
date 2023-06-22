@@ -1,0 +1,1808 @@
+{
+  "resourceType": "Bundle",
+  "id": "10d2e230-e7d0-4f1f-a01e-755eddfd9081",
+  "meta": {
+    "lastUpdated": "2023-05-02T08:48:07.085+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://hapi.fhir.org/baseR4/BodyStructure?_include=*"
+    },
+    {
+      "relation": "next",
+      "url": "https://hapi.fhir.org/baseR4?_getpages=10d2e230-e7d0-4f1f-a01e-755eddfd9081&_getpagesoffset=20&_count=20&_pretty=true&_include=*&_bundletype=searchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/60433",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "60433",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-13T13:26:59.539+00:00",
+          "source": "#tmVC5qJrQ0sXWi1v"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fetus</p><p><b>identifier</b>: 12345</p><p><b>location</b>: Fetus <span>(Details : {SNOMED CT code '83418008' = 'Fetus', given as 'Entire fetus (body structure)'})</span></p><p><b>description</b>: EDD 1/1/2017 confirmation by LMP</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "83418008",
+              "display": "Entire fetus (body structure)"
+            }
+          ],
+          "text": "Fetus"
+        },
+        "description": "EDD 1/1/2017 confirmation by LMP"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/62398",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "62398",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-14T09:58:01.744+00:00",
+          "source": "#7d4Xd3wy1hvjHJlF"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fetus</p><p><b>identifier</b>: 12345</p><p><b>location</b>: Fetus <span>(Details : {SNOMED CT code '83418008' = 'Fetus', given as 'Entire fetus (body structure)'})</span></p><p><b>description</b>: EDD 1/1/2017 confirmation by LMP</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "83418008",
+              "display": "Entire fetus (body structure)"
+            }
+          ],
+          "text": "Fetus"
+        },
+        "description": "EDD 1/1/2017 confirmation by LMP",
+        "patient": {
+          "reference": "Patient/37"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/62615",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "62615",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-14T10:37:15.477+00:00",
+          "source": "#hfQ2TayMfplRlfT1"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fetus</p><p><b>identifier</b>: 12345</p><p><b>location</b>: Fetus <span>(Details : {SNOMED CT code '83418008' = 'Fetus', given as 'Entire fetus (body structure)'})</span></p><p><b>description</b>: EDD 1/1/2017 confirmation by LMP</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "83418008",
+              "display": "Entire fetus (body structure)"
+            }
+          ],
+          "text": "Fetus"
+        },
+        "description": "EDD 1/1/2017 confirmation by LMP",
+        "patient": {
+          "reference": "Patient/37"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/62699",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "62699",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-14T11:12:05.723+00:00",
+          "source": "#82MjVxFvmy3QRegt"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fetus</p><p><b>identifier</b>: 12345</p><p><b>location</b>: Fetus <span>(Details : {SNOMED CT code '83418008' = 'Fetus', given as 'Entire fetus (body structure)'})</span></p><p><b>description</b>: EDD 1/1/2017 confirmation by LMP</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "83418008",
+              "display": "Entire fetus (body structure)"
+            }
+          ],
+          "text": "Fetus"
+        },
+        "description": "EDD 1/1/2017 confirmation by LMP",
+        "patient": {
+          "reference": "Patient/37"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/63077",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "63077",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-14T12:12:59.192+00:00",
+          "source": "#eKS3lBNS06JZZ0CB"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: tumor</p><p><b>identifier</b>: 12345</p><p><b>morphology</b>: Splenic mass <span>(Details : {SNOMED CT code '4147007' = 'Mass', given as 'Mass (morphologic abnormality)'})</span></p><p><b>location</b>: Spleen <span>(Details : {SNOMED CT code '78961009' = 'Spleen', given as 'Splenic structure (body structure)'})</span></p><p><b>description</b>: 7 cm maximum diameter</p><p><b>image</b>: </p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "morphology": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4147007",
+              "display": "Mass (morphologic abnormality)"
+            }
+          ],
+          "text": "Splenic mass"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "78961009",
+              "display": "Splenic structure (body structure)"
+            }
+          ],
+          "text": "Spleen"
+        },
+        "description": "7 cm maximum diameter",
+        "image": [
+          {
+            "contentType": "application/dicom",
+            "url": "http://imaging.acme.com/wado/server?requestType=WADO&amp;wado_details"
+          }
+        ],
+        "patient": {
+          "reference": "Patient/63070"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/63078",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "63078",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-14T12:12:59.543+00:00",
+          "source": "#4n3t5u9dDzFAN2CQ"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: skin-patch</p><p><b>identifier</b>: 12345</p><p><b>active</b>: false</p><p><b>morphology</b>: Skin patch <span>(Details )</span></p><p><b>location</b>: Forearm <span>(Details : {SNOMED CT code '14975008' = 'Forearm', given as 'Forearm'})</span></p><p><b>locationQualifier</b>: Left <span>(Details : {SNOMED CT code '419161000' = 'Unilateral left', given as 'Unilateral left'})</span>, Volar <span>(Details : {SNOMED CT code '263929005' = 'Volar', given as 'Volar'})</span></p><p><b>description</b>: inner surface (volar) of the left forearm</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "active": false,
+        "morphology": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4147007",
+              "display": "Mass (morphologic abnormality)"
+            }
+          ],
+          "text": "Splenic mass"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "14975008",
+              "display": "Forearm"
+            }
+          ],
+          "text": "Forearm"
+        },
+        "locationQualifier": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "419161000",
+                "display": "Unilateral left"
+              }
+            ],
+            "text": "Left"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "263929005",
+                "display": "Volar"
+              }
+            ],
+            "text": "Volar"
+          }
+        ],
+        "description": "inner surface (volar) of the left forearm",
+        "image": [
+          {
+            "contentType": "application/dicom",
+            "url": "http://imaging.acme.com/wado/server?requestType=WADO&amp;wado_details"
+          }
+        ],
+        "patient": {
+          "reference": "Patient/63070"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/63079",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "63079",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-14T12:15:23.615+00:00",
+          "source": "#eDI3MFdZEqXSGTr9"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fetus</p><p><b>identifier</b>: 12345</p><p><b>location</b>: Fetus <span>(Details : {SNOMED CT code '83418008' = 'Fetus', given as 'Entire fetus (body structure)'})</span></p><p><b>description</b>: EDD 1/1/2017 confirmation by LMP</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "83418008",
+              "display": "Entire fetus (body structure)"
+            }
+          ],
+          "text": "Fetus"
+        },
+        "description": "EDD 1/1/2017 confirmation by LMP",
+        "patient": {
+          "reference": "Patient/37"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/64199",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "64199",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-15T05:56:39.641+00:00",
+          "source": "#bPzW6TMAZtMYgPPl"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fetus</p><p><b>identifier</b>: 12345</p><p><b>location</b>: Fetus <span>(Details : {SNOMED CT code '83418008' = 'Fetus', given as 'Entire fetus (body structure)'})</span></p><p><b>description</b>: EDD 1/1/2017 confirmation by LMP</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "83418008",
+              "display": "Entire fetus (body structure)"
+            }
+          ],
+          "text": "Fetus"
+        },
+        "description": "EDD 1/1/2017 confirmation by LMP",
+        "patient": {
+          "reference": "Patient/37"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/76109",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "76109",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T18:27:44.656+00:00",
+          "source": "#cV7ed4OmXk3TE7xy"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fetus</p><p><b>identifier</b>: 12345</p><p><b>location</b>: Fetus <span>(Details : {SNOMED CT code '83418008' = 'Fetus', given as 'Entire fetus (body structure)'})</span></p><p><b>description</b>: EDD 1/1/2017 confirmation by LMP</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "83418008",
+              "display": "Entire fetus (body structure)"
+            }
+          ],
+          "text": "Fetus"
+        },
+        "description": "EDD 1/1/2017 confirmation by LMP",
+        "patient": {
+          "reference": "Patient/76107"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/76110",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "76110",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T18:27:45.145+00:00",
+          "source": "#ZKVHHDb1EvjRVJCH"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: tumor</p><p><b>identifier</b>: 12345</p><p><b>morphology</b>: Splenic mass <span>(Details : {SNOMED CT code '4147007' = 'Mass', given as 'Mass (morphologic abnormality)'})</span></p><p><b>location</b>: Spleen <span>(Details : {SNOMED CT code '78961009' = 'Spleen', given as 'Splenic structure (body structure)'})</span></p><p><b>description</b>: 7 cm maximum diameter</p><p><b>image</b>: </p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "morphology": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4147007",
+              "display": "Mass (morphologic abnormality)"
+            }
+          ],
+          "text": "Splenic mass"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "78961009",
+              "display": "Splenic structure (body structure)"
+            }
+          ],
+          "text": "Spleen"
+        },
+        "description": "7 cm maximum diameter",
+        "image": [
+          {
+            "contentType": "application/dicom",
+            "url": "http://imaging.acme.com/wado/server?requestType=WADO&amp;wado_details"
+          }
+        ],
+        "patient": {
+          "reference": "Patient/76107"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/76111",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "76111",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T18:27:45.765+00:00",
+          "source": "#pgwuMBiXwjqrukzg"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: skin-patch</p><p><b>identifier</b>: 12345</p><p><b>active</b>: false</p><p><b>morphology</b>: Skin patch <span>(Details )</span></p><p><b>location</b>: Forearm <span>(Details : {SNOMED CT code '14975008' = 'Forearm', given as 'Forearm'})</span></p><p><b>locationQualifier</b>: Left <span>(Details : {SNOMED CT code '419161000' = 'Unilateral left', given as 'Unilateral left'})</span>, Volar <span>(Details : {SNOMED CT code '263929005' = 'Volar', given as 'Volar'})</span></p><p><b>description</b>: inner surface (volar) of the left forearm</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "active": false,
+        "morphology": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4147007",
+              "display": "Mass (morphologic abnormality)"
+            }
+          ],
+          "text": "Splenic mass"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "14975008",
+              "display": "Forearm"
+            }
+          ],
+          "text": "Forearm"
+        },
+        "locationQualifier": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "419161000",
+                "display": "Unilateral left"
+              }
+            ],
+            "text": "Left"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "263929005",
+                "display": "Volar"
+              }
+            ],
+            "text": "Volar"
+          }
+        ],
+        "description": "inner surface (volar) of the left forearm",
+        "image": [
+          {
+            "contentType": "application/dicom",
+            "url": "http://imaging.acme.com/wado/server?requestType=WADO&amp;wado_details"
+          }
+        ],
+        "patient": {
+          "reference": "Patient/76107"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/fetus",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "fetus",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-24T17:35:41.073+00:00",
+          "source": "#m7qu4s9JvpXskaum",
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fetus</p><p><b>identifier</b>: 12345</p><p><b>location</b>: Fetus <span>(Details : {SNOMED CT code '83418008' = 'Fetus', given as 'Entire fetus (body structure)'})</span></p><p><b>description</b>: EDD 1/1/2017 confirmation by LMP</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "83418008",
+              "display": "Entire fetus (body structure)"
+            }
+          ],
+          "text": "Fetus"
+        },
+        "description": "EDD 1/1/2017 confirmation by LMP",
+        "patient": {
+          "reference": "Patient/example"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/skin-patch",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "skin-patch",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-24T17:35:42.566+00:00",
+          "source": "#x37WlT790vBeQMZT",
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: skin-patch</p><p><b>identifier</b>: 12345</p><p><b>active</b>: false</p><p><b>morphology</b>: Skin patch <span>(Details )</span></p><p><b>location</b>: Forearm <span>(Details : {SNOMED CT code '14975008' = 'Forearm', given as 'Forearm'})</span></p><p><b>locationQualifier</b>: Left <span>(Details : {SNOMED CT code '419161000' = 'Unilateral left', given as 'Unilateral left'})</span>, Volar <span>(Details : {SNOMED CT code '263929005' = 'Volar', given as 'Volar'})</span></p><p><b>description</b>: inner surface (volar) of the left forearm</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "active": false,
+        "morphology": {
+          "text": "Skin patch"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "14975008",
+              "display": "Forearm"
+            }
+          ],
+          "text": "Forearm"
+        },
+        "locationQualifier": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "419161000",
+                "display": "Unilateral left"
+              }
+            ],
+            "text": "Left"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "263929005",
+                "display": "Volar"
+              }
+            ],
+            "text": "Volar"
+          }
+        ],
+        "description": "inner surface (volar) of the left forearm",
+        "patient": {
+          "reference": "Patient/example"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/tumor",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "tumor",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-24T17:35:43.710+00:00",
+          "source": "#kaac89UzVIPVdjwF",
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: tumor</p><p><b>identifier</b>: 12345</p><p><b>morphology</b>: Splenic mass <span>(Details : {SNOMED CT code '4147007' = 'Mass', given as 'Mass (morphologic abnormality)'})</span></p><p><b>location</b>: Spleen <span>(Details : {SNOMED CT code '78961009' = 'Spleen', given as 'Splenic structure (body structure)'})</span></p><p><b>description</b>: 7 cm maximum diameter</p><p><b>image</b>: </p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "morphology": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4147007",
+              "display": "Mass (morphologic abnormality)"
+            }
+          ],
+          "text": "Splenic mass"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "78961009",
+              "display": "Splenic structure (body structure)"
+            }
+          ],
+          "text": "Spleen"
+        },
+        "description": "7 cm maximum diameter",
+        "image": [
+          {
+            "contentType": "application/dicom",
+            "url": "http://imaging.acme.com/wado/server?requestType=WADO&amp;wado_details"
+          }
+        ],
+        "patient": {
+          "reference": "Patient/example"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/113800",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "113800",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-29T06:23:29.461+00:00",
+          "source": "#wrBxhKByF50Jg9BB"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fetus</p><p><b>identifier</b>: 12345</p><p><b>location</b>: Fetus <span>(Details : {SNOMED CT code '83418008' = 'Fetus', given as 'Entire fetus (body structure)'})</span></p><p><b>description</b>: EDD 1/1/2017 confirmation by LMP</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "83418008",
+              "display": "Entire fetus (body structure)"
+            }
+          ],
+          "text": "Fetus"
+        },
+        "description": "EDD 1/1/2017 confirmation by LMP",
+        "patient": {
+          "reference": "Patient/113798"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/113801",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "113801",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-29T06:23:29.813+00:00",
+          "source": "#1XIflCztVT4SkIUk"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: tumor</p><p><b>identifier</b>: 12345</p><p><b>morphology</b>: Splenic mass <span>(Details : {SNOMED CT code '4147007' = 'Mass', given as 'Mass (morphologic abnormality)'})</span></p><p><b>location</b>: Spleen <span>(Details : {SNOMED CT code '78961009' = 'Spleen', given as 'Splenic structure (body structure)'})</span></p><p><b>description</b>: 7 cm maximum diameter</p><p><b>image</b>: </p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "morphology": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4147007",
+              "display": "Mass (morphologic abnormality)"
+            }
+          ],
+          "text": "Splenic mass"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "78961009",
+              "display": "Splenic structure (body structure)"
+            }
+          ],
+          "text": "Spleen"
+        },
+        "description": "7 cm maximum diameter",
+        "image": [
+          {
+            "contentType": "application/dicom",
+            "url": "http://imaging.acme.com/wado/server?requestType=WADO&amp;wado_details"
+          }
+        ],
+        "patient": {
+          "reference": "Patient/113798"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/113802",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "113802",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-29T06:23:30.175+00:00",
+          "source": "#qD8e7f3lbCg2EdXZ"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: skin-patch</p><p><b>identifier</b>: 12345</p><p><b>active</b>: false</p><p><b>morphology</b>: Skin patch <span>(Details )</span></p><p><b>location</b>: Forearm <span>(Details : {SNOMED CT code '14975008' = 'Forearm', given as 'Forearm'})</span></p><p><b>locationQualifier</b>: Left <span>(Details : {SNOMED CT code '419161000' = 'Unilateral left', given as 'Unilateral left'})</span>, Volar <span>(Details : {SNOMED CT code '263929005' = 'Volar', given as 'Volar'})</span></p><p><b>description</b>: inner surface (volar) of the left forearm</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "active": false,
+        "morphology": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4147007",
+              "display": "Mass (morphologic abnormality)"
+            }
+          ],
+          "text": "Splenic mass"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "14975008",
+              "display": "Forearm"
+            }
+          ],
+          "text": "Forearm"
+        },
+        "locationQualifier": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "419161000",
+                "display": "Unilateral left"
+              }
+            ],
+            "text": "Left"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "263929005",
+                "display": "Volar"
+              }
+            ],
+            "text": "Volar"
+          }
+        ],
+        "description": "inner surface (volar) of the left forearm",
+        "image": [
+          {
+            "contentType": "application/dicom",
+            "url": "http://imaging.acme.com/wado/server?requestType=WADO&amp;wado_details"
+          }
+        ],
+        "patient": {
+          "reference": "Patient/113798"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/220611",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "220611",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-05T11:03:43.570+00:00",
+          "source": "#kDPqemsbAe7gzPo8"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: skin-patch</p><p><b>identifier</b>: 12345</p><p><b>active</b>: false</p><p><b>morphology</b>: Skin patch <span>(Details )</span></p><p><b>location</b>: Forearm <span>(Details : {SNOMED CT code '14975008' = 'Forearm', given as 'Forearm'})</span></p><p><b>locationQualifier</b>: Left <span>(Details : {SNOMED CT code '419161000' = 'Unilateral left', given as 'Unilateral left'})</span>, Volar <span>(Details : {SNOMED CT code '263929005' = 'Volar', given as 'Volar'})</span></p><p><b>description</b>: inner surface (volar) of the left forearm</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "active": false,
+        "morphology": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4147007",
+              "display": "Mass (morphologic abnormality)"
+            }
+          ],
+          "text": "Splenic mass"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "14975008",
+              "display": "Forearm"
+            }
+          ],
+          "text": "Forearm"
+        },
+        "locationQualifier": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "419161000",
+                "display": "Unilateral left"
+              }
+            ],
+            "text": "Left"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "263929005",
+                "display": "Volar"
+              }
+            ],
+            "text": "Volar"
+          }
+        ],
+        "description": "inner surface (volar) of the left forearm",
+        "image": [
+          {
+            "contentType": "application/dicom",
+            "url": "http://imaging.acme.com/wado/server?requestType=WADO&amp;wado_details"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/220612",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "220612",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-05T11:03:43.989+00:00",
+          "source": "#3mLVwRav1EuWdjqX"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: skin-patch</p><p><b>identifier</b>: 12345</p><p><b>active</b>: false</p><p><b>morphology</b>: Skin patch <span>(Details )</span></p><p><b>location</b>: Forearm <span>(Details : {SNOMED CT code '14975008' = 'Forearm', given as 'Forearm'})</span></p><p><b>locationQualifier</b>: Left <span>(Details : {SNOMED CT code '419161000' = 'Unilateral left', given as 'Unilateral left'})</span>, Volar <span>(Details : {SNOMED CT code '263929005' = 'Volar', given as 'Volar'})</span></p><p><b>description</b>: inner surface (volar) of the left forearm</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "active": false,
+        "morphology": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4147007",
+              "display": "Mass (morphologic abnormality)"
+            }
+          ],
+          "text": "Splenic mass"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "14975008",
+              "display": "Forearm"
+            }
+          ],
+          "text": "Forearm"
+        },
+        "locationQualifier": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "419161000",
+                "display": "Unilateral left"
+              }
+            ],
+            "text": "Left"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "263929005",
+                "display": "Volar"
+              }
+            ],
+            "text": "Volar"
+          }
+        ],
+        "description": "inner surface (volar) of the left forearm",
+        "image": [
+          {
+            "contentType": "application/dicom",
+            "url": "http://imaging.acme.com/wado/server?requestType=WADO&amp;wado_details"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/BodyStructure/220718",
+      "resource": {
+        "resourceType": "BodyStructure",
+        "id": "220718",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-05T11:14:47.989+00:00",
+          "source": "#bKmNYMX9EM5JL9NK"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: skin-patch</p><p><b>identifier</b>: 12345</p><p><b>active</b>: false</p><p><b>morphology</b>: Skin patch <span>(Details )</span></p><p><b>location</b>: Forearm <span>(Details : {SNOMED CT code '14975008' = 'Forearm', given as 'Forearm'})</span></p><p><b>locationQualifier</b>: Left <span>(Details : {SNOMED CT code '419161000' = 'Unilateral left', given as 'Unilateral left'})</span>, Volar <span>(Details : {SNOMED CT code '263929005' = 'Volar', given as 'Volar'})</span></p><p><b>description</b>: inner surface (volar) of the left forearm</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://goodhealth.org/bodystructure/identifiers",
+            "value": "12345"
+          }
+        ],
+        "active": false,
+        "morphology": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4147007",
+              "display": "Mass (morphologic abnormality)"
+            }
+          ],
+          "text": "Splenic mass"
+        },
+        "location": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "14975008",
+              "display": "Forearm"
+            }
+          ],
+          "text": "Forearm"
+        },
+        "locationQualifier": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "419161000",
+                "display": "Unilateral left"
+              }
+            ],
+            "text": "Left"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "263929005",
+                "display": "Volar"
+              }
+            ],
+            "text": "Volar"
+          }
+        ],
+        "description": "inner surface (volar) of the left forearm",
+        "image": [
+          {
+            "contentType": "application/dicom",
+            "url": "http://imaging.acme.com/wado/server?requestType=WADO&amp;wado_details"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Patient/63070",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "63070",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2020-08-06T17:18:52.206+00:00",
+          "source": "#0pNOmCZ6Y2AvHase"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Mrs Katerina <b>NGUYEN </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>49476534</td></tr><tr><td>Address</td><td><span>Unit 7 </span><br/><span>76 Clydesdale St </span><br/><span>Como </span><span>WA </span><span>Australia </span></td></tr><tr><td>Date of birth</td><td><span>20 August 1979</span></td></tr></tbody></table></div>"
+        },
+        "identifier": [
+          {
+            "value": "49476534"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "family": "Nguyen",
+            "given": [
+              "Katerina"
+            ],
+            "prefix": [
+              "Mrs"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0403823832",
+            "use": "mobile",
+            "rank": 1
+          },
+          {
+            "system": "phone",
+            "value": "0893981165",
+            "use": "home",
+            "rank": 2
+          },
+          {
+            "system": "phone",
+            "value": "0898765432",
+            "use": "work",
+            "rank": 3
+          },
+          {
+            "system": "email",
+            "value": "kate.nguyen79@gmail.com",
+            "use": "work",
+            "rank": 4
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1979-08-20",
+        "deceasedBoolean": true,
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "Unit 7",
+              "76 Clydesdale St"
+            ],
+            "city": "Como",
+            "state": "WA",
+            "postalCode": "6152",
+            "country": "Australia"
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/ValueSet/patient-contact-relationship",
+                    "code": "partner",
+                    "display": "Partner"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "usual",
+              "family": "Nguyen",
+              "given": [
+                "Jimmy"
+              ],
+              "prefix": [
+                "Mr"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "0403123456",
+                "use": "mobile",
+                "rank": 1
+              },
+              {
+                "system": "phone",
+                "value": "0845643214",
+                "use": "home",
+                "rank": 2
+              },
+              {
+                "system": "phone",
+                "value": "0899945547",
+                "use": "work",
+                "rank": 3
+              },
+              {
+                "system": "email",
+                "value": "jim.nguyen79@work.com",
+                "use": "work",
+                "rank": 4
+              }
+            ],
+            "address": {
+              "use": "home",
+              "line": [
+                "Unit 7",
+                "76 Clydesdale St"
+              ],
+              "city": "Como",
+              "state": "WA",
+              "postalCode": "6152",
+              "country": "Australia"
+            },
+            "gender": "male"
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Patient/37",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "37",
+        "meta": {
+          "versionId": "29",
+          "lastUpdated": "2022-09-28T16:27:21.935+00:00",
+          "source": "#6ALGAZ2M3tgxBcbs"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: newborn</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 05/09/2017</p><p><b>multipleBirth</b>: 2</p></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Everywoman"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "test_fn",
+            "given": [
+              "Test"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "1234-567-0",
+            "use": "mobile"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2017-09-05T22:00:00.000Z",
+        "_birthDate": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+              "valueDateTime": "2017-05-09T17:11:00+01:00"
+            }
+          ]
+        },
+        "multipleBirthInteger": 2,
+        "contact": [
+          {
+            "relationship": [
+              {
+                "id": "c",
+                "text": "Ansprechpartner in Notf\u00e4llen"
+              }
+            ],
+            "name": {
+              "use": "official",
+              "family": "Slytherin",
+              "given": [
+                "R\u00fcdiger"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "9384320235",
+                "use": "mobile"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Patient/113798",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "113798",
+        "meta": {
+          "versionId": "3",
+          "lastUpdated": "2022-11-15T09:05:13.115+00:00",
+          "source": "#sPIEut3lyTb9BRDA"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> <div class=\"hapiHeaderText\">Mrs Katerina <b>NGUYEN </b> </div> <table class=\"hapiPropertyTable\"> <tbody> <tr> <td>Identifier</td> <td>49476534</td> </tr> <tr> <td>Address</td> <td> <span>Unit 7 </span> <br/> <span>76 Clydesdale St </span> <br/> <span>Como </span> <span>WA </span> <span>Australia </span> </td> </tr> <tr> <td>Date of birth</td> <td> <span>18 August 1979</span> </td> </tr> </tbody> </table> </div>"
+        },
+        "identifier": [
+          {
+            "value": "49476534"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "family": "Nguyen",
+            "given": [
+              "Katerina"
+            ],
+            "prefix": [
+              "Mrs"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0403 823 832",
+            "use": "mobile",
+            "rank": 1
+          },
+          {
+            "system": "phone",
+            "value": "08 9398 1165",
+            "use": "home",
+            "rank": 2
+          },
+          {
+            "system": "phone",
+            "value": "08 9876 5432",
+            "use": "work",
+            "rank": 3
+          },
+          {
+            "system": "email",
+            "value": "kate.nguyen79@gmail.com",
+            "use": "work",
+            "rank": 4
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1979-08-19",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "Unit 7",
+              "76 Clydesdale St"
+            ],
+            "city": "Como",
+            "state": "WA",
+            "postalCode": "6152",
+            "country": "Australia"
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/ValueSet/patient-contact-relationship",
+                    "code": "partner",
+                    "display": "Partner"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "usual",
+              "family": "Nguyen",
+              "given": [
+                "Jimmy"
+              ],
+              "prefix": [
+                "Mr"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "0403 123 456",
+                "use": "mobile",
+                "rank": 1
+              },
+              {
+                "system": "phone",
+                "value": "08 4564 3214",
+                "use": "home",
+                "rank": 2
+              },
+              {
+                "system": "phone",
+                "value": "08 9994 5547",
+                "use": "work",
+                "rank": 3
+              },
+              {
+                "system": "email",
+                "value": "jim.nguyen79@work.com",
+                "use": "work",
+                "rank": 4
+              }
+            ],
+            "address": {
+              "use": "home",
+              "line": [
+                "Unit 7",
+                "76 Clydesdale St"
+              ],
+              "city": "Como",
+              "state": "WA",
+              "postalCode": "6152",
+              "country": "Australia"
+            },
+            "gender": "male"
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Patient/76107",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "76107",
+        "meta": {
+          "versionId": "4",
+          "lastUpdated": "2020-02-25T10:34:50.679+00:00",
+          "source": "#hpem2Y6CXCXuDTD6"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> <div class=\"hapiHeaderText\">Mrs Katerina <b>NGUYEN </b> </div> <table class=\"hapiPropertyTable\"> <tbody> <tr> <td>Identifier</td> <td>49476534</td> </tr> <tr> <td>Address</td> <td> <span>Unit 7 </span> <br/> <span>76 Clydesdale St </span> <br/> <span>Como </span> <span>WA </span> <span>Australia </span> </td> </tr> <tr> <td>Date of birth</td> <td> <span>18 August 1979</span> </td> </tr> </tbody> </table> </div>"
+        },
+        "identifier": [
+          {
+            "value": "49476534"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "family": "JackMa",
+            "given": [
+              "Katerina"
+            ],
+            "prefix": [
+              "Mrs"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0403 823 832",
+            "use": "mobile",
+            "rank": 1
+          },
+          {
+            "system": "phone",
+            "value": "08 9398 1165",
+            "use": "home",
+            "rank": 2
+          },
+          {
+            "system": "phone",
+            "value": "08 9876 5432",
+            "use": "work",
+            "rank": 3
+          },
+          {
+            "system": "email",
+            "value": "kate.nguyen79@gmail.com",
+            "use": "work",
+            "rank": 4
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1979-08-18",
+        "deceasedBoolean": true,
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "Unit 7",
+              "76 Clydesdale St"
+            ],
+            "city": "Como",
+            "state": "WA",
+            "postalCode": "6152",
+            "country": "Australia"
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/ValueSet/patient-contact-relationship",
+                    "code": "partner",
+                    "display": "Partner"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "usual",
+              "family": "Nguyen",
+              "given": [
+                "Jimmy"
+              ],
+              "prefix": [
+                "Mr"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "0403 123 456",
+                "use": "mobile",
+                "rank": 1
+              },
+              {
+                "system": "phone",
+                "value": "08 4564 3214",
+                "use": "home",
+                "rank": 2
+              },
+              {
+                "system": "phone",
+                "value": "08 9994 5547",
+                "use": "work",
+                "rank": 3
+              },
+              {
+                "system": "email",
+                "value": "jim.nguyen79@work.com",
+                "use": "work",
+                "rank": 4
+              }
+            ],
+            "address": {
+              "use": "home",
+              "line": [
+                "Unit 7",
+                "76 Clydesdale St"
+              ],
+              "city": "Como",
+              "state": "WA",
+              "postalCode": "6152",
+              "country": "Australia"
+            },
+            "gender": "male"
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Patient/example",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "example",
+        "meta": {
+          "versionId": "271",
+          "lastUpdated": "2023-03-29T11:10:17.933+00:00",
+          "source": "#vfysT9KeoPzxDYPx"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<table>\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Name</td>\n\t\t\t\t\t\t<td>Peter James \n              <b>Chalmers</b> (&quot;Jim&quot;)\n            </td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Address</td>\n\t\t\t\t\t\t<td>534 Erewhon, Pleasantville, Vic, 3999</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Contacts</td>\n\t\t\t\t\t\t<td>Home: unknown. Work: (03) 5555 6473</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Id</td>\n\t\t\t\t\t\t<td>MRN: 12345 (Acme Healthcare)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t</div>"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "system": "urn:oid:1.2.36.146.595.217.0.1",
+            "value": "12345",
+            "period": {
+              "start": "2001-05-06"
+            },
+            "assigner": {
+              "display": "Acme Healthcare"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Chalmers1111",
+            "given": [
+              "Peter1111",
+              "James1111"
+            ]
+          },
+          {
+            "use": "usual",
+            "given": [
+              "Jim111"
+            ]
+          },
+          {
+            "use": "maiden",
+            "family": "Windsor111",
+            "given": [
+              "Peter1111",
+              "James111"
+            ],
+            "period": {
+              "end": "2002"
+            }
+          }
+        ],
+        "telecom": [
+          {
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "(03) 5555 6473",
+            "use": "work",
+            "rank": 1
+          },
+          {
+            "system": "phone",
+            "value": "(03) 3410 5613",
+            "use": "mobile",
+            "rank": 2
+          },
+          {
+            "system": "phone",
+            "value": "(03) 5555 8834",
+            "use": "old",
+            "period": {
+              "end": "2014"
+            }
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1974-12-25",
+        "_birthDate": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+              "valueDateTime": "1974-12-25T14:35:45-05:00"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "type": "both",
+            "text": "534 Erewhon St PeasantVille, Rainbow, Vic  3999",
+            "line": [
+              "534 Erewhon St"
+            ],
+            "city": "PleasantVille",
+            "district": "Rainbow",
+            "state": "Vic",
+            "postalCode": "3999",
+            "period": {
+              "start": "1974-12-25"
+            }
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "N"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "family": "du March\u00e9",
+              "_family": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                    "valueString": "VV"
+                  }
+                ]
+              },
+              "given": [
+                "B\u00e9n\u00e9dicte"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "+33 (237) 998327"
+              }
+            ],
+            "address": {
+              "use": "home",
+              "type": "both",
+              "line": [
+                "534 Erewhon St"
+              ],
+              "city": "PleasantVille",
+              "district": "Rainbow",
+              "state": "Vic",
+              "postalCode": "3999",
+              "period": {
+                "start": "1974-12-25"
+              }
+            },
+            "gender": "female",
+            "period": {
+              "start": "2012"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}

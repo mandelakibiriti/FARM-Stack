@@ -1,0 +1,3355 @@
+{
+  "resourceType": "Bundle",
+  "id": "108ebef7-b5bf-4b7c-87af-0b54b854a5fe",
+  "meta": {
+    "lastUpdated": "2023-05-02T08:48:01.804+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://hapi.fhir.org/baseR4/CarePlan?_include=*"
+    },
+    {
+      "relation": "next",
+      "url": "https://hapi.fhir.org/baseR4?_getpages=108ebef7-b5bf-4b7c-87af-0b54b854a5fe&_getpagesoffset=20&_count=20&_pretty=true&_include=*&_bundletype=searchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/1390",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "1390",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2019-10-22T12:08:47.798+00:00",
+          "source": "#O4eH2UE1zdS2IiZU"
+        },
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "completed",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "reference": "Patient/1200",
+          "display": "Naman Jain"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "reference": "Practitioner/1058",
+          "display": "Dr Adam Careful"
+        },
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "reference": "Observation/example",
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "reference": "Practitioner/1058",
+                  "display": "Naman Jain"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/1404",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "1404",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2019-10-22T12:09:53.648+00:00",
+          "source": "#nqEqH5qzHHlhRzGm"
+        },
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "reference": "Patient/1203",
+          "display": "Naman Jain"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "reference": "Practitioner/1058",
+          "display": "Dr Adam Careful"
+        },
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "reference": "Observation/example",
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "reference": "Practitioner/1058",
+                  "display": "Naman Jain"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/53301",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "53301",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-01T21:17:13.179+00:00",
+          "source": "#Ko2zSJYYXW4YoaIn"
+        },
+        "status": "active",
+        "intent": "proposal",
+        "subject": {
+          "reference": "Patient/53254",
+          "type": "Patient"
+        },
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "code": "6025007",
+                    "display": "Laparoscopic appendectomy"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "6025007",
+                    "display": "Laparoscopic appendectomy"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "reference": "Observation/53298",
+                "type": "Observation"
+              },
+              {
+                "reference": "Procedure/53299",
+                "type": "Procedure"
+              },
+              {
+                "reference": "Medication/9352fd3a-d63e-4957-a57d-daf4878d2385",
+                "type": "Medication"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "6025007",
+                    "display": "Laparoscopic appendectomy"
+                  }
+                ]
+              },
+              "status": "completed"
+            }
+          },
+          {
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": " http://www.nlm.nih.gov/research/umls/rxnorm",
+                    "code": "258395",
+                    "display": "Lisinopril"
+                  }
+                ]
+              },
+              "status": "in-progress"
+            }
+          },
+          {
+            "detail": {
+              "status": "unknown"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/53333",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "53333",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-01T21:37:05.589+00:00",
+          "source": "#Pzd7PO3A3sZn4z63"
+        },
+        "status": "active",
+        "intent": "proposal",
+        "subject": {
+          "reference": "Patient/53254",
+          "type": "Patient"
+        },
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "code": "6025007",
+                    "display": "Laparoscopic appendectomy"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "6025007",
+                    "display": "Laparoscopic appendectomy"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "reference": "Observation/53330",
+                "type": "Observation"
+              },
+              {
+                "reference": "Procedure/53331",
+                "type": "Procedure"
+              },
+              {
+                "reference": "Medication/9352fd3a-d63e-4957-a57d-daf4878d2385",
+                "type": "Medication"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "6025007",
+                    "display": "Laparoscopic appendectomy"
+                  }
+                ]
+              },
+              "status": "completed"
+            }
+          },
+          {
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": " http://www.nlm.nih.gov/research/umls/rxnorm",
+                    "code": "258395",
+                    "display": "Lisinopril"
+                  }
+                ]
+              },
+              "status": "in-progress"
+            }
+          },
+          {
+            "detail": {
+              "status": "unknown"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/53365",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "53365",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2019-11-06T08:41:51.148+00:00",
+          "source": "#30etJ1CnRk6UiFmD"
+        },
+        "status": "active",
+        "intent": "proposal",
+        "subject": {
+          "reference": "Patient/22",
+          "type": "Patient"
+        },
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "code": "6025007",
+                    "display": "Laparoscopic appendectomy"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "6025007",
+                    "display": "Laparoscopic appendectomy"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "reference": "Observation/53362",
+                "type": "Observation"
+              },
+              {
+                "reference": "Procedure/53363",
+                "type": "Procedure"
+              },
+              {
+                "reference": "Medication/880f4621-2e94-438e-bc87-58f886f395c1",
+                "type": "Medication"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "6025007",
+                    "display": "Laparoscopic appendectomy"
+                  }
+                ]
+              },
+              "status": "completed"
+            }
+          },
+          {
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": " http://www.nlm.nih.gov/research/umls/rxnorm",
+                    "code": "258395",
+                    "display": "Lisinopril"
+                  }
+                ]
+              },
+              "status": "in-progress"
+            }
+          },
+          {
+            "detail": {
+              "status": "unknown"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72354",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72354",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T09:56:17.604+00:00",
+          "source": "#r3rNcPNvMVHCMGPw"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72385",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72385",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T09:57:20.425+00:00",
+          "source": "#w0Iewkor2pTNriMw"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72445",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72445",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:06:06.554+00:00",
+          "source": "#EgB3eMilS2R1CiAm"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72504",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72504",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:11:04.409+00:00",
+          "source": "#LxRDJ7MbegCRgaXe"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72592",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72592",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:15:53.994+00:00",
+          "source": "#UpoakLgWAnPLSejR"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72639",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72639",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:18:28.167+00:00",
+          "source": "#WBlVbP3bURPfEzHa"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72686",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72686",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:19:46.549+00:00",
+          "source": "#sG5bkgConROnf6uN"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72724",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72724",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:21:59.708+00:00",
+          "source": "#awt7rdVbtEbzjKey"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72795",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72795",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:23:34.083+00:00",
+          "source": "#60075R38wHQJhZCK"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72872",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72872",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:26:42.306+00:00",
+          "source": "#pEEZ2qsPxl3pfgh3"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/72992",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "72992",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:31:41.414+00:00",
+          "source": "#CUWjcPKsshmHHJ2w"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/73047",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "73047",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:34:04.690+00:00",
+          "source": "#PY8d6EgN7NPEnHhR"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/73117",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "73117",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:37:51.404+00:00",
+          "source": "#BHHdjyns54LYh8aq"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/73155",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "73155",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:47:40.309+00:00",
+          "source": "#ndZZe05CnTNMiQlK"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CarePlan/73200",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "73200",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-21T10:53:03.383+00:00",
+          "source": "#okocrTfRfTWwpoSB"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Condition",
+            "id": "p1",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed"
+                }
+              ]
+            },
+            "code": {
+              "text": "Obesity"
+            },
+            "subject": {
+              "display": "Peter James Chalmers"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "instantiatesUri": [
+          "http://example.org/protocol-for-obesity"
+        ],
+        "basedOn": [
+          {
+            "display": "Management of Type 2 Diabetes"
+          }
+        ],
+        "replaces": [
+          {
+            "display": "Plan from urgent care clinic"
+          }
+        ],
+        "partOf": [
+          {
+            "display": "Overall wellness plan"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "text": "Weight management plan"
+          }
+        ],
+        "description": "Manage obesity and weight loss",
+        "subject": {
+          "display": "Peter James Chalmers"
+        },
+        "period": {
+          "end": "2017-06-01"
+        },
+        "created": "2016-01-01",
+        "author": {
+          "display": "Dr Adam Careful"
+        },
+        "addresses": [
+          {
+            "reference": "#p1",
+            "display": "obesity"
+          }
+        ],
+        "activity": [
+          {
+            "outcomeCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "161832001",
+                    "display": "Progressive weight loss"
+                  }
+                ]
+              }
+            ],
+            "outcomeReference": [
+              {
+                "display": "Weight Measured"
+              }
+            ],
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Weight Measured"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                  }
+                ]
+              },
+              "status": "completed",
+              "statusReason": {
+                "text": "Achieved weight loss to mitigate diabetes risk."
+              },
+              "doNotPerform": false,
+              "scheduledTiming": {
+                "repeat": {
+                  "frequency": 1,
+                  "period": 1,
+                  "periodUnit": "d"
+                }
+              },
+              "location": {
+                "display": "Patient's home"
+              },
+              "performer": [
+                {
+                  "display": "Peter James Chalmers"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Patient/1200",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1200",
+        "meta": {
+          "versionId": "40",
+          "lastUpdated": "2023-02-16T13:51:00.136+00:00",
+          "source": "#IiHMYvbRmw8e06Nx"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">\u00f4ng V\u0103n T\u00e1m B\u1ea3y B\u1ea3y <b>PH\u1ea0M </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>5911bfd0-687e-4ac9-ab37-04e8815e4f0d</td></tr><tr><td>Address</td><td><span>X\u00d4 vi\u1ebft ngh\u1ec7 t\u0129nh </span><br/><span>Th\u00e0nh Ph\u1ed1 H\u1ed3 Ch\u00ed Minh </span><span>USD </span></td></tr><tr><td>Date of birth</td><td><span>10 October 1990</span></td></tr></tbody></table></div>"
+        },
+        "extension": [
+          {
+            "url": "https://hapi.fhir.org/baseR4/StructureDefinition/lafiaCareTypesAndInterests",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "408467006",
+                  "display": "Adult mental illness"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "394577000",
+                  "display": "Anesthetics"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "394578005",
+                  "display": "Audiological medicine"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "394578005",
+                  "display": "Audiological medicine"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "408467006",
+                  "display": "Adult mental illness"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "394577000",
+                  "display": "Anesthetics"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "394578005",
+                  "display": "Audiological medicine"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://hapi.fhir.org/baseR4/StructureDefinition/lafiaUserAnthropometry",
+            "extension": [
+              {
+                "url": "height",
+                "valueQuantity": {
+                  "value": 70,
+                  "unit": "ft",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "ft_i"
+                }
+              },
+              {
+                "url": "weight",
+                "valueQuantity": {
+                  "value": 80,
+                  "unit": "kg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "kg"
+                }
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "Mrs"
+                }
+              ]
+            },
+            "value": "5911bfd0-687e-4ac9-ab37-04e8815e4f0d"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "text": "Sridev Noel  Iyyap",
+            "family": "Iyyap",
+            "given": [
+              "Sridev",
+              "Noel "
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "sridevi@appexinnovation.com",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "9524202323",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "8072036793",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "8332930965",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "7987886770",
+            "use": "work"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2001-04-08",
+        "address": [
+          {
+            "use": "home",
+            "type": "physical",
+            "text": "20, church park street",
+            "line": [
+              "20, church park street",
+              "20097"
+            ],
+            "city": "New York",
+            "state": "New York ",
+            "postalCode": "20097",
+            "country": "USD"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "D",
+              "display": "Divorced"
+            }
+          ]
+        },
+        "contact": [
+          {
+            "extension": [
+              {
+                "url": "https://hapi.fhir.org/baseR4/StructureDefinition/LafiaContactMetadata",
+                "extension": [
+                  {
+                    "url": "birthDate",
+                    "valueString": "2005-01-02"
+                  },
+                  {
+                    "url": "maritalStatus",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                          "code": "D",
+                          "display": "Divorced"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "use": "official",
+              "text": "Mike Usman  White",
+              "family": "White",
+              "given": [
+                "Mike",
+                "Usman "
+              ]
+            },
+            "gender": "female"
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "Practitioner/1058",
+            "display": "Guru-General Practitioner"
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/358",
+          "display": "PHARMACIE DU GINKGO"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Practitioner/1058",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "1058",
+        "meta": {
+          "versionId": "12",
+          "lastUpdated": "2023-03-01T14:59:08.910+00:00",
+          "source": "#4ZkoLW6e4MijWK0c"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "https://radboud.nl/identifiers/PractitionerIdentifier",
+            "value": "Vaz"
+          },
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN",
+                  "display": "938277859"
+                }
+              ]
+            },
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "938277859"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Guru",
+            "given": [
+              "Tata"
+            ],
+            "prefix": [
+              "DR"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "8411915364",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "guru@appexinnovation.com",
+            "use": "work"
+          }
+        ],
+        "gender": "male",
+        "communication": [
+          {
+            "coding": [
+              {
+                "system": "urn:ietf:bcp:47",
+                "code": "en",
+                "display": "English"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Patient/1203",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1203",
+        "meta": {
+          "versionId": "14",
+          "lastUpdated": "2020-09-04T19:21:43.309+00:00",
+          "source": "#DaNQToCvaCx46SEM"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> <div class=\"hapiHeaderText\">Aaron <b>HANK </b> </div> <table class=\"hapiPropertyTable\"> <tbody> <tr> <td>Identifier</td> <td>5911bfd0-687e-4ac9-ab37-04e8815e4f0d</td> </tr> <tr> <td>Address</td> <td> <span>UK </span> </td> </tr> <tr> <td>Date of birth</td> <td> <span>18 February 1960</span> </td> </tr> </tbody> </table> </div>"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "5911bfd0-687e-4ac9-ab37-04e8815e4f0d"
+          }
+        ],
+        "name": [
+          {
+            "family": "Hank",
+            "given": [
+              "Aaron"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "hank.aaron@appexinnovation.com",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "0612789638",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "069562639",
+            "use": "work"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1961-02-10",
+        "address": [
+          {
+            "city": "UK"
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "Practitioner/1058",
+            "display": "Guru-General Practitioner"
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/1621",
+          "display": "PHARMACIE DU GINKGO"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Patient/53254",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "53254",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2020-09-02T12:38:54.894+00:00",
+          "source": "#lEyJfhLvQFFdb9hD"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">James <b>SMITH </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>110107073916280</td></tr><tr><td>Address</td><td><span>1234 Six Forks </span><br/><span>Cary </span><span>NC </span><span>US </span></td></tr><tr><td>Date of birth</td><td><span>01 September 1965</span></td></tr></tbody></table></div>"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "1.3.6.1.4.1.22812.3.99930.3",
+            "value": "110107073916280"
+          },
+          {
+            "use": "official",
+            "system": "https://www.edifecs.com/fhir/patient/identifier",
+            "value": "74306e5e90359c6574c90a69b2e9325c1106c44a22d9733a67eaa53412bb3251"
+          }
+        ],
+        "name": [
+          {
+            "family": "Smith",
+            "given": [
+              "James"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "value": "tel:+1-(919)854-3333",
+            "use": "home"
+          },
+          {
+            "value": "tel:+1-(919)854-4444",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1965-09-01",
+        "address": [
+          {
+            "line": [
+              "1234 Six Forks"
+            ],
+            "city": "Cary",
+            "state": "NC",
+            "postalCode": "27513",
+            "country": "US"
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/53256",
+          "type": "Organization"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Patient/22",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "22",
+        "meta": {
+          "versionId": "145",
+          "lastUpdated": "2023-03-21T21:39:26.971+00:00",
+          "source": "#LDq5JRsHsYcrmWqP"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> <div class=\"hapiHeaderText\">Caleb <b>CUSHING </b> </div> <table class=\"hapiPropertyTable\"> <tbody> <tr> <td>Identifier</td> <td>812ca8a0-33b4-494b-8ce4-f9b773f9d6b0</td> </tr> </tbody> </table> </div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/birthPlace",
+            "valueAddress": {
+              "use": "work",
+              "city": "Auckland"
+            }
+          },
+          {
+            "url": "place-of-birth",
+            "valueString": "Auckland"
+          },
+          {
+            "url": "status",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://standards.digital.health.nz/ns/nz-citizenship-status-code",
+                  "code": "yes",
+                  "display": "Yes"
+                }
+              ],
+              "text": "This person is a citizen."
+            }
+          },
+          {
+            "url": "source",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://standards.digital.health.nz/ns/information-source-code",
+                  "code": "BRCT",
+                  "display": "Birth Certificate"
+                }
+              ],
+              "text": "Birth Certificate"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "812ca8a0-33b4-494b-8ce4-f9b773f9d6b0"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Abraham",
+            "given": [
+              "Sooraj"
+            ]
+          },
+          {
+            "use": "maiden",
+            "family": "wazz"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0405687522",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "dhduhsdf@dfgg.de",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "04123456",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "address": [
+          {
+            "use": "work",
+            "line": [
+              "Frankenstrasse 7"
+            ],
+            "city": "Kerala",
+            "state": "HH",
+            "postalCode": "20097",
+            "country": "Deutschland"
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "id": "w",
+                "text": "Arbeitgeber"
+              }
+            ],
+            "name": {
+              "use": "official",
+              "family": "Targareyan",
+              "given": [
+                "Daenerys"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "email",
+                "value": "kkskrishnasai99@sdfsd.de",
+                "use": "mobile"
+              },
+              {
+                "system": "fax",
+                "value": "sdfdsfsdf",
+                "use": "temp"
+              }
+            ]
+          },
+          {
+            "relationship": [
+              {
+                "id": "n",
+                "text": "Kontaktperson"
+              }
+            ],
+            "name": {
+              "use": "official",
+              "family": "m\u00fcller",
+              "given": [
+                "klaus",
+                "peter"
+              ]
+            }
+          },
+          {
+            "name": {
+              "family": "Parks",
+              "given": [
+                "Christopher",
+                "C.H."
+              ]
+            }
+          },
+          {
+            "name": {
+              "family": "Parks",
+              "given": [
+                "Christopher",
+                "C.H."
+              ]
+            }
+          },
+          {
+            "name": {
+              "family": "Parks",
+              "given": [
+                "Christopher",
+                "C.H."
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}
