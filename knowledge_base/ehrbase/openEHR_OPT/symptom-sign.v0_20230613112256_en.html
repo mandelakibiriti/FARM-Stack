@@ -1,0 +1,2600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- simple style -->
+    <link rel="stylesheet" href="static/style.css" /><!-- boostrap style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  </head>
+  <body class="form-body">
+    <div class="form-container">
+      <h1>symptom-sign.v0</h1>
+      <div class="COMPOSITION  form-item">
+        <label>clinical encounter.v0</label>
+        <div class="EVENT_CONTEXT  form-item">
+          <div class="ITEM_TREE  form-item">
+            <label>Tree</label>
+            <div class="CLUSTER  form-item">
+              <label>ARCHETYPE_SLOT is not supported yet, found at /context/other_context[at0001]/items[at0002]</label>
+            </div>
+          </div>
+        </div>
+        <div class="EVALUATION  form-item">
+          <label>Problem/Diagnosis</label>
+          <div class="ITEM_TREE  form-item">
+            <label>structure</label>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Problem/Diagnosis name</label>
+              <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0002]/value"></texarea>
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Clinical description</label>
+              <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0009]/value"></texarea>
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Body site</label>
+              <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0012]/value"></texarea>
+            </div>
+            <div class="CLUSTER  form-item">
+              <label>Anatomical location</label>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Body site name</label>
+                <texarea class="DV_TEXT form-control" name="/items[at0001]/value"></texarea>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Specific site</label>
+                <texarea class="DV_TEXT form-control" name="/items[at0065]/value"></texarea>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Laterality</label>
+                <select name="/items[at0002]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0003">Left</option>
+                  <option value="at0004">Right</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Aspect</label>
+                <select name="/items[at0064]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0067">Medial</option>
+                  <option value="at0068">Lateral</option>
+                  <option value="at0069">Superior</option>
+                  <option value="at0070">Inferior</option>
+                  <option value="at0071">Anterior</option>
+                  <option value="at0072">Posterior</option>
+                  <option value="at0073">Proximal</option>
+                  <option value="at0074">Distal</option>
+                  <option value="at0080">Deep</option>
+                  <option value="at0081">Superficial</option>
+                  <option value="at0075">Palmar</option>
+                  <option value="at0076">Plantar</option>
+                  <option value="at0082">Dorsal</option>
+                  <option value="at0077">Mid</option>
+                  <option value="at0078">Oral</option>
+                  <option value="at0079">Anal</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Anatomical Line</label>
+                <select name="/items[at0055]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0062">Midline</option>
+                  <option value="at0056">Midaxillary line</option>
+                  <option value="at0057">Anterior axillary line</option>
+                  <option value="at0058">Posterior axillary line</option>
+                  <option value="at0059">Mid-clavicular line</option>
+                  <option value="at0060">Mid-pupillary line</option>
+                  <option value="at0063">Mid-scapular line</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Description</label>
+                <texarea class="DV_TEXT form-control" name="/items[at0023]/value"></texarea>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0053]</label>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0054]</label>
+              </div>
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Cause</label>
+              <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0078]/value"></texarea>
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Date/time of onset</label>
+              <input type="datetime-local" name="/data[at0001]/items[at0077]/value" class="DV_DATE_TIME form-control" />
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Date/time clinically recognised</label>
+              <input type="datetime-local" name="/data[at0001]/items[at0003]/value" class="DV_DATE_TIME form-control" />
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Severity</label>
+              <select name="/data[at0001]/items[at0005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                <option value=""></option>
+                <option value="at0047">Mild</option>
+                <option value="at0048">Moderate</option>
+                <option value="at0049">Severe</option>
+              </select>
+            </div>
+            <div class="CLUSTER  form-item">
+              <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/items[at0043]</label>
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Course description</label>
+              <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0072]/value"></texarea>
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Date/time of resolution</label>
+              <input type="datetime-local" name="/data[at0001]/items[at0030]/value" class="DV_DATE_TIME form-control" />
+            </div>
+            <div class="CLUSTER  form-item">
+              <label>Problem/Diagnosis qualifier</label>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Diagnostic status</label>
+                <select name="/items[at0004]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0016">Preliminary</option>
+                  <option value="at0017">Working</option>
+                  <option value="at0018">Established</option>
+                  <option value="at0088">Refuted</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Current/Past?</label>
+                <select name="/items[at0060]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0062">Current</option>
+                  <option value="at0061">Past</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Active/Inactive?</label>
+                <select name="/items[at0003]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0026">Active</option>
+                  <option value="at0027">Inactive</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Level of control</label>
+                <select name="/items[at0098]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0099">Controlled</option>
+                  <option value="at0100">Indeterminate</option>
+                  <option value="at0101">Not controlled</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Progression</label>
+                <select name="/items[at0102]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0103">Improving</option>
+                  <option value="at0104">Stable</option>
+                  <option value="at0105">Worsening</option>
+                  <option value="at0106">Indeterminate</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Resolution phase</label>
+                <select name="/items[at0083]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0086">Not resolving</option>
+                  <option value="at0085">Resolving</option>
+                  <option value="at0084">Resolved</option>
+                  <option value="at0087">Indeterminate</option>
+                  <option value="at0097">Relapsed</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Remission status</label>
+                <select name="/items[at0089]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0090">In remission</option>
+                  <option value="at0092">Not in remission</option>
+                  <option value="at0093">Indeterminate</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Episodicity</label>
+                <select name="/items[at0001]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0034">New</option>
+                  <option value="at0035">Ongoing</option>
+                  <option value="at0070">Indeterminate</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Reason for an ongoing episode</label>
+                <texarea class="DV_TEXT form-control" name="/items[at0107]/value"></texarea>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Occurrence</label>
+                <select name="/items[at0071]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0095">First occurrence</option>
+                  <option value="at0096">Recurrence</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Course label</label>
+                <texarea class="DV_TEXT form-control" name="/items[at0077]/value"></texarea>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Diagnostic category</label>
+                <select name="/items[at0063]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0064">Principal diagnosis</option>
+                  <option value="at0066">Secondary diagnosis</option>
+                  <option value="at0076">Complication</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Admission diagnosis?</label>
+                <input type="checkbox" name="/items[at0073]/value" class="DV_BOOLEAN" />
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Comment</label>
+                <texarea class="DV_TEXT form-control" name="/items[at0110]/value"></texarea>
+              </div>
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Diagnostic certainty</label>
+              <select name="/data[at0001]/items[at0073]/value/defining_code" class="DV_CODED_TEXT form-control">
+                <option value=""></option>
+                <option value="at0074">Suspected</option>
+                <option value="at0075">Probable</option>
+                <option value="at0076">Confirmed</option>
+              </select>
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Comment</label>
+              <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0069]/value"></texarea>
+            </div>
+          </div>
+          <div class="ITEM_TREE  form-item">
+            <label>Tree</label>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Last updated</label>
+              <input type="datetime-local" name="/protocol[at0032]/items[at0070]/value" class="DV_DATE_TIME form-control" />
+            </div>
+            <div class="CLUSTER  form-item">
+              <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0032]/items[at0071]</label>
+            </div>
+          </div>
+        </div>
+        <div class="SECTION  form-item">
+          <label>Sign/Symptoms</label>
+          <div class="OBSERVATION  form-item">
+            <label>Symptom/Sign</label>
+            <div class="HISTORY  form-item">
+              <label>Event Series</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Symptom/Sign name</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0001]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Nil significant</label>
+                    <input type="checkbox" name="/data[at0190]/events[at0191]/data[at0192]/items[at0035]/value" class="DV_BOOLEAN" />
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Body site</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0151]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Anatomical location</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Body site name</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0001]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Specific site</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0065]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Laterality</label>
+                      <select name="/items[at0002]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0003">Left</option>
+                        <option value="at0004">Right</option>
+                      </select>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Aspect</label>
+                      <select name="/items[at0064]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0067">Medial</option>
+                        <option value="at0068">Lateral</option>
+                        <option value="at0069">Superior</option>
+                        <option value="at0070">Inferior</option>
+                        <option value="at0071">Anterior</option>
+                        <option value="at0072">Posterior</option>
+                        <option value="at0073">Proximal</option>
+                        <option value="at0074">Distal</option>
+                        <option value="at0080">Deep</option>
+                        <option value="at0081">Superficial</option>
+                        <option value="at0075">Palmar</option>
+                        <option value="at0076">Plantar</option>
+                        <option value="at0082">Dorsal</option>
+                        <option value="at0077">Mid</option>
+                        <option value="at0078">Oral</option>
+                        <option value="at0079">Anal</option>
+                      </select>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Anatomical Line</label>
+                      <select name="/items[at0055]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0062">Midline</option>
+                        <option value="at0056">Midaxillary line</option>
+                        <option value="at0057">Anterior axillary line</option>
+                        <option value="at0058">Posterior axillary line</option>
+                        <option value="at0059">Mid-clavicular line</option>
+                        <option value="at0060">Mid-pupillary line</option>
+                        <option value="at0063">Mid-scapular line</option>
+                      </select>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Description</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0023]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0053]</label>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0054]</label>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0002]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Episodicity</label>
+                    <select name="/data[at0190]/events[at0191]/data[at0192]/items[at0175]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0176">New</option>
+                      <option value="at0178">Ongoing</option>
+                      <option value="at0177">Indeterminate</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Occurrence</label>
+                    <select name="/data[at0190]/events[at0191]/data[at0192]/items[at0186]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0187">First occurrence</option>
+                      <option value="at0188">Recurrence</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Episode onset</label>
+                    <input type="datetime-local" name="/data[at0190]/events[at0191]/data[at0192]/items[at0152]/value" class="DV_DATE_TIME form-control" />
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Onset type</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0164]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Duration</label>
+                    <label>D
+                      <input type="number" name="/data[at0190]/events[at0191]/data[at0192]/items[at0028]/value/D" class="small DV_DURATION form-control" />
+                    </label>
+                    <label>H
+                      <input type="number" name="/data[at0190]/events[at0191]/data[at0192]/items[at0028]/value/H" class="small DV_DURATION form-control" />
+                    </label>
+                    <label>M
+                      <input type="number" name="/data[at0190]/events[at0191]/data[at0192]/items[at0028]/value/M" class="small DV_DURATION form-control" />
+                    </label>
+                    <label>S
+                      <input type="number" name="/data[at0190]/events[at0191]/data[at0192]/items[at0028]/value/S" class="small DV_DURATION form-control" />
+                    </label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Severity category</label>
+                    <select name="/data[at0190]/events[at0191]/data[at0192]/items[at0021]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0023">Mild</option>
+                      <option value="at0024">Moderate</option>
+                      <option value="at0025">Severe</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Severity rating</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0190]/events[at0191]/data[at0192]/items[at0026]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0190]/events[at0191]/data[at0192]/items[at0026]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Character</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0189]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Progression</label>
+                    <select name="/data[at0190]/events[at0191]/data[at0192]/items[at0180]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0183">Worsening</option>
+                      <option value="at0182">Unchanged</option>
+                      <option value="at0181">Improving</option>
+                      <option value="at0184">Resolved</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Pattern</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0003]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Modifying factor</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Factor</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0018]/items[at0019]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Effect</label>
+                      <select name="/data[at0190]/events[at0191]/data[at0192]/items[at0018]/items[at0017]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0159">Relieves</option>
+                        <option value="at0156">No effect</option>
+                        <option value="at0158">Worsens</option>
+                      </select>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Description</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0018]/items[at0056]/value"></texarea>
+                    </div>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Precipitating/resolving factor</label>
+                    <select name="/data[at0190]/events[at0191]/data[at0192]/items[at0165]/name/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0167">Precipitating factor</option>
+                      <option value="at0168">Resolving factor</option>
+                    </select>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Factor</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0165]/items[at0170]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0190]/events[at0191]/data[at0192]/items[at0165]/items[at0154]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Time interval</label>
+                      <label>D
+                        <input type="number" name="/data[at0190]/events[at0191]/data[at0192]/items[at0165]/items[at0171]/value/D" class="small DV_DURATION form-control" />
+                      </label>
+                      <label>H
+                        <input type="number" name="/data[at0190]/events[at0191]/data[at0192]/items[at0165]/items[at0171]/value/H" class="small DV_DURATION form-control" />
+                      </label>
+                      <label>M
+                        <input type="number" name="/data[at0190]/events[at0191]/data[at0192]/items[at0165]/items[at0171]/value/M" class="small DV_DURATION form-control" />
+                      </label>
+                      <label>S
+                        <input type="number" name="/data[at0190]/events[at0191]/data[at0192]/items[at0165]/items[at0171]/value/S" class="small DV_DURATION form-control" />
+                      </label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Description</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0165]/items[at0185]/value"></texarea>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Impact</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0155]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Episode description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0037]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Condition progress</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Phase</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0001]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Phase recognised</label>
+                      <input type="datetime-local" name="/items[at0006]/value" class="DV_DATE_TIME form-control" />
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0007]/value"></texarea>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Resolution date/time</label>
+                    <input type="datetime-local" name="/data[at0190]/events[at0191]/data[at0192]/items[at0161]/value" class="DV_DATE_TIME form-control" />
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Description of previous episodes</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0057]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Number of previous episodes</label>
+                    <input type="number" class="DV_COUNT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0031]/value" />
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0190]/events[at0191]/data[at0192]/items[at0146]</label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0190]/events[at0191]/data[at0192]/items[at0163]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Exclusion of a symptom or sign</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Exclusion Statement</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0001]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Excluded Symptom</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0002]/value"></texarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Item tree</label>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0193]/items[at0194]</label>
+              </div>
+            </div>
+          </div>
+          <div class="EVALUATION  form-item">
+            <label>Exposure</label>
+            <div class="ITEM_TREE  form-item">
+              <label>Tree</label>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Agent</label>
+                <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0002]/value"></texarea>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Overall Description</label>
+                <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0003]/value"></texarea>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Category</label>
+                <select name="/data[at0001]/items[at0005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0006">Environmental</option>
+                  <option value="at0007">Occupational</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Ongoing Exposure</label>
+                <input type="checkbox" name="/data[at0001]/items[at0004]/value" class="DV_BOOLEAN" />
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>Exposure Details</label>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Date of Onset</label>
+                  <input type="datetime-local" name="/data[at0001]/items[at0010]/items[at0011]/value" class="DV_DATE_TIME form-control" />
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Description</label>
+                  <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0010]/items[at0013]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Date Ceased</label>
+                  <input type="datetime-local" name="/data[at0001]/items[at0010]/items[at0012]/value" class="DV_DATE_TIME form-control" />
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Tree</label>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Date Updated</label>
+                <input type="datetime-local" name="/protocol[at0008]/items[at0009]/value" class="DV_DATE_TIME form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="SECTION  form-item">
+            <label>Adverse reaction list</label>
+            <div class="EVALUATION  form-item">
+              <label>Adverse reaction risk</label>
+              <div class="ITEM_TREE  form-item">
+                <label>Tree</label>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Substance</label>
+                  <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0002]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Status</label>
+                  <select name="/data[at0001]/items[at0063]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0127">Suspected</option>
+                    <option value="at0064">Likely</option>
+                    <option value="at0065">Confirmed</option>
+                    <option value="at0067">Resolved</option>
+                    <option value="at0066">Refuted</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Criticality</label>
+                  <select name="/data[at0001]/items[at0101]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0102">Low</option>
+                    <option value="at0103">High</option>
+                    <option value="at0124">Indeterminate</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Category</label>
+                  <select name="/data[at0001]/items[at0120]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0121">Food</option>
+                    <option value="at0122">Medication</option>
+                    <option value="at0123">Other</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Onset of last reaction</label>
+                  <input type="datetime-local" name="/data[at0001]/items[at0117]/value" class="DV_DATE_TIME form-control" />
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Reaction mechanism</label>
+                  <select name="/data[at0001]/items[at0058]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0059">Immune mediated</option>
+                    <option value="at0060">Non-immune mediated</option>
+                    <option value="at0126">Indeterminate</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Comment</label>
+                  <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0006]/value"></texarea>
+                </div>
+                <div class="CLUSTER  form-item">
+                  <label>Reaction event</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Specific substance</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0009]/items[at0010]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Certainty</label>
+                    <select name="/data[at0001]/items[at0009]/items[at0021]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0095">Suspected</option>
+                      <option value="at0023">Likely</option>
+                      <option value="at0118">Confirmed</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Manifestation</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0009]/items[at0011]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Reaction description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0009]/items[at0012]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Onset of reaction</label>
+                    <input type="datetime-local" name="/data[at0001]/items[at0009]/items[at0027]/value" class="DV_DATE_TIME form-control" />
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Duration of reaction</label>
+                    <label>D
+                      <input type="number" name="/data[at0001]/items[at0009]/items[at0028]/value/D" class="small DV_DURATION form-control" />
+                    </label>
+                    <label>H
+                      <input type="number" name="/data[at0001]/items[at0009]/items[at0028]/value/H" class="small DV_DURATION form-control" />
+                    </label>
+                    <label>M
+                      <input type="number" name="/data[at0001]/items[at0009]/items[at0028]/value/M" class="small DV_DURATION form-control" />
+                    </label>
+                    <label>S
+                      <input type="number" name="/data[at0001]/items[at0009]/items[at0028]/value/S" class="small DV_DURATION form-control" />
+                    </label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Severity of reaction</label>
+                    <select name="/data[at0001]/items[at0009]/items[at0089]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0093">Mild</option>
+                      <option value="at0092">Moderate</option>
+                      <option value="at0090">Severe</option>
+                    </select>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/items[at0009]/items[at0029]</label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Initial exposure</label>
+                    <input type="datetime-local" name="/data[at0001]/items[at0009]/items[at0020]/value" class="DV_DATE_TIME form-control" />
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Duration of exposure</label>
+                    <label>D
+                      <input type="number" name="/data[at0001]/items[at0009]/items[at0025]/value/D" class="small DV_DURATION form-control" />
+                    </label>
+                    <label>H
+                      <input type="number" name="/data[at0001]/items[at0009]/items[at0025]/value/H" class="small DV_DURATION form-control" />
+                    </label>
+                    <label>M
+                      <input type="number" name="/data[at0001]/items[at0009]/items[at0025]/value/M" class="small DV_DURATION form-control" />
+                    </label>
+                    <label>S
+                      <input type="number" name="/data[at0001]/items[at0009]/items[at0025]/value/S" class="small DV_DURATION form-control" />
+                    </label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Route of exposure</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0009]/items[at0106]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Exposure description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0009]/items[at0018]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/items[at0009]/items[at0096]</label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Clinical management description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0009]/items[at0040]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/items[at0009]/items[at0119]</label>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/items[at0009]/items[at0041]</label>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/items[at0009]/items[at0116]</label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Reaction comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0009]/items[at0032]/value"></texarea>
+                  </div>
+                </div>
+              </div>
+              <div class="ITEM_TREE  form-item">
+                <label>Tree</label>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Last updated</label>
+                  <input type="datetime-local" name="/protocol[at0042]/items[at0062]/value" class="DV_DATE_TIME form-control" />
+                </div>
+                <div class="CLUSTER  form-item">
+                  <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0042]/items[at0128]</label>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Supporting clinical record information</label>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Reaction reported?</label>
+                  <input type="checkbox" name="/protocol[at0042]/items[at0044]/value" class="DV_BOOLEAN" />
+                </div>
+                <div class="CLUSTER  form-item">
+                  <label>Report summary</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Date of report</label>
+                    <input type="datetime-local" name="/protocol[at0042]/items[at0099]/items[at0125]/value" class="DV_DATE_TIME form-control" />
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Report comment</label>
+                    <texarea class="DV_TEXT form-control" name="/protocol[at0042]/items[at0099]/items[at0048]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Adverse reaction report</label>
+                    <input type="text" class="DV_URI form-control" name="/protocol[at0042]/items[at0099]/items[at0045]/value" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="EVALUATION  form-item">
+              <label>Exclusion - global</label>
+              <div class="ITEM_TREE  form-item">
+                <label>Tree</label>
+                <div class="ELEMENT form-group row form-item">
+                  <select name="/data[at0001]/items[at0002]/name/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0003">Global exclusion of problems/diagnoses</option>
+                    <option value="at0004">Global exclusion of family history</option>
+                    <option value="at0005">Global exclusion of medication use</option>
+                    <option value="at0006">Global exclusion of procedures</option>
+                    <option value="at0007">Global exclusion of adverse reactions</option>
+                  </select>
+                  <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0002]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Comment</label>
+                  <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0011]/value"></texarea>
+                </div>
+              </div>
+              <div class="ITEM_TREE  form-item">
+                <label>Tree</label>
+                <div class="CLUSTER  form-item">
+                  <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0008]/items[at0010]</label>
+                </div>
+              </div>
+            </div>
+            <div class="EVALUATION  form-item">
+              <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0003]</label>
+            </div>
+          </div>
+          <texarea class="DV_TEXT form-control" name="/name"></texarea>
+        </div>
+        <div class="SECTION  form-item">
+          <label>Sign/Symptoms</label>
+          <div class="OBSERVATION  form-item">
+            <label>Body weight</label>
+            <div class="HISTORY  form-item">
+              <label>history</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Simple</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Weight</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="kg">kg</option>
+                        <option value="[lb_av]">[lb_av]</option>
+                        <option value="g">g</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at0003]/data[at0001]/items[at0024]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>state structure</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">State of dress</label>
+                    <select name="/data[at0002]/events[at0003]/state[at0008]/items[at0009]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0013">Naked</option>
+                      <option value="at0017">Nappy/diaper</option>
+                      <option value="at0011">Lightly clothed/underwear</option>
+                      <option value="at0028">Fully clothed, without shoes</option>
+                      <option value="at0010">Fully clothed, including shoes</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="POINT_EVENT  form-item">
+                <label>Birth</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Simple</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Weight</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0002]/events[at0026]/data[at0001]/items[at0004]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0002]/events[at0026]/data[at0001]/items[at0004]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="kg">kg</option>
+                        <option value="[lb_av]">[lb_av]</option>
+                        <option value="g">g</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at0026]/data[at0001]/items[at0024]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>state structure</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">State of dress</label>
+                    <select name="/data[at0002]/events[at0026]/state[at0008]/items[at0009]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0013">Naked</option>
+                      <option value="at0017">Nappy/diaper</option>
+                      <option value="at0011">Lightly clothed/underwear</option>
+                      <option value="at0028">Fully clothed, without shoes</option>
+                      <option value="at0010">Fully clothed, including shoes</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Confounding factors</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at0026]/state[at0008]/items[at0025]/value"></texarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>protocol structure</label>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0015]/items[at0020]</label>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0015]/items[at0027]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Height/Length</label>
+            <div class="HISTORY  form-item">
+              <label>history</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Simple</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Height/Length</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="cm">cm</option>
+                        <option value="[in_i]">[in_i]</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0018]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Position</label>
+                    <select name="/data[at0001]/events[at0002]/state[at0013]/items[at0014]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0016">Standing</option>
+                      <option value="at0020">Lying</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>List</label>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0007]/items[at0011]</label>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0007]/items[at0022]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Physical examination findings</label>
+            <div class="HISTORY  form-item">
+              <label>Event Series</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Auscultation findings</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">System or structure examined</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0001]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Body site</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0012]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0011]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">No abnormality detected</label>
+                      <input type="checkbox" name="/items[at0002]/value" class="DV_BOOLEAN" />
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Clinical description</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0003]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0004]</label>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0005]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Clinical interpretation</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0006]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0007]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0008]</label>
+                    </div>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Inspection findings</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">System or structure examined</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0001]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Body site</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0012]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0011]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">No abnormality detected</label>
+                      <input type="checkbox" name="/items[at0002]/value" class="DV_BOOLEAN" />
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Clinical description</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0003]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0004]</label>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0005]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Clinical interpretation</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0006]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0007]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0008]</label>
+                    </div>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Palpation findings</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">System or structure examined</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0001]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Body site</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0012]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0011]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">No abnormality detected</label>
+                      <input type="checkbox" name="/items[at0002]/value" class="DV_BOOLEAN" />
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Clinical description</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0003]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0004]</label>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0005]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Clinical interpretation</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0006]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0007]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0008]</label>
+                    </div>
+                    <texarea class="DV_TEXT form-control" name="/name"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Palpation findings</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">System or structure examined</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0001]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Body site</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0012]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0011]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">No abnormality detected</label>
+                      <input type="checkbox" name="/items[at0002]/value" class="DV_BOOLEAN" />
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Clinical description</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0003]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0004]</label>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0005]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Clinical interpretation</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0006]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/items[at0007]/value"></texarea>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0008]</label>
+                    </div>
+                    <texarea class="DV_TEXT form-control" name="/name"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Interpretation</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0011]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Confounding factors</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/state[at0009]/items[at0008]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Position</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/state[at0009]/items[at0013]/value"></texarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Tree</label>
+              <div class="CLUSTER  form-item">
+                <label>Medical device</label>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Device name</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0001]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Type</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0003]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Description</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0002]/value"></texarea>
+                </div>
+                <div class="CLUSTER  form-item">
+                  <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0009]</label>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Unique device identifier (UDI)</label>
+                  <label>issuer
+                    <input type="text" name="/items[at0021]/value/issuer" class="small DV_IDENTIFIER form-control" />
+                  </label>
+                  <label>assigner
+                    <input type="text" name="/items[at0021]/value/assigner" class="small DV_IDENTIFIER form-control" />
+                  </label>
+                  <label>id
+                    <input type="text" name="/items[at0021]/value/id" class="small DV_IDENTIFIER form-control" />
+                  </label>
+                  <label>type
+                    <input type="text" name="/items[at0021]/value/type" class="small DV_IDENTIFIER form-control" />
+                  </label>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Manufacturer</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0004]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Date of manufacture</label>
+                  <input type="datetime-local" name="/items[at0005]/value" class="DV_DATE_TIME form-control" />
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Serial number</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0020]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Catalogue number</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0022]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Model number</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0023]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Batch/Lot number</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0006]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Software version</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0025]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Date of expiry</label>
+                  <input type="datetime-local" name="/items[at0007]/value" class="DV_DATE_TIME form-control" />
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Other identifier</label>
+                  <label>issuer
+                    <input type="text" name="/items[at0024]/value/issuer" class="small DV_IDENTIFIER form-control" />
+                  </label>
+                  <label>assigner
+                    <input type="text" name="/items[at0024]/value/assigner" class="small DV_IDENTIFIER form-control" />
+                  </label>
+                  <label>id
+                    <input type="text" name="/items[at0024]/value/id" class="small DV_IDENTIFIER form-control" />
+                  </label>
+                  <label>type
+                    <input type="text" name="/items[at0024]/value/type" class="small DV_IDENTIFIER form-control" />
+                  </label>
+                </div>
+                <div class="CLUSTER  form-item">
+                  <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0019]</label>
+                </div>
+                <div class="CLUSTER  form-item">
+                  <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0018]</label>
+                </div>
+                <div class="CLUSTER  form-item">
+                  <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0026]</label>
+                </div>
+                <div class="CLUSTER  form-item">
+                  <label>ARCHETYPE_SLOT is not supported yet, found at /items[at0027]</label>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Comment</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0008]/value"></texarea>
+                </div>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0007]/items[at0012]</label>
+              </div>
+            </div>
+          </div>
+          <texarea class="DV_TEXT form-control" name="/name"></texarea>
+        </div>
+        <div class="SECTION  form-item">
+          <label>Vital signs</label>
+          <div class="OBSERVATION  form-item">
+            <label>Blood pressure</label>
+            <div class="HISTORY  form-item">
+              <label>History</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>blood pressure</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Systolic</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at0006]/data[at0003]/items[at0004]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at0006]/data[at0003]/items[at0004]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="mm[Hg]">mm[Hg]</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Diastolic</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at0006]/data[at0003]/items[at0005]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at0006]/data[at0003]/items[at0005]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="mm[Hg]">mm[Hg]</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Mean arterial pressure</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at0006]/data[at0003]/items[at1006]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at0006]/data[at0003]/items[at1006]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="mm[Hg]">mm[Hg]</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Pulse pressure</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at0006]/data[at0003]/items[at1007]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at0006]/data[at0003]/items[at1007]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="mm[Hg]">mm[Hg]</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Clinical interpretation</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0006]/data[at0003]/items[at1059]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0006]/data[at0003]/items[at0033]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>state structure</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Position</label>
+                    <select name="/data[at0001]/events[at0006]/state[at0007]/items[at0008]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at1000">Standing</option>
+                      <option value="at1001">Sitting</option>
+                      <option value="at1002">Reclining</option>
+                      <option value="at1003">Lying</option>
+                      <option value="at1014">Lying with tilt to left</option>
+                    </select>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0006]/state[at0007]/items[at1030]</label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Sleep status</label>
+                    <select name="/data[at0001]/events[at0006]/state[at0007]/items[at1043]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at1044">Awake</option>
+                      <option value="at1045">Sleeping</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="INTERVAL_EVENT  form-item">
+                <label>24 hour average</label>
+                <select name="/data[at0001]/events[at1042]/math_function/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="146">mean</option>
+                </select>
+                <label>D
+                  <input type="number" name="/data[at0001]/events[at1042]/width/D" class="small DV_DURATION form-control" />
+                </label>
+                <label>H
+                  <input type="number" name="/data[at0001]/events[at1042]/width/H" class="small DV_DURATION form-control" />
+                </label>
+                <label>M
+                  <input type="number" name="/data[at0001]/events[at1042]/width/M" class="small DV_DURATION form-control" />
+                </label>
+                <label>S
+                  <input type="number" name="/data[at0001]/events[at1042]/width/S" class="small DV_DURATION form-control" />
+                </label>
+                <div class="ITEM_TREE  form-item">
+                  <label>blood pressure</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Systolic</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at1042]/data[at0003]/items[at0004]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at1042]/data[at0003]/items[at0004]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="mm[Hg]">mm[Hg]</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Diastolic</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at1042]/data[at0003]/items[at0005]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at1042]/data[at0003]/items[at0005]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="mm[Hg]">mm[Hg]</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Mean arterial pressure</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at1042]/data[at0003]/items[at1006]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at1042]/data[at0003]/items[at1006]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="mm[Hg]">mm[Hg]</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Pulse pressure</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at1042]/data[at0003]/items[at1007]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at1042]/data[at0003]/items[at1007]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="mm[Hg]">mm[Hg]</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Clinical interpretation</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at1042]/data[at0003]/items[at1059]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at1042]/data[at0003]/items[at0033]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>state structure</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Position</label>
+                    <select name="/data[at0001]/events[at1042]/state[at0007]/items[at0008]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at1000">Standing</option>
+                      <option value="at1001">Sitting</option>
+                      <option value="at1002">Reclining</option>
+                      <option value="at1003">Lying</option>
+                      <option value="at1014">Lying with tilt to left</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Confounding factors</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at1042]/state[at0007]/items[at1052]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at1042]/state[at0007]/items[at1030]</label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Sleep status</label>
+                    <select name="/data[at0001]/events[at1042]/state[at0007]/items[at1043]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at1044">Awake</option>
+                      <option value="at1045">Sleeping</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Tilt</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at1042]/state[at0007]/items[at1005]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at1042]/state[at0007]/items[at1005]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="deg">deg</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Tree</label>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Cuff size</label>
+                <select name="/protocol[at0011]/items[at0013]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0015">Adult Thigh</option>
+                  <option value="at0016">Large Adult</option>
+                  <option value="at0017">Adult</option>
+                  <option value="at1008">Small Adult</option>
+                  <option value="at1009">Paediatric/Child</option>
+                  <option value="at1018">Infant</option>
+                  <option value="at1019">Neonatal</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Location of measurement</label>
+                <select name="/protocol[at0011]/items[at0014]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0025">Right arm</option>
+                  <option value="at0026">Left arm</option>
+                  <option value="at0027">Right thigh</option>
+                  <option value="at0028">Left thigh</option>
+                  <option value="at1020">Right wrist</option>
+                  <option value="at1021">Left wrist</option>
+                  <option value="at1026">Right ankle</option>
+                  <option value="at1031">Left ankle</option>
+                  <option value="at1032">Finger</option>
+                  <option value="at1051">Toe</option>
+                  <option value="at1056">Dorsum of foot</option>
+                  <option value="at1053">Intra-arterial</option>
+                </select>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0011]/items[at1057]</label>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Method</label>
+                <select name="/protocol[at0011]/items[at1035]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at1036">Auscultation</option>
+                  <option value="at1037">Palpation</option>
+                  <option value="at1039">Machine</option>
+                  <option value="at1040">Invasive</option>
+                </select>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0011]/items[at1025]</label>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0011]/items[at1058]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Body temperature</label>
+            <div class="HISTORY  form-item">
+              <label>History</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Temperature</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="Cel">Cel</option>
+                        <option value="[degF]">[degF]</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at0003]/data[at0001]/items[at0063]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>State</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Body exposure</label>
+                    <select name="/data[at0002]/events[at0003]/state[at0029]/items[at0030]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0031">Naked</option>
+                      <option value="at0032">Reduced clothing/bedding</option>
+                      <option value="at0033">Appropriate clothing/bedding</option>
+                      <option value="at0034">Increased clothing/bedding</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Day of menstrual cycle</label>
+                    <input type="number" class="DV_COUNT form-control" name="/data[at0002]/events[at0003]/state[at0029]/items[at0065]/value" />
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0002]/events[at0003]/state[at0029]/items[at0056]</label>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0002]/events[at0003]/state[at0029]/items[at0057]</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Protocol</label>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Location of measurement</label>
+                <select name="/protocol[at0020]/items[at0021]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0024">Axilla</option>
+                  <option value="at0061">Forehead</option>
+                  <option value="at0022">Mouth</option>
+                  <option value="at0043">Skin</option>
+                </select>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0020]/items[at0064]</label>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0020]/items[at0059]</label>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0020]/items[at0062]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Pulse/Heart beat</label>
+            <div class="HISTORY  form-item">
+              <label>history</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>structure</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Presence</label>
+                    <select name="/data[at0002]/events[at0003]/data[at0001]/items[at1005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at1024">Present</option>
+                      <option value="at1025">Not detected</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Rate</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="/min">/min</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Regularity</label>
+                    <select name="/data[at0002]/events[at0003]/data[at0001]/items[at0005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0006">Regular</option>
+                      <option value="at1028">Irregular</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Irregular type</label>
+                    <select name="/data[at0002]/events[at0003]/data[at0001]/items[at1055]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0007">Regularly Irregular</option>
+                      <option value="at0008">Irregularly Irregular</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Character</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at0003]/data[at0001]/items[at1030]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Clinical description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at0003]/data[at0001]/items[at1022]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <select name="/data[at0002]/events[at0003]/data[at0001]/items[at1023]/name/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at1057">Clinical interpretation</option>
+                      <option value="at1058">Rhythm</option>
+                    </select>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at0003]/data[at0001]/items[at1023]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at0003]/data[at0001]/items[at1059]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>List</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Position</label>
+                    <select name="/data[at0002]/events[at0003]/state[at0012]/items[at0013]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at1003">Standing/upright</option>
+                      <option value="at1001">Sitting</option>
+                      <option value="at1002">Reclining</option>
+                      <option value="at1000">Lying</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Confounding factors</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at0003]/state[at0012]/items[at1018]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0002]/events[at0003]/state[at0012]/items[at1017]</label>
+                  </div>
+                </div>
+              </div>
+              <div class="INTERVAL_EVENT  form-item">
+                <label>Maximum</label>
+                <select name="/data[at0002]/events[at1036]/math_function/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="144">maximum</option>
+                </select>
+                <div class="ITEM_TREE  form-item">
+                  <label>structure</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Presence</label>
+                    <select name="/data[at0002]/events[at1036]/data[at0001]/items[at1005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at1024">Present</option>
+                      <option value="at1025">Not detected</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Rate</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0002]/events[at1036]/data[at0001]/items[at0004]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0002]/events[at1036]/data[at0001]/items[at0004]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="/min">/min</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Regularity</label>
+                    <select name="/data[at0002]/events[at1036]/data[at0001]/items[at0005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0006">Regular</option>
+                      <option value="at1028">Irregular</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Irregular type</label>
+                    <select name="/data[at0002]/events[at1036]/data[at0001]/items[at1055]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0007">Regularly Irregular</option>
+                      <option value="at0008">Irregularly Irregular</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Character</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at1036]/data[at0001]/items[at1030]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Clinical description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at1036]/data[at0001]/items[at1022]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <select name="/data[at0002]/events[at1036]/data[at0001]/items[at1023]/name/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at1057">Clinical interpretation</option>
+                      <option value="at1058">Rhythm</option>
+                    </select>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at1036]/data[at0001]/items[at1023]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at1036]/data[at0001]/items[at1059]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>List</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Position</label>
+                    <select name="/data[at0002]/events[at1036]/state[at0012]/items[at0013]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at1003">Standing/upright</option>
+                      <option value="at1001">Sitting</option>
+                      <option value="at1002">Reclining</option>
+                      <option value="at1000">Lying</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Confounding factors</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0002]/events[at1036]/state[at0012]/items[at1018]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0002]/events[at1036]/state[at0012]/items[at1017]</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>List</label>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Method</label>
+                <select name="/protocol[at0010]/items[at1019]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at1032">Palpation</option>
+                  <option value="at1033">Auscultation</option>
+                  <option value="at1034">Automatic, non-invasive</option>
+                  <option value="at1050">Automatic, invasive</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Body site</label>
+                <select name="/protocol[at0010]/items[at1037]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at1038">Radial Artery - Left</option>
+                  <option value="at1039">Radial Artery - Right</option>
+                  <option value="at1040">Heart</option>
+                  <option value="at1041">Carotid Artery - Left</option>
+                  <option value="at1042">Carotid Artery - Right</option>
+                  <option value="at1043">Femoral Artery - Left</option>
+                  <option value="at1044">Femoral Artery - Right</option>
+                  <option value="at1049">Brachial artery - Right</option>
+                  <option value="at1048">Brachial artery - Left</option>
+                  <option value="at1047">Finger</option>
+                  <option value="at1054">Toe</option>
+                  <option value="at1051">Ear lobe</option>
+                </select>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0010]/items[at1013]</label>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0010]/items[at1056]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Respiration</label>
+            <div class="HISTORY  form-item">
+              <label>history</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>List</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Presence</label>
+                    <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0062]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0063">Present</option>
+                      <option value="at0064">Not detected</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Rate</label>
+                    <div class="col-md-5">
+                      <input type="number" name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value/magnitude" class="DV_QUANTITY form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value/units" class="DV_QUANTITY form-control">
+                        <option value=""></option>
+                        <option value="/min">/min</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Regularity</label>
+                    <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0006">Regular</option>
+                      <option value="at0007">Irregular</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Depth</label>
+                    <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0016]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0017">Normal</option>
+                      <option value="at0018">Shallow</option>
+                      <option value="at0019">Deep</option>
+                      <option value="at0025">Variable</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Clinical description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0024]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Clinical interpretation</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0070]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>List</label>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/state[at0022]/items[at0055]</label>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/state[at0022]/items[at0037]</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Tree</label>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0057]/items[at0058]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Pulse oximetry</label>
+            <div class="HISTORY  form-item">
+              <label>Event Series</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">SpO₂</label>
+                    <label>numerator
+                      <input type="number" name="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/value/numerator" class="small DV_PROPORTION form-control" />
+                    </label>
+                    <label>denominator
+                      <input type="number" name="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/value/denominator" class="small DV_PROPORTION form-control" />
+                    </label>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/data[at0003]/items[at0054]</label>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/data[at0003]/items[at0060]</label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Interpretation</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0058]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Comment</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0036]/value"></texarea>
+                  </div>
+                </div>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="CLUSTER  form-item">
+                    <label>Level of exertion</label>
+                    <div class="CLUSTER  form-item">
+                      <label>Exercise intensity</label>
+                      <div class="ELEMENT form-group row form-item">
+                        <label class="col-md-2 col-form-label">Description</label>
+                        <texarea class="DV_TEXT form-control" name="/items[at0010]/items[at0016]/value"></texarea>
+                      </div>
+                      <div class="ELEMENT form-group row form-item">
+                        <label class="col-md-2 col-form-label">Intensity</label>
+                        <select name="/items[at0010]/items[at0011]/value/defining_code" class="DV_CODED_TEXT form-control">
+                          <option value=""></option>
+                          <option value="at0012">Low Intensity</option>
+                          <option value="at0013">Medium Intensity</option>
+                          <option value="at0014">High Intensity</option>
+                          <option value="at0015">Flat Out</option>
+                        </select>
+                      </div>
+                      <div class="ELEMENT form-group row form-item">
+                        <label class="col-md-2 col-form-label">Measured</label>
+                        <div class="col-md-5">
+                          <input type="number" name="/items[at0010]/items[at0005]/value/magnitude" class="DV_QUANTITY form-control" />
+                        </div>
+                        <div class="col-md-5">
+                          <select name="/items[at0010]/items[at0005]/value/units" class="DV_QUANTITY form-control">
+                            <option value=""></option>
+                            <option value="J/min">J/min</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Phase</label>
+                      <select name="/items[at0009]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0006">At rest</option>
+                        <option value="at0007">During exertion</option>
+                        <option value="at0008">Post-exertion</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/state[at0014]/items[at0015]</label>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Confounding factors</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/state[at0014]/items[at0016]/value"></texarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>List</label>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Sensor site</label>
+                <texarea class="DV_TEXT form-control" name="/protocol[at0007]/items[at0009]/value"></texarea>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Pre/post-ductal</label>
+                <select name="/protocol[at0007]/items[at0061]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0062">Pre-ductal</option>
+                  <option value="at0063">Post-ductal</option>
+                  <option value="at0064">Indeterminate</option>
+                </select>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0007]/items[at0018]</label>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0007]/items[at0059]</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="EVALUATION  form-item">
+          <label>Differential diagnoses</label>
+          <div class="ITEM_TREE  form-item">
+            <label>Tree</label>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Overall description</label>
+              <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0002]/value"></texarea>
+            </div>
+            <div class="CLUSTER  form-item">
+              <label>Per differential</label>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Diagnosis name</label>
+                <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0003]/items[at0004]/value"></texarea>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Status</label>
+                <select name="/data[at0001]/items[at0003]/items[at0005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                  <option value=""></option>
+                  <option value="at0006">Possible</option>
+                  <option value="at0007">Accepted</option>
+                  <option value="at0008">Excluded</option>
+                </select>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Rationale</label>
+                <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0003]/items[at0009]/value"></texarea>
+              </div>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/items[at0003]/items[at0010]</label>
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Order</label>
+                <input type="number" class="DV_COUNT form-control" name="/data[at0001]/items[at0003]/items[at0011]/value" />
+              </div>
+              <div class="ELEMENT form-group row form-item">
+                <label class="col-md-2 col-form-label">Comment</label>
+                <texarea class="DV_TEXT form-control" name="/data[at0001]/items[at0003]/items[at0012]/value"></texarea>
+              </div>
+            </div>
+          </div>
+          <div class="ITEM_TREE  form-item">
+            <label>Item tree</label>
+            <div class="CLUSTER  form-item">
+              <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0013]/items[at0014]</label>
+            </div>
+            <div class="ELEMENT form-group row form-item">
+              <label class="col-md-2 col-form-label">Last updated</label>
+              <input type="datetime-local" name="/protocol[at0013]/items[at0015]/value" class="DV_DATE_TIME form-control" />
+            </div>
+          </div>
+        </div>
+        <div class="SECTION  form-item">
+          <label>Sign/Symptoms</label>
+          <div class="OBSERVATION  form-item">
+            <label>Progress note</label>
+            <div class="HISTORY  form-item">
+              <label>Event Series</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Progress Note</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value"></texarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Tree</label>
+              <div class="CLUSTER  form-item">
+                <label>Problem/Diagnosis qualifier</label>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Diagnostic status</label>
+                  <select name="/items[at0004]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0016">Preliminary</option>
+                    <option value="at0017">Working</option>
+                    <option value="at0018">Established</option>
+                    <option value="at0088">Refuted</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Current/Past?</label>
+                  <select name="/items[at0060]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0062">Current</option>
+                    <option value="at0061">Past</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Active/Inactive?</label>
+                  <select name="/items[at0003]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0026">Active</option>
+                    <option value="at0027">Inactive</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Level of control</label>
+                  <select name="/items[at0098]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0099">Controlled</option>
+                    <option value="at0100">Indeterminate</option>
+                    <option value="at0101">Not controlled</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Progression</label>
+                  <select name="/items[at0102]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0103">Improving</option>
+                    <option value="at0104">Stable</option>
+                    <option value="at0105">Worsening</option>
+                    <option value="at0106">Indeterminate</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Resolution phase</label>
+                  <select name="/items[at0083]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0086">Not resolving</option>
+                    <option value="at0085">Resolving</option>
+                    <option value="at0084">Resolved</option>
+                    <option value="at0087">Indeterminate</option>
+                    <option value="at0097">Relapsed</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Remission status</label>
+                  <select name="/items[at0089]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0090">In remission</option>
+                    <option value="at0092">Not in remission</option>
+                    <option value="at0093">Indeterminate</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Episodicity</label>
+                  <select name="/items[at0001]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0034">New</option>
+                    <option value="at0035">Ongoing</option>
+                    <option value="at0070">Indeterminate</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Reason for an ongoing episode</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0107]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Occurrence</label>
+                  <select name="/items[at0071]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0095">First occurrence</option>
+                    <option value="at0096">Recurrence</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Course label</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0077]/value"></texarea>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Diagnostic category</label>
+                  <select name="/items[at0063]/value/defining_code" class="DV_CODED_TEXT form-control">
+                    <option value=""></option>
+                    <option value="at0064">Principal diagnosis</option>
+                    <option value="at0066">Secondary diagnosis</option>
+                    <option value="at0076">Complication</option>
+                  </select>
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Admission diagnosis?</label>
+                  <input type="checkbox" name="/items[at0073]/value" class="DV_BOOLEAN" />
+                </div>
+                <div class="ELEMENT form-group row form-item">
+                  <label class="col-md-2 col-form-label">Comment</label>
+                  <texarea class="DV_TEXT form-control" name="/items[at0110]/value"></texarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <texarea class="DV_TEXT form-control" name="/name"></texarea>
+        </div>
+        <div class="SECTION  form-item">
+          <label>Sign/Symptoms</label>
+          <div class="OBSERVATION  form-item">
+            <label>Social context screening questionnaire</label>
+            <div class="HISTORY  form-item">
+              <label>History</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Screening purpose</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0034]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Specific social context</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Context</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0022]/items[at0004]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Presence?</label>
+                      <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0022]/items[at0005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0023">Yes</option>
+                        <option value="at0024">No</option>
+                        <option value="at0027">Unknown</option>
+                      </select>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/data[at0003]/items[at0022]/items[at0026]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0022]/items[at0025]/value"></texarea>
+                    </div>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/data[at0003]/items[at0044]</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Item tree</label>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0007]/items[at0021]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Family history screening questionnaire</label>
+            <div class="HISTORY  form-item">
+              <label>History</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Screening purpose</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Any presence?</label>
+                    <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0006">Yes</option>
+                      <option value="at0007">No</option>
+                      <option value="at0008">Unknown</option>
+                    </select>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Specific family health problem</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Problem/diagnosis name</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0035]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Present?</label>
+                      <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0010]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0011">Yes</option>
+                        <option value="at0012">No</option>
+                        <option value="at0013">Unknown</option>
+                      </select>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Relationship</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0018]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Age at diagnosis</label>
+                      <label>D
+                        <input type="number" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0037]/value/D" class="small DV_DURATION form-control" />
+                      </label>
+                      <label>H
+                        <input type="number" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0037]/value/H" class="small DV_DURATION form-control" />
+                      </label>
+                      <label>M
+                        <input type="number" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0037]/value/M" class="small DV_DURATION form-control" />
+                      </label>
+                      <label>S
+                        <input type="number" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0037]/value/S" class="small DV_DURATION form-control" />
+                      </label>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0036]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0028]/value"></texarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Item tree</label>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0021]/items[at0029]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Medication screening questionnaire</label>
+            <div class="HISTORY  form-item">
+              <label>Event Series</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Screening purpose</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0022]/events[at0023]/data[at0001]/items[at0040]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Any medications used?</label>
+                    <select name="/data[at0022]/events[at0023]/data[at0001]/items[at0027]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0028">Yes</option>
+                      <option value="at0029">No</option>
+                      <option value="at0030">Unknown</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0022]/events[at0023]/data[at0001]/items[at0043]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Specific medication</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Medication name</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0021]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Specific medication used?</label>
+                      <select name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0024]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0036">Yes</option>
+                        <option value="at0037">No</option>
+                        <option value="at0039">Unknown</option>
+                      </select>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Latest dose</label>
+                      <input type="datetime-local" name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0003]/value" class="DV_DATE_TIME form-control" />
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Timing</label>
+                      <label>D
+                        <input type="number" name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0002]/value/D" class="small DV_DURATION form-control" />
+                      </label>
+                      <label>H
+                        <input type="number" name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0002]/value/H" class="small DV_DURATION form-control" />
+                      </label>
+                      <label>M
+                        <input type="number" name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0002]/value/M" class="small DV_DURATION form-control" />
+                      </label>
+                      <label>S
+                        <input type="number" name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0002]/value/S" class="small DV_DURATION form-control" />
+                      </label>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0041]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0025]/value"></texarea>
+                    </div>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0022]/events[at0023]/data[at0001]/items[at0042]</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Tree</label>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0005]/items[at0019]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Procedure screening questionnaire</label>
+            <div class="HISTORY  form-item">
+              <label>History</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Screening purpose</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0034]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Any previous procedures?</label>
+                    <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0028]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0031">Yes</option>
+                      <option value="at0032">No</option>
+                      <option value="at0038">Unknown</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0041]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Specific procedure</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Procedure name</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0022]/items[at0004]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Past procedure?</label>
+                      <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0022]/items[at0005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0023">Yes</option>
+                        <option value="at0024">No</option>
+                        <option value="at0039">Unknown</option>
+                      </select>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Timing</label>
+                      <input type="datetime-local" name="/data[at0001]/events[at0002]/data[at0003]/items[at0022]/items[at0037]/value" class="DV_DATE_TIME form-control" />
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/data[at0003]/items[at0022]/items[at0036]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0022]/items[at0025]/value"></texarea>
+                    </div>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/data[at0003]/items[at0040]</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Item tree</label>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0007]/items[at0021]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Diagnostic investigation screening questionnaire</label>
+            <div class="HISTORY  form-item">
+              <label>Event Series</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Screening purpose</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0022]/events[at0023]/data[at0001]/items[at0040]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Any tests?</label>
+                    <select name="/data[at0022]/events[at0023]/data[at0001]/items[at0027]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0028">Yes</option>
+                      <option value="at0029">No</option>
+                      <option value="at0030">Unknown</option>
+                    </select>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Description</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0022]/events[at0023]/data[at0001]/items[at0043]/value"></texarea>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Specific investigation</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Test name</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0021]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Carried out?</label>
+                      <select name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0024]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0036">Yes</option>
+                        <option value="at0037">No</option>
+                        <option value="at0039">Unknown</option>
+                      </select>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Date</label>
+                      <input type="datetime-local" name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0003]/value" class="DV_DATE_TIME form-control" />
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Result</label>
+                      <select name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0002]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0044">Positive</option>
+                        <option value="at0045">Negative</option>
+                      </select>
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0041]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0025]/value"></texarea>
+                    </div>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0022]/events[at0023]/data[at0001]/items[at0042]</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Tree</label>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0005]/items[at0019]</label>
+              </div>
+            </div>
+          </div>
+          <div class="OBSERVATION  form-item">
+            <label>Exposure screening questionnaire</label>
+            <div class="HISTORY  form-item">
+              <label>History</label>
+              <div class="EVENT  form-item">
+                <label>Any event</label>
+                <div class="ITEM_TREE  form-item">
+                  <label>Item tree</label>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Screening purpose</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Name of agent</label>
+                    <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/value"></texarea>
+                  </div>
+                  <div class="ELEMENT form-group row form-item">
+                    <label class="col-md-2 col-form-label">Any exposure?</label>
+                    <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/value/defining_code" class="DV_CODED_TEXT form-control">
+                      <option value=""></option>
+                      <option value="at0006">Yes</option>
+                      <option value="at0007">No</option>
+                      <option value="at0008">Unknown</option>
+                    </select>
+                  </div>
+                  <div class="CLUSTER  form-item">
+                    <label>Specific exposure</label>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Event name</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0010]/value"></texarea>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Potential exposure?</label>
+                      <select name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0011]/value/defining_code" class="DV_CODED_TEXT form-control">
+                        <option value=""></option>
+                        <option value="at0012">Yes</option>
+                        <option value="at0013">No</option>
+                        <option value="at0014">Unknown</option>
+                      </select>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Timing</label>
+                      <input type="datetime-local" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0015]/value" class="DV_DATE_TIME form-control" />
+                    </div>
+                    <div class="CLUSTER  form-item">
+                      <label>ARCHETYPE_SLOT is not supported yet, found at /data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0016]</label>
+                    </div>
+                    <div class="ELEMENT form-group row form-item">
+                      <label class="col-md-2 col-form-label">Comment</label>
+                      <texarea class="DV_TEXT form-control" name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0017]/value"></texarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ITEM_TREE  form-item">
+              <label>Item tree</label>
+              <div class="CLUSTER  form-item">
+                <label>ARCHETYPE_SLOT is not supported yet, found at /protocol[at0018]/items[at0019]</label>
+              </div>
+            </div>
+          </div>
+          <texarea class="DV_TEXT form-control" name="/name"></texarea>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

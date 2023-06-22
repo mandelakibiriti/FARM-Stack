@@ -1,0 +1,13 @@
+.form-body {
+    width: 900px;
+    margin: auto;
+}
+
+texarea.DV_TEXT.form-control {
+    padding: 1rem 0.75rem;
+}
+
+label.col-md-2.col-form-label{
+    flex: 0 0 100%;
+    max-width: 100%
+}
