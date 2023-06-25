@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from .config import Settings as settings
-from .routers import api,db, fhir
+from .routers import api,db
 
 app = FastAPI()
 
