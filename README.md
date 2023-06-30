@@ -203,6 +203,10 @@ For ISR allows you to create or update static pages after you’ve built your si
         }
     })
 ```
+
+## Working with FHIR
+For more information on how to work with FHIR find out more [here](https://scribehow.com/page/FHIR_Implementation__VOFdemXsQvin_U3XZ52D6g)
+
 FARM Stack Sources:
 1. [FARM Stack FreeCodeCamp](https://www.youtube.com/watch?v=OzUzrs8uJl8)
 
