@@ -5,6 +5,7 @@ from .config import Settings as settings
 from .routers import api,db
 
 app = FastAPI()
+mongodb_client = AsyncIOMotorClient(settings.DB_URI)
 
 origins = ['http://localhost:3000']
 app.add_middleware(
@@ -17,12 +18,11 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup_db_client():
-    app.mongodb_client = AsyncIOMotorClient(settings.DB_URI)
-    app.mongodb = app.mongodb_client[settings.DB_NAME]
+    mongodb_client[settings.DB_NAME]
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
-    app.mongodb_client.close()
+    mongodb_client.close()
 
 app.include_router(api.router)
 app.include_router(db.router)

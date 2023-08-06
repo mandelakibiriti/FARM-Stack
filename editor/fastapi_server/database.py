@@ -122,8 +122,8 @@ async def fetch_all_symptom():
     return symptoms
 
 # Create a single entry
-async def add_symptom(dx:dict) -> dict:
-    document = await symptoms_collection.insert_one(dx)
+async def add_symptom(symptom : dict) -> dict:
+    document = await symptoms_collection.insert_one(symptom)
     new_symptom_document = await symptoms_collection.find_one({"_id":document.inserted_id})
     return symptoms_helper(new_symptom_document)
 

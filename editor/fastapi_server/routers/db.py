@@ -19,6 +19,8 @@ from ..schemas import (
     UpdateSymptom
 )
 
+#TODO: Update symptoms and diseases based on ID
+
 #-------------------------------------------------------------------------------------
 # DIAGNOSES
 #-------------------------------------------------------------------------------------
@@ -51,16 +53,16 @@ async def delete_dx(id):
 #-------------------------------------------------------------------------------------
 @router.post("/api/symptom", response_model=Symptom, response_description="create a new symptom")
 async def create_symptom(symptom:Symptom = Body(...)):
-    symptom = jsonable_encoder(symptom)
-    response = await add_symptom(symptom)
+    symptom_details = jsonable_encoder(symptom)
+    response = await add_symptom(symptom_details)
     if response:
         return response
     raise HTTPException(400, "Something went wrong / Bad request")
 
 @router.put("/api/symptom/{nameStdSymptom}", response_model=Symptom, response_description="updating an existing symptom")
 async def update_symptom(nameStdSymptom: str, req: UpdateSymptom = Body(...)):
-    req = {k:v for k,v in req.dict().items() if v is not None}
-    update_symptom_data = await change_symptom(nameStdSymptom,req)
+    symptom = {k:v for k,v in req.dict().items() if v is not None} 
+    update_symptom_data = await change_symptom(nameStdSymptom,symptom)
     if update_symptom_data:
         return update_symptom_data
     raise HTTPException(404, f"Error occurred when updating symptom data")

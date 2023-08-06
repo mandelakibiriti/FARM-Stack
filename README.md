@@ -44,6 +44,14 @@ Create and connect the Mongo Database using the [motor driver](https://www.mongo
 
 Since [Database authentication](https://www.mongodb.com/features/mongodb-authentication) is required you can create the authentication as part of the database using the admin name using `mongosh` in the terminal as shown below.
 
+#### Note on Ubuntu installation
+- For setting up Mongo can be [buggy due to permission settings](https://askubuntu.com/questions/823288/mongodb-loads-but-breaks-returning-status-14) may be wrong which can result in the mongod service from failing. A fix can be found below:
+```bash
+$ sudo chown -R mongodb:mongodb /var/lib/mongodb
+$ sudo chown mongodb:mongodb /tmp/mongodb-27017.sock
+$ sudo service mongod restart
+``` 
+
 - Connect to the database
 ```bash
 $ mongosh "mongodb://localhost:27017"
@@ -51,7 +59,7 @@ $ mongosh "mongodb://localhost:27017"
 - Create a user account and role after connecting to the localhost instance of MongoDb
 ```bash
 > USE test - or name of the user you want
-test > db.createUser({user: "admin", pwd: "password%40mymongo", roles: [{role: "userAdminAnyDatabase", db:"admin"}]})
+test > db.createUser({user: "admin", pwd: "password%40mymongo", roles: [{role: "userAdminAnyDatabase", db:"admin"}]});
 { ok: 1 }
 test > show users;
 [
@@ -67,7 +75,7 @@ test > show users;
 ```
 Confirm roles of the `test` as type admin user with `show roles;` command. You can also confirm creation of the user in `mongosh`:
 ```bash
-db.getUsers({showCredentials: true})
+test > db.getUsers({showCredentials: true})
 ```
 
 - Add url to the FastAPI .env file to indicate the new user added:
