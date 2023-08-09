@@ -56,11 +56,11 @@ export default function DiagnosisDetailsForm() {
     return(
         <div>
             <nav className="fixed shadow-lg w-full bg-white navbar">
-                <div className="flex flex-wrap space-x-6 p-4">
+                <div className="flex flex-wrap space-x-6 p-5">
                     <button 
                         form="dxForm"
                         type="submit"
-                        className="mr-1 px-4 py-2 font-bold text-white bg-indigo-900 rounded-full hover:bg-blue-800 focus:outline-none focus:shadow-outline"
+                        className="ml-2 px-4 py-2 text-white bg-indigo-900 rounded-full hover:bg-blue-800 focus:outline-none focus:shadow-outline"
                     >
                         { loading ?  "Add Diagnosis" :  <Loading/>  }           
                     </button>

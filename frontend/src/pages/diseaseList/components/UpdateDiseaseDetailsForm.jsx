@@ -1,12 +1,14 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import Loading from "@/components/Loading"
+import DashboardLayout from "@/components/Layouts/DashboardLayout"
+import { MdSportsMartialArts } from "react-icons/md"
 
 export default function DiagnosisDetailsForm({ dxData }) {
     // Date Handler
     const createDate = new Date(dxData.createDate)
     const lastUpdateDate = new Date(dxData.updateDate)
-    const updateDate = new Date()
+    const updateDate = new Date();
     const id = dxData._id
 
     // React Hook Form
@@ -44,19 +46,19 @@ export default function DiagnosisDetailsForm({ dxData }) {
     return(
         <div>
             <nav className="fixed shadow-lg w-full bg-white navbar">
-                <div className="flex flex-wrap space-x-6 p-4">
+                <div className="flex flex-wrap space-x-6 p-5">
                     <button 
                         form="dxForm"
                         type="submit"
                         onClick={()=>{
                             setLoading(false);
                         }}
-                        className="mr-1 px-4 py-2 font-bold text-white bg-indigo-900 rounded-full hover:bg-blue-800 focus:outline-none focus:shadow-outline"
+                        className="px-5 py-2 text-white bg-indigo-900 rounded-full hover:bg-blue-800"
                     >
                         { loading ?  "Update" :  <Loading/>  }                
                     </button>
                     <div className="grid grid-cols-3 divide-x">
-                        <span className="px-4 py-2.5 text-indigo-900 font-bold ">{dxData.nameStd}</span>
+                        <span className="px-4 py-2.5 text-indigo-900">{dxData.nameStd}</span>
                         
                             {
                                 dxData.publish ?
@@ -72,11 +74,15 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             }
                     </div>
           
-                    <div className="flex flex-wrap justify-around py-2.5 text-sm font-medium text-gray-900 dark:text-black font-medium">
+                    <div className="flex flex-wrap justify-around py-2.5 text-sm font-medium text-gray-900 font-medium">
                         <p className="mr-2">updated</p>
-                        <span className="border-l-2 pl-2">
-                            {lastUpdateDate.toString()}
+                        <span className="border-l-2 pl-2 flex">
+                            {lastUpdateDate.toDateString()}
+                            <p className="ml-2 text-gray-500"> 
+                            {lastUpdateDate.toLocaleTimeString()}
+                            </p>
                         </span>
+
                     </div>
 
                 </div>
@@ -87,7 +93,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                 key={dxData._id}>
                     <div className="grid gap-4 p-4"> 
                         <div className="grid gap-3 mb-6 p-4 rounded-lg">
-                            <label htmlFor="nameStd" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">nameStd</label>
+                            <label htmlFor="nameStd" className="block mb-2 text-sm font-medium text-gray-900">nameStd</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.nameStd}
@@ -97,7 +103,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
 
-                            <label htmlFor="icd10" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">icd10</label>
+                            <label htmlFor="icd10" className="block mb-2 text-sm font-medium text-gray-900">icd10</label>
                             <input 
                                 type="text"     
                                 defaultValue={dxData.icd10}
@@ -109,7 +115,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >    
                             </input>
                             
-                            <label htmlFor="diagnosisId" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">diagnosisId</label>
+                            <label htmlFor="diagnosisId" className="block mb-2 text-sm font-medium text-gray-900">diagnosisId</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.diagnosisId}
@@ -119,7 +125,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
                             
-                            <label htmlFor="diseaseClass" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">diseaseClass</label>
+                            <label htmlFor="diseaseClass" className="block mb-2 text-sm font-medium text-gray-900">diseaseClass</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.diseaseClass}
@@ -129,7 +135,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
                             
-                            <label htmlFor="definition" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">definition</label>
+                            <label htmlFor="definition" className="block mb-2 text-sm font-medium text-gray-900">definition</label>
                             <textarea 
                                 type="text" 
                                 defaultValue={dxData.definition}
@@ -139,7 +145,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </textarea>
                             
-                            <label htmlFor="background" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">background</label>
+                            <label htmlFor="background" className="block mb-2 text-sm font-medium text-gray-900">background</label>
                             <textarea 
                                 type="text" 
                                 defaultValue={dxData.background}
@@ -149,7 +155,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </textarea>
 
-                            <label htmlFor="etiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">etiology</label>
+                            <label htmlFor="etiology" className="block mb-2 text-sm font-medium text-gray-900">etiology</label>
                             <textarea 
                                 type="text" 
                                 defaultValue={dxData.etiology}
@@ -159,7 +165,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </textarea>
                             
-                            <label htmlFor="epidemiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">epidemiology</label>
+                            <label htmlFor="epidemiology" className="block mb-2 text-sm font-medium text-gray-900">epidemiology</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.epidemiology}
@@ -169,7 +175,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
                             
-                            <label htmlFor="pathophysiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">pathophysiology</label>
+                            <label htmlFor="pathophysiology" className="block mb-2 text-sm font-medium text-gray-900">pathophysiology</label>
                             <textarea 
                                 type="text" 
                                 defaultValue={dxData.pathophysiology}
@@ -179,7 +185,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </textarea>
                             
-                            <label htmlFor="workup" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">workup</label>
+                            <label htmlFor="workup" className="block mb-2 text-sm font-medium text-gray-900">workup</label>
                             <textarea 
                                 type="text" 
                                 defaultValue={dxData.workup}
@@ -189,7 +195,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </textarea>
 
-                            <label htmlFor="examinations" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">examinations</label>
+                            <label htmlFor="examinations" className="block mb-2 text-sm font-medium text-gray-900">examinations</label>
                             <textarea 
                                 type="text" 
                                 defaultValue={dxData.examinations}
@@ -199,7 +205,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </textarea>
 
-                            <label htmlFor="vitalStatus" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">vitalStatus</label>
+                            <label htmlFor="vitalStatus" className="block mb-2 text-sm font-medium text-gray-900">vitalStatus</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.vitalStatus}
@@ -209,7 +215,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
 
-                            <label htmlFor="laboratoryTest" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">laboratoryTest</label>
+                            <label htmlFor="laboratoryTest" className="block mb-2 text-sm font-medium text-gray-900">laboratoryTest</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.laboratoryTest}
@@ -224,7 +230,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             This will render a read-only field. If the field should be mutable use `defaultChecked`. 
                             Otherwise, set either `onChange` or `readOnly`. */}
                             <fieldset className="mt-1 block mb-2">
-                                <legend className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-200 pb-2 font-medium">Chronicity Status</legend>
+                                <legend className="block mb-2 text-sm font-medium text-gray-900 border-b border-slate-200 pb-2 font-medium">Chronicity Status</legend>
 
                                 <input 
                                     type="checkbox" 
@@ -252,7 +258,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
 
                             </fieldset>
                             
-                            <label htmlFor="pharmacologicalTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">pharmacologicalTreatments</label>
+                            <label htmlFor="pharmacologicalTreatments" className="block mb-2 text-sm font-medium text-gray-900">pharmacologicalTreatments</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.pharmacologicalTreatments}
@@ -262,7 +268,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
 
-                            <label htmlFor="interventionalTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">interventionalTreatments</label>
+                            <label htmlFor="interventionalTreatments" className="block mb-2 text-sm font-medium text-gray-900">interventionalTreatments</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.interventionalTreatments}
@@ -272,7 +278,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
 
-                            <label htmlFor="lifestyleTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">lifestyleTreatments</label>
+                            <label htmlFor="lifestyleTreatments" className="block mb-2 text-sm font-medium text-gray-900">lifestyleTreatments</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.lifestyleTreatments}
@@ -282,7 +288,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
 
-                            <label htmlFor="prevention" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">prevention</label>
+                            <label htmlFor="prevention" className="block mb-2 text-sm font-medium text-gray-900">prevention</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.prevention}
@@ -292,7 +298,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
 
-                            <label htmlFor="differentialDx" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">differentialDx</label>
+                            <label htmlFor="differentialDx" className="block mb-2 text-sm font-medium text-gray-900">differentialDx</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.differentialDx}
@@ -302,7 +308,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
 
-                            <label htmlFor="coMorbidities" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">coMorbidities</label>
+                            <label htmlFor="coMorbidities" className="block mb-2 text-sm font-medium text-gray-900">coMorbidities</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.coMorbidities}
@@ -312,7 +318,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
                             
-                            <label htmlFor="patientInfo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">patientInfo</label>
+                            <label htmlFor="patientInfo" className="block mb-2 text-sm font-medium text-gray-900">patientInfo</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.patientInfo}
@@ -322,7 +328,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
 
-                            <label htmlFor="references" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">references</label>
+                            <label htmlFor="references" className="block mb-2 text-sm font-medium text-gray-900">references</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.references}
@@ -332,7 +338,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             >
                             </input>
 
-                            <label htmlFor="citations" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">citations</label>
+                            <label htmlFor="citations" className="block mb-2 text-sm font-medium text-gray-900">citations</label>
                             <input 
                                 type="text" 
                                 defaultValue={dxData.citations}
@@ -346,7 +352,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                             This will render a read-only field. If the field should be mutable use `defaultChecked`. 
                             Otherwise, set either `onChange` or `readOnly`. */}
                             <fieldset className="mt-1 block mb-2">
-                                <legend className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-200 pb-2 font-medium">published status</legend>
+                                <legend className="block mb-2 text-sm font-medium text-gray-900 border-b border-slate-200 pb-2 font-medium">published status</legend>
 
                                 <input 
                                     id="draft" 
@@ -369,9 +375,10 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 <label htmlFor="published" className="peer-checked/published:text-sky-500 text-sm font-medium">Published</label>
                             </fieldset>
    
-                            <p className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-200 pb-2 font-medium">date created</p>
-                            <span className="mb-2 text-sm font-medium text-gray-900 dark:text-black pb-2 font-medium">
-                                {createDate.toString()}
+                            <p className="block mb-2 text-sm font-medium text-gray-900 border-b border-slate-200 pb-2 font-medium">date created</p>
+                            <span className="flex mb-2 text-sm font-medium text-gray-900 pb-2 font-medium">
+                                {createDate.toDateString()}
+                                <span className="ml-2">{createDate.toLocaleTimeString()}</span>
                             </span>
                         </div>
                     </div>

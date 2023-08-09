@@ -2,8 +2,8 @@ import DashboardLayout from "../../components/Layouts/DashboardLayout"
 
 export default function Dashboard() {
     return (
-        <div>
-            Dashboard
+        <div className="p-5">
+            <span>Dashboard Page</span>
         </div>
     )
 }

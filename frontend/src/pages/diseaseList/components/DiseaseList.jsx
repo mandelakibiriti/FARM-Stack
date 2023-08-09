@@ -20,7 +20,7 @@ export default function DiseaseList({dxTitle}) {
 
     return (
         <div>
-            <div className="gap-4 p-2">
+            <div className="gap-4 p-5">
                 <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                 <div className="relative">
                     <input onChange={handleChange} type="search" id="default-search" className="block w-full p-4 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Search by diagnosis name">
@@ -46,7 +46,7 @@ export default function DiseaseList({dxTitle}) {
             { dxTitle.props.filter((item) => { // Search Function
                 return search.toLowerCase() === '' ? item : item.nameStd.toLowerCase().includes(search)
             }).map((dx) =>(        
-                <div className="gap-4 p-2 group" key={dx._id}> 
+                <div className="gap-4 p-5 group" key={dx._id}> 
 
                     <div className="flex justify-between bg-white p-4 rounded-lg hover:bg-slate-50">
                         

@@ -224,7 +224,8 @@ FARM Stack Sources:
 3. [Docker](https://www.youtube.com/watch?v=gAkwW2tuIqE)
 4. [FastAPI Mongo](https://testdriven.io/blog/fastapi-mongo/)
 5. [Environment Variables](https://www.youtube.com/watch?v=A1OA0Y9vwJY)
-5. [How to build with React](https://www.freecodecamp.org/news/how-to-build-a-react-app-different-ways/#how-react-works-under-the-hood)
+6. [How to build with React](https://www.freecodecamp.org/news/how-to-build-a-react-app-different-ways/#how-react-works-under-the-hood)
+7. [Data and Time in Javascript](https://www.digitalocean.com/community/tutorials/js-date-object)
 
 FHIR Sources
 1. [HAPI FHIR Open Server Endpoint](https://hapi.fhir.org/baseDstu3/swagger-ui/?page=Condition#/Condition/get_Condition__history)
