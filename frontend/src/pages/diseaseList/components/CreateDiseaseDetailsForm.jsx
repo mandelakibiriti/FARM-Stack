@@ -1,7 +1,8 @@
-import { useState } from "react"
-import { useForm } from "react-hook-form"
-import { useRouter } from "next/router"
-import Loading from "@/components/Loading"
+import Link from "next/link";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/router";
+import Loading from "@/components/Loading";
 
 export default function DiagnosisDetailsForm() {
     // Router
@@ -55,8 +56,8 @@ export default function DiagnosisDetailsForm() {
  
     return(
         <div>
-            <nav className="fixed shadow-lg w-full bg-white navbar">
-                <div className="flex flex-wrap space-x-6 p-5">
+            <nav className="fixed shadow-lg w-full bg-white">
+                <div className="flex justify-end mr-20 p-5 gap-x-4">
                     <button 
                         form="dxForm"
                         type="submit"
@@ -64,6 +65,12 @@ export default function DiagnosisDetailsForm() {
                     >
                         { loading ?  "Add Diagnosis" :  <Loading/>  }           
                     </button>
+
+                    <Link href={'/diseaseList'}>
+                        <button className="px-4 py-2 text-white bg-rose-600 rounded-full hover:bg-rose-800 focus:outline-none focus:shadow-outline">
+                            Cancel 
+                        </button>
+                    </Link>     
           
                 </div>
             </nav>
@@ -141,7 +148,7 @@ export default function DiagnosisDetailsForm() {
                             <textarea 
                                 type="text" 
                                 {...register("background", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3 pl-[10]" 
+                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
                                 placeholder="Brief pathophysiology description ie. diagnosis caused by this...results in symptoms that..." 
                             >
                             </textarea>

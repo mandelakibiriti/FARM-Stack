@@ -72,7 +72,7 @@ function Sidebar ({children}) {
 
                     <ul className="pt-2">
                         {menu.map((item, index) => (
-                            <li key={index} className={`text-white cursor-pointer ${item.spacing ? "absolute bottom-0": "mt-2"}`}>
+                            <li key={index} className={`text-white ${item.spacing ? "absolute bottom-0": "mt-2"}`}>
                                 <div className="flex p-2 mb-4 mt-2 gap-x-4 hover:bg-gray-200 hover:text-indigo-900 rounded-lg" onClick={() => item.submenu ? onClickSubMenu(index): undefined}>
                                     <span className="text-2xl block float-left">
                                        {item.icon}
@@ -90,21 +90,19 @@ function Sidebar ({children}) {
                                 {item.visible && (
                                     <ul>
                                         {item.submenuItems.map((subitem,index) => (
-                                            <Link href={subitem.href}>
                                                 <li key={index} className={`text-white text-sm cursor-pointer p-2 px-8 mt-4 
                                                 hover:bg-gray-200 hover:text-indigo-900 rounded-lg ${!open && "hidden"}`}>
-                                                    {subitem.title}
+                                                    <Link href={subitem.href}>
+                                                        {subitem.title}
+                                                    </Link>
                                                 </li>
-                                            </Link>
                                         ))}
                                     </ul>
                                 )}
                             </li>
                         ))}
                     </ul>
-                </div>
-
-            
+                </div>            
             </div>
 
             <main className="ml-20 w-full">

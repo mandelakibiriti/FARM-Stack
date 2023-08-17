@@ -1,0 +1,8 @@
+@import url("https://cdn.jsdelivr.net/npm/ol@v7.2.2/ol.css");
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+}

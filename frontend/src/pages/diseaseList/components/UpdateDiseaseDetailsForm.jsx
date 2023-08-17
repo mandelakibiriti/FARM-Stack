@@ -1,8 +1,6 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import Loading from "@/components/Loading"
-import DashboardLayout from "@/components/Layouts/DashboardLayout"
-import { MdSportsMartialArts } from "react-icons/md"
 
 export default function DiagnosisDetailsForm({ dxData }) {
     // Date Handler
@@ -45,8 +43,8 @@ export default function DiagnosisDetailsForm({ dxData }) {
   
     return(
         <div>
-            <nav className="fixed shadow-lg w-full bg-white navbar">
-                <div className="flex flex-wrap space-x-6 p-5">
+            <nav className="fixed shadow-lg w-full bg-white">
+                <div className="flex flex-wrap space-x-2 p-5">
                     <button 
                         form="dxForm"
                         type="submit"
@@ -57,7 +55,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                     >
                         { loading ?  "Update" :  <Loading/>  }                
                     </button>
-                    <div className="grid grid-cols-3 divide-x">
+                    <div className="grid lg:grid-cols-3 grid-cols-2 divide-x">
                         <span className="px-4 py-2.5 text-indigo-900">{dxData.nameStd}</span>
                         
                             {
@@ -75,7 +73,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                     </div>
           
                     <div className="flex flex-wrap justify-around py-2.5 text-sm font-medium text-gray-900 font-medium">
-                        <p className="mr-2">updated</p>
+                        <p className="mr-2">Last Updated</p>
                         <span className="border-l-2 pl-2 flex">
                             {lastUpdateDate.toDateString()}
                             <p className="ml-2 text-gray-500"> 
@@ -87,7 +85,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
 
                 </div>
             </nav>
-            <div className="py-16">
+            <div className="py-32 md:py-16">
                 <form id="dxForm" 
                 onSubmit={handleSubmit(onSubmit)} 
                 key={dxData._id}>
