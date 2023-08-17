@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from 'react';
+import { useEffect} from 'react';
 import Map from 'ol/Map.js';
 import OSM from 'ol/source/OSM.js';
 import TileLayer from 'ol/layer/Tile.js';
@@ -21,9 +21,8 @@ export default function ClusterMap() {
                 zoom: 2,
             }),
         });
+        console.log("render..")
     }, [])
-
-
 
     return (
         <>

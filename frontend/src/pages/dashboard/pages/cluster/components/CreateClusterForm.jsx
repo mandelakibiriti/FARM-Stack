@@ -1,12 +1,35 @@
+'use client'
 import Link from "next/link";
 import Loading from "@/components/Loading";
-import ClusterMap from "../components/ClusterMap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { AiOutlineForm, AiOutlineFileJpg, AiOutlineCloudUpload } from "react-icons/ai";
 import { BsPinMapFill } from "react-icons/bs";
 
+import Map from 'ol/Map.js';
+import OSM from 'ol/source/OSM.js';
+import TileLayer from 'ol/layer/Tile.js';
+import View from 'ol/View.js';
+import Script from 'next/script';
+import style from '../styles/ol.module.css';
+
 export default function CreateClusterForm() {
+    // Map Item
+    useEffect (() => {
+        new Map({
+            target: 'map',
+            layers: [
+                new TileLayer({
+                    source: new OSM(),
+                }),
+            ],
+            view: new View({
+                center: [0, 0],
+                zoom: 2,
+            }),
+        });
+        console.log("render..")
+    }, [])
 
     // Button State
     const [loading, setLoading] = useState(true);
@@ -138,7 +161,8 @@ export default function CreateClusterForm() {
                             <span className="ml-2 text-indigo-900 font-bold text-xl">Cluster Map</span>
                         </div>
                         <div className="mr-6">
-                            <ClusterMap/>
+                            <div id='map' className={`${style} mt-4 h-96 lg:h-96`}></div>
+                            <Script src= "https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js" />
                         </div>
                     </div>
 
