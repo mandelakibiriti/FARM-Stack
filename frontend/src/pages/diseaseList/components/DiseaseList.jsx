@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import {IoIosRefresh, IoIosRemoveCircleOutline, IoIosAddCircleOutline} from "react-icons/io"
-import DeleteModal from "@/components/DeleteModal"
+import DeleteModal from "@/pages/diseaseList/components/DeleteModal"
 
 export default function DiseaseList({dxTitle}) {
     // Delete Modal

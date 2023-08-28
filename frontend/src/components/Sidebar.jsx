@@ -1,8 +1,8 @@
 import Link from "next/link"
 import { MdLogout } from "react-icons/md";
 import { BsChevronDown, BsClipboardDataFill} from "react-icons/bs"
-import { HiArrowSmallLeft, HiRectangleStack } from "react-icons/hi2"
-import { FiSettings } from "react-icons/fi"
+import { HiRectangleStack } from "react-icons/hi2"
+import { FiSettings, FiMenu } from "react-icons/fi"
 import { SiAlwaysdata } from "react-icons/si"
 import { useState } from "react"
 
@@ -43,8 +43,7 @@ function Sidebar ({children}) {
         {
             title: "Logout",
             href: "#",
-            icon: <MdLogout/>,
-            spacing: true
+            icon: <MdLogout/>
         }
     ]
 
@@ -58,27 +57,25 @@ function Sidebar ({children}) {
     return (
         <div className="flex">
             
-            <div className={`h-screen z-40 fixed bg-indigo-900 p-5 duration-500 ${open ? "w-72" : "w-20"}`}>
-                <HiArrowSmallLeft className={`bg-indigo-900 text-white text-3xl absolute -right-3 border-2 
-                border-indigo-900 rounded-full cursor-pointer ${!open && "rotate-180"}`} onClick={() => setOpen(!open)}/>
+            <div className={`h-screen z-40 fixed bg-background dark:bg-background dark:border-gray-100 border-r p-5 duration-500 ${open ? "w-72" : "w-20"}`}>
             
                 <div className="inline-flex cursor-pointer" onClick={() => setOpen(!open)}>
-                    <SiAlwaysdata className={`text-white text-4xl block duration-500 ${!open && "rotate-[360deg] ml-2 text-4xl"}`}/>
-                    <h1 className={`text-white origin-left font-light text-xl ml-4 ${!open && "scale-0"}`}>Data EHR</h1>
+                    <SiAlwaysdata className={`text-accent text-4xl block duration-500 ${!open && "rotate-[360deg] ml-2 text-4xl"}`}/>
+                    <h1 className={`text-accent origin-left font-light text-xl ml-4 ${!open && "scale-0"}`}>Data EHR</h1>
                 </div>
                 
                 <div className="pt-2">
-                    <span className="border-b-[2px] border-gray-300 w-full inline-flex"></span>
+                    <span className="border-b-[2px] border-accent w-full inline-flex"></span>
 
                     <ul className="pt-2">
                         {menu.map((item, index) => (
-                            <li key={index} className={`text-white ${item.spacing ? "absolute bottom-0": "mt-2"}`}>
-                                <div className="flex p-2 mb-4 mt-2 gap-x-4 hover:bg-gray-200 hover:text-indigo-900 rounded-lg" onClick={() => item.submenu ? onClickSubMenu(index): undefined}>
+                            <li key={index} className={`text-accent ${item.bottom ? "bottom-0 absolute" : "mt-2"}`}>
+                                <div className="flex p-2 mb-4 mt-2 gap-x-4 hover:bg-primary hover:text-primary-foreground dark:hover:text-primary-foreground rounded-lg" onClick={() => item.submenu ? onClickSubMenu(index): undefined}>
                                     <span className="text-2xl block float-left">
                                        {item.icon}
                                     </span>
                                     <Link href={item.href}>
-                                        <span className={`text-base ml-2 font-medium flex-1 duration-200 ${!open && "hidden"}`}>
+                                        <span className={`ml-2 font-medium flex-1 duration-200 ${!open && "hidden"}`}>
                                             {item.title}
                                         </span>
                                     </Link>
@@ -90,8 +87,8 @@ function Sidebar ({children}) {
                                 {item.visible && (
                                     <ul>
                                         {item.submenuItems.map((subitem,index) => (
-                                                <li key={index} className={`text-white text-sm cursor-pointer p-2 px-8 mt-4 
-                                                hover:bg-gray-200 hover:text-indigo-900 rounded-lg ${!open && "hidden"}`}>
+                                                <li key={index} className={`text-accent text-sm cursor-pointer p-2 px-8 mt-4 
+                                                hover:text-primary dark:hover:text-primary rounded-lg ${!open && "hidden"}`}>
                                                     <Link href={subitem.href}>
                                                         {subitem.title}
                                                     </Link>
@@ -102,7 +99,13 @@ function Sidebar ({children}) {
                             </li>
                         ))}
                     </ul>
-                </div>            
+                </div>
+
+                <div className="flex bottom-0 absolute p-2 mb-4 mt-2 gap-x-4 text-accent hover:bg-primary hover:text-primary-foreground dark:hover:text-primary-foreground rounded-lg cursor-pointer" onClick={() => setOpen(!open)}>
+                    <span className="text-2xl block float-left">
+                        <FiMenu/>
+                    </span>
+                </div>         
             </div>
 
             <main className="ml-20 w-full">
