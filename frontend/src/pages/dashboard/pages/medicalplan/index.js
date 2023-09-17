@@ -1,6 +1,6 @@
 import DashboardLayout from "../../../../components/Layouts/DashboardLayout"
 import CreateMedicalPlanForm from "./components/CreateMedicalPlanForm"
-import { getAllDxHandler } from "../../../lib/dxAllData"
+import { getAllDxHandler } from "../../../api/dxAllData"
 
 export default function MedicalPlan({server_data}) {
     return (

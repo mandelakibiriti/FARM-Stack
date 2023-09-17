@@ -4,51 +4,16 @@ import TopCard from "./components/TopCard";
 import Header from "@/components/Header";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import DataTable from "./components/DataTable";
+import PieChart from "./components/PieChat";
+import { topCard_items, header, hospitals, statusOptions } from "./lib/data";
 
 export default function Dashboard() {
-  const topCard_items = [
-    {
-      Label: "Consultation Providers",
-      Value: "50 Providers",
-      Percentage: 0,
-      Status: "stable",
-    },
-    {
-      Label: "Physical Providers",
-      Value: "130 Centers",
-      Percentage: 10,
-      Status: "critical",
-    },
-    {
-      Label: "Consultations",
-      Value: "300 consults",
-      Percentage: 10,
-      Status: "good",
-    },
-    {
-      Label: "Registered Subscribers",
-      Value: "300 Subscribers",
-      Percentage: 10,
-      Status: "critical",
-    },
-    {
-      Label: "Subscription Utilization",
-      Value: "Ksh. 3,000,000",
-      Percentage: 10,
-      Status: "good",
-    },
-    {
-      Label: "Subscriptions Paid",
-      Value: "Ksh. 10,000,000",
-      Percentage: 60,
-      Status: "good",
-    },
-  ];
+  const Items = topCard_items;
 
   return (
-    <div className="bg-gray-100 dark:bg-background min-h-screen">
+    <div className="bg-background dark:bg-background min-h-screen">
       <Header />
-      <div className="grid lg:grid-cols-3 p-4 gap-4 rounded-lg">
+      <div className="grid lg:grid-cols-3 p-4 gap-2 rounded-lg">
         {topCard_items.map((item, index) => (
           <TopCard Items={item} key={index} />
         ))}
@@ -58,7 +23,7 @@ export default function Dashboard() {
         <div className="flex gap-x-4 justify-end">
           <button
             type="button"
-            className="text-white bg-primary hover:ring dark:bg-primary dark:hover:ring font-sm rounded-lg text-sm my-2 p-2"
+            className="text-white bg-primary hover:ring dark:bg-primary dark:hover:ring duration-200 font-sm rounded-lg text-sm my-2 p-2"
           >
             <Link
               href={{
@@ -74,7 +39,7 @@ export default function Dashboard() {
 
           <button
             type="button"
-            className="text-white bg-primary hover:ring dark:bg-primary dark:hover:ring font-sm rounded-lg text-sm my-2 p-2"
+            className="text-white bg-primary hover:ring dark:bg-primary dark:hover:ring duration-200 font-sm rounded-lg text-sm my-2 p-2"
           >
             <Link
               href={{
@@ -90,8 +55,13 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 p-4 gap-4">
-        <DataTable/>
+      <div className="grid lg:grid-cols-3 p-4 lg:gap-x-4 sm:gap-y-4">
+        <div className="col-span-2">
+          <DataTable title="Facility List" columns={header} rows={hospitals} status={statusOptions}/>
+        </div>
+        <div className="col-span-1">
+          <PieChart/>
+        </div>
       </div>
     </div>
   );
@@ -99,4 +69,4 @@ export default function Dashboard() {
 
 Dashboard.getLayout = function getLayout(page) {
   return <DashboardLayout>{page}</DashboardLayout>;
-};
+}

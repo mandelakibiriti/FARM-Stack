@@ -1,6 +1,6 @@
 import DashboardLayout from "../../../../components/Layouts/DashboardLayout";
 import CreateClusterForm from "../cluster/components/CreateClusterForm";
-import { getAllDxHandler } from "../../../lib/dxAllData";
+import { getAllDxHandler } from "../../../api/dxAllData";
 
 export default function Cluster({server_data}) {
     return (

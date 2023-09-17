@@ -41,7 +41,7 @@ export default function CreateMedicalPlan() {
 
                         {/* Form Section */}
                         <form id="dxForm" 
-                        onSubmit={'handleSubmit(onSubmit)'}
+                        // onSubmit={'handleSubmit(onSubmit)'}
                         >
                             <div className="mt-2 mr-6"> 
                                 <div className="rounded-lg">

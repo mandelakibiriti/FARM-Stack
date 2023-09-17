@@ -57,7 +57,7 @@ function Sidebar ({children}) {
     return (
         <div className="flex">
             
-            <div className={`h-screen z-40 fixed bg-background dark:bg-background dark:border-gray-100 border-r p-5 duration-500 ${open ? "w-72" : "w-20"}`}>
+            <div className={`h-screen z-40 fixed bg-slate-200 dark:bg-gray-900 p-5 duration-500 ${open ? "w-72" : "w-20"}`}>
             
                 <div className="inline-flex cursor-pointer" onClick={() => setOpen(!open)}>
                     <SiAlwaysdata className={`text-accent text-4xl block duration-500 ${!open && "rotate-[360deg] ml-2 text-4xl"}`}/>
@@ -65,7 +65,7 @@ function Sidebar ({children}) {
                 </div>
                 
                 <div className="pt-2">
-                    <span className="border-b-[2px] border-accent w-full inline-flex"></span>
+                    <span className="border-b-[2px] border-slate-900 dark:border-primary-foreground w-full inline-flex"></span>
 
                     <ul className="pt-2">
                         {menu.map((item, index) => (

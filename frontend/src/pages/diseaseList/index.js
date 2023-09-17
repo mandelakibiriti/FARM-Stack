@@ -1,13 +1,12 @@
 import Header from "@/components/Header"
 import DashboardLayout from "@/components/Layouts/DashboardLayout"
 import DiseaseList from "@/pages/diseaseList/components/DiseaseList"
-import { getAllDxHandler } from "../lib/dxAllData"
 
 export default function Diseases({server_data}) {
     return (
-        <main className='bg-gray-100 min-h-screen'>
+        <main className='bg-gray-100 dark:bg-background min-h-screen'>
             <Header/>
-            <DiseaseList dxTitle={server_data}/>
+            <DiseaseList dxData={server_data}/>
         </main>
     )
 }
@@ -21,10 +20,27 @@ Diseases.getLayout = function getLayout(page) {
     )
 }
 
-// SSR
+// getServerSideProps
 export async function getServerSideProps(){
-    let data = await getAllDxHandler()
-    return {
-        props: {server_data: data}
+    // Fetch data from external API
+    let server_url = process.env.NEXT_GET_ALL_DXs
+
+    // ISR with revalidate
+    const res = await fetch(server_url, {
+        next : {
+            revalidate: 60
+        }
+    })
+    if (!res.ok) {
+        // This will activate the closest `error.js` Error Boundary
+        console.log('Failed to fetch data');
+        return {
+            notFound: true
+        }
     }
+    let data = await res.json()
+    console.log("Data Aquired Success!");
+    return { 
+        props: {server_data: data}
+    };
 }

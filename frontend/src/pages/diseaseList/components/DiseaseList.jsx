@@ -1,9 +1,18 @@
-import { useState } from "react"
-import Link from "next/link"
-import {IoIosRefresh, IoIosRemoveCircleOutline, IoIosAddCircleOutline} from "react-icons/io"
-import DeleteModal from "@/pages/diseaseList/components/DeleteModal"
+import Link from "next/link";
+import { useState, useMemo, useEffect } from "react";
+import { IoIosAddCircleOutline} from "react-icons/io";
+import { BsFillPencilFill } from "react-icons/bs";
+import { MdDelete } from "react-icons/md";
+import { ClipboardListIcon } from "@heroicons/react/outline";
+import { Title, Icon, Divider } from "@tremor/react";
+import { 
+    Chip, cn, Button,
+    Table, TableHeader, TableColumn, TableBody, TableRow, TableCell,
+    DropdownTrigger, Dropdown, DropdownMenu, DropdownSection, DropdownItem } from "@nextui-org/react";
+import DeleteModal from "@/pages/diseaseList/components/DeleteModal";
+import { VerticalDotsIcon } from "./VerticalDots";
 
-export default function DiseaseList({dxTitle}) {
+export default function DiseaseList({dxData}) {
     // Delete Modal
     const [ showDeleteModal, setShowDeleteModal ] = useState(false);
     const [ modalData, setModalData ] = useState(null);
@@ -18,88 +27,150 @@ export default function DiseaseList({dxTitle}) {
         setSearch(e.target.value)
     }
 
+    // Icons in Dropdown
+    const iconClasses = "text-xl text-default-500 pointer-events-none flex-shrink-0";
+
+    // Sort
+    const [sortDescriptor, setSortDescriptor] = useState({
+        //indicate json key from data
+        direction: "ascending"
+      });
+    const sortedItems = useMemo(() => {
+        return dxData.sort((a, b) => {
+            const first = a["publish"];
+            const second = b["publish"];
+            const cmp = first < second ? -1 : first > second ? 1 : 0;
+            return sortDescriptor.direction === "descending" ? -cmp : cmp;
+        });
+    },[sortDescriptor, dxData]);
+
     return (
         <div>
-            <div className="gap-4 p-5">
-                <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                <div className="relative">
-                    <input onChange={handleChange} type="search" id="default-search" className="block w-full p-4 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Search by diagnosis name">
-                    </input>
-                    <button type="submit" className="hover:scale-105 motion-reduce text-white absolute right-2.5 bottom-2.5 bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2">
+            <div className="gap-4 p-4">
+                <div className="flex">
+                    <div className="text-primary font-medium text-sm px-2 py-4">
                         <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                         <span className="sr-only">Search</span>
-                    </button>
-                </div>
-
-                <button type="button" className="text-white bg-indigo-700 hover:bg-indigo-800 font-sm rounded-lg text-sm my-2 p-2">       
-                    <Link href={{
-                        pathname:'/diseaseList/addDisease' // Update Diagnosis URL
-                    }}>
-                        <div className="inline-flex">
-                            <IoIosAddCircleOutline className="my-1 mr-2"/>
-                            <span>Add Diagnosis</span>
-                        </div>
-                    </Link>
-                </button>
-            </div>
-            
-            { dxTitle.props.filter((item) => { // Search Function
-                return search.toLowerCase() === '' ? item : item.nameStd.toLowerCase().includes(search)
-            }).map((dx) =>(        
-                <div className="gap-4 p-5 group" key={dx._id}> 
-
-                    <div className="flex justify-between bg-white p-4 rounded-lg hover:bg-slate-50">
-                        
-                        <label htmlFor="nameStd" className="text-m font-medium text-gray-900 dark:text-black">{dx.nameStd}</label>
-                        <div className="justify-end">
-
-                            <button type="button" className="invisible group-hover:visible hover:bg-gray-500 text-white bg-[#2557D6] font-sm rounded-lg text-sm mr-2 p-1">
-                                <Link href={{
-                                    pathname:`/diseaseList/${dx._id}`,
-                                    query: encodeURI(dx) // Update Diagnosis URL
-                                }}> 
-                                    <div className="inline-flex">
-                                        <span className="mr-2">Update</span>
-                                        <IoIosRefresh className="my-1"/>
-                                    </div>
-                                </Link>
-                            </button>
-                            
-                            <button 
-                                onClick={() => {
-                                    setShowDeleteModal(true);
-                                    setModalData(dx);
-                                }}
-                                type="button" 
-                                className="invisible group-hover:visible hover:bg-gray-500 text-white bg-[#be185d] font-sm rounded-lg text-sm mr-2 p-1"
-                            >
-                                <div className="inline-flex">
-                                    <span className="mr-2">Delete</span>
-                                    <IoIosRemoveCircleOutline className="my-1"/>
-                                </div>
-                            </button>
-
-                            <div className="inline-flex">
-                                {
-                                    dx.publish ?
-                                    <span className="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-1 rounded-full">
-                                        <span className="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
-                                        Published
-                                        <span className="sr-only">Published</span>
-                                    </span>
-                                    :
-                                    <span className="inline-flex items-center bg-yellow-100 text-yellow-600 text-xs font-medium mr-2 px-2.5 py-1 rounded-full">
-                                        <span className="w-2 h-2 mr-1 bg-yellow-500 rounded-full"></span>
-                                        Draft
-                                        <span className="sr-only">Draft</span>
-                                    </span>
-                                }
-                            </div>
-                        </div>
                     </div>
+                    <input onChange={handleChange} type="search" id="default-search" className="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Search by diagnosis name">
+                    </input>
                 </div>
-            ))}
+            </div>
+            <div className="m-4 w-1/1">
+                <div className="flex justify-between">
+                    <div className="flex gap-x-2">
+                    <Icon icon={ClipboardListIcon} size="lg" color="blue"/>
+                    <Title className="mt-2">Number of Diagnoses</Title>
+                    <Chip variant="solid" className="mt-2">
+                        <span>{dxData.length}</span>
+                    </Chip>
+                    </div>
+                    <Button className="text-white item-right bg-primary hover:ring dark:bg-primary dark:hover:ring duration-200 rounded-lg text-sm ml-2 p-2">       
+                        <Link href={{
+                            pathname:'/diseaseList/pages/addDisease' // Add Diagnosis URL
+                        }}>
+                            <div className="inline-flex">
+                                <IoIosAddCircleOutline className="my-1 mr-1"/>
+                                <span>Add Diagnosis</span>
+                            </div>
+                        </Link>
+                    </Button>
+                </div>
+                <Divider className="bg-primary"/>
 
+                <Table  
+                    aria-label="Diagnosis Table"
+                    sortDescriptor={sortDescriptor}
+                    onSortChange={setSortDescriptor}
+                >
+                    <TableHeader>
+                        <TableColumn className="text-slate-900 dark:text-primary-foreground" allowsSorting>DISEASE NAME</TableColumn>
+                        <TableColumn className="text-slate-900 dark:text-primary-foreground">ICD CODE</TableColumn>
+                        <TableColumn className="text-slate-900 dark:text-primary-foreground">CATEGORY</TableColumn>
+                        <TableColumn className="text-slate-900 dark:text-primary-foreground" allowsSorting>STATUS</TableColumn>
+                        <TableColumn className="text-slate-900 dark:text-primary-foreground">ACTION</TableColumn>
+                    </TableHeader>
+                    <TableBody emptyContent={"No Diagnoses found"} dxData={sortedItems}>
+                        { 
+                            dxData.filter((item) => {// Search Function
+                                return search === '' ? item : item.nameStd.toLowerCase().includes(search.toLowerCase())
+                            }).map((dx) => (  
+                            <TableRow key={dx._id}>     
+                                <TableCell>
+                                    <span className="dark:text-primary-foreground">{dx.nameStd}</span>
+                                </TableCell>
+                                <TableCell>
+                                    <span className="dark:text-primary-foreground">{dx.icd10}</span>
+                                </TableCell> 
+                                <TableCell>
+                                    <span className="dark:text-primary-foreground">{dx.diseaseClass}</span>
+                                </TableCell>    
+                                <TableCell>  
+                                    {
+                                        dx.publish ?
+                                        <span className="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-1 rounded-full">
+                                            <span className="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+                                            Published
+                                            <span className="sr-only">Published</span>
+                                        </span>
+                                        :
+                                        <span className="inline-flex items-center bg-yellow-100 text-yellow-600 text-xs font-medium mr-2 px-2.5 py-1 rounded-full">
+                                            <span className="w-2 h-2 mr-1 bg-yellow-500 rounded-full"></span>
+                                            Draft
+                                            <span className="sr-only">Draft</span>
+                                        </span>
+                                    }
+                                </TableCell> 
+                                <TableCell>
+                                    <div>
+                                        <Dropdown
+                                            showArrow
+                                        >
+                                            <DropdownTrigger>
+                                                <Button isIconOnly size="sm" variant="light"> 
+                                                    <VerticalDotsIcon/>
+                                                </Button>
+                                            </DropdownTrigger>
+                                            <DropdownMenu variant="faded" aria-label="Dropdown menu with icons">
+                                            <DropdownSection showDivider>
+                                                <DropdownItem
+                                                    key="edit"
+                                                    description="Allows you to edit or view diagnosis"
+                                                    startContent={<BsFillPencilFill className={iconClasses}/>}
+                                                >
+                                                    <Link href={{
+                                                            pathname: `/diseaseList/pages/updateDisease/${dx._id}`,
+                                                            query: encodeURI(dx) // Update Diagnosis URL
+                                                    }}>
+                                                        Edit Diagnosis
+                                                    </Link>
+                                                </DropdownItem>
+                                            </DropdownSection> 
+                                            <DropdownSection title="Danger Zone">
+                                                <DropdownItem
+                                                    key="delete"
+                                                    className="text-danger"
+                                                    color="danger"
+                                                    description="Permanently Delete Diagnosis"
+                                                    startContent={<MdDelete className={cn(iconClasses, "text-danger")}/>}
+                                                    onClick={() => {
+                                                        setShowDeleteModal(true);
+                                                        setModalData(dx);
+                                                    }}
+                                                >
+                                                    Delete Diagnosis
+                                                </DropdownItem> 
+                                            </DropdownSection>
+                                            </DropdownMenu>
+                                        </Dropdown>
+                                    </div>
+                            </TableCell>
+                            </TableRow> 
+                        ))
+                    }
+                </TableBody> 
+                </Table>
+            </div>
             <DeleteModal 
                 closeModal={closeModalHandler} 
                 openModal={showDeleteModal} 
