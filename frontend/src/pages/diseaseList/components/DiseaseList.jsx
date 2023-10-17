@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { IoIosAddCircleOutline} from "react-icons/io";
-import { BsFillPencilFill } from "react-icons/bs";
+import { BsFillPencilFill, BsChevronDown } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 import { ClipboardListIcon } from "@heroicons/react/outline";
 import { Title, Icon, Divider } from "@tremor/react";
@@ -11,6 +11,8 @@ import {
     DropdownTrigger, Dropdown, DropdownMenu, DropdownSection, DropdownItem } from "@nextui-org/react";
 import DeleteModal from "@/pages/diseaseList/components/DeleteModal";
 import { VerticalDotsIcon } from "./VerticalDots";
+import { CheckIcon } from "./CheckIcon";
+import { header } from "@/pages/dashboard/lib/data";
 
 export default function DiseaseList({dxData}) {
     // Delete Modal
@@ -30,15 +32,176 @@ export default function DiseaseList({dxData}) {
     // Icons in Dropdown
     const iconClasses = "text-xl text-default-500 pointer-events-none flex-shrink-0";
 
-    // Sort
+    // Columns Header
+    const current_columns = Object.keys(dxData[0]);
+    current_columns.splice(30, 0, "action");
+    const default_columns = ['nameStd', 'icd10', 'diagnosisId', 'diseaseClass', 'publish', 'createDate','action'];
+    const [visibleColumns, setVisibleColumns] = useState(default_columns);
+
+    // Manage state of columns
+    const headerColumns = useMemo(()=>{
+        const arrayLength = visibleColumns.length;
+        if(arrayLength) return default_columns;
+        return current_columns.filter((column) => Array.from(visibleColumns).includes(column))
+    });
+
+    // Render row with specific name of column
+    const renderCell = useCallback((dx, columnName)=> {
+        const cellValue = dx[columnName];
+        switch (columnName) {
+            case "isChronic":
+                return (
+                    cellValue ?
+                    <Chip
+                    className="capitalize border-none gap-1 text-green-600"
+                    startContent={<CheckIcon size={18} />}
+                    color="success"
+                    size="sm"
+                    variant="flat"
+                    >
+                        true
+                    </Chip>
+                    :
+                    <Chip
+                    className="capitalize border-none gap-1 text-red-600"
+                    color="danger"
+                    size="sm"
+                    variant="flat"
+                    >
+                        false
+                    </Chip>
+                );
+            case "isAcuteonChronic":
+                return (
+                    cellValue ?
+                    <Chip
+                    className="capitalize border-none gap-1 text-green-600"
+                    startContent={<CheckIcon size={18} />}
+                    color="success"
+                    size="sm"
+                    variant="flat"
+                    >
+                        true
+                    </Chip>
+                    :
+                    <Chip
+                    className="capitalize border-none gap-1 text-red-600"
+                    color="danger"
+                    size="sm"
+                    variant="flat"
+                    >
+                        false
+                    </Chip>
+                );
+            case "isAcute":
+                return (
+                    cellValue ?
+                    <Chip
+                    className="capitalize border-none gap-1 text-green-600"
+                    startContent={<CheckIcon size={18} />}
+                    color="success"
+                    size="sm"
+                    variant="flat"
+                    >
+                        true
+                    </Chip>
+                    :
+                    <Chip
+                    className="capitalize border-none gap-1 text-red-600"
+                    color="danger"
+                    size="sm"
+                    variant="flat"
+                    >
+                        false
+                    </Chip>
+                );
+            case "action":
+                return (
+                    <div className="flex justify-center">
+                        <Dropdown
+                            className="bg-background border-1 border-default-200"
+                            showArrow
+                        >
+                            <DropdownTrigger>
+                                <Button isIconOnly radius="full" size="sm" variant="light">
+                                    <VerticalDotsIcon />
+                                </Button>
+                            </DropdownTrigger>
+                            <DropdownMenu variant="faded" aria-label="Dropdown menu with icons">
+                                <DropdownSection showDivider>
+                                    <DropdownItem
+                                        key="edit"
+                                        description="Allows you to edit or view diagnosis"
+                                        textValue="edit"
+                                        startContent={<BsFillPencilFill className={iconClasses} />}
+                                    >
+                                        <Link href={{
+                                            pathname: `/diseaseList/pages/updateDisease/${dx._id}`,
+                                            query: encodeURI(dx) // Update Diagnosis URL
+                                        }}>
+                                            Edit Diagnosis
+                                        </Link>
+                                    </DropdownItem>
+                                </DropdownSection>
+                                <DropdownSection title="Danger Zone">
+                                    <DropdownItem
+                                        key="delete"
+                                        className="text-danger"
+                                        color="danger"
+                                        description="Permanently Delete Diagnosis"
+                                        textValue="delete"
+                                        startContent={<MdDelete className={cn(iconClasses, "text-danger")} />}
+                                        onClick={() => {
+                                            setShowDeleteModal(true);
+                                            setModalData(dx);
+                                        }}
+                                    >
+                                        Delete Diagnosis
+                                    </DropdownItem>
+                                </DropdownSection>
+                            </DropdownMenu>
+                        </Dropdown>
+                    </div>
+                );
+            case "publish":
+                return(
+                    cellValue ?
+                    <span className="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-1 rounded-full">
+                        <span className="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+                        Published
+                        <span className="sr-only">Published</span>
+                    </span>
+                    :
+                    <span className="inline-flex items-center bg-yellow-100 text-yellow-600 text-xs font-medium mr-2 px-2.5 py-1 rounded-full">
+                        <span className="w-2 h-2 mr-1 bg-yellow-500 rounded-full"></span>
+                        Draft
+                        <span className="sr-only">Draft</span>
+                    </span>
+                );
+            case "createDate":
+                let date = new Date(cellValue);
+                return(
+                    <span className="flex">
+                        {date.toDateString()}
+                        <p className="ml-2 text-gray-500 dark:text-gray-200"> 
+                        {date.toLocaleTimeString()}
+                        </p>
+                    </span>
+                )
+            default:
+                return cellValue
+        }
+    }, []);
+
+    // Sort columns
     const [sortDescriptor, setSortDescriptor] = useState({
-        //indicate json key from data
+        column: current_columns[1],
         direction: "ascending"
-      });
+    });
     const sortedItems = useMemo(() => {
         return dxData.sort((a, b) => {
-            const first = a["publish"];
-            const second = b["publish"];
+            const first = a[sortDescriptor.column];
+            const second = b[sortDescriptor.column];
             const cmp = first < second ? -1 : first > second ? 1 : 0;
             return sortDescriptor.direction === "descending" ? -cmp : cmp;
         });
@@ -65,110 +228,73 @@ export default function DiseaseList({dxData}) {
                         <span>{dxData.length}</span>
                     </Chip>
                     </div>
-                    <Button className="text-white item-right bg-primary hover:ring dark:bg-primary dark:hover:ring duration-200 rounded-lg text-sm ml-2 p-2">       
-                        <Link href={{
-                            pathname:'/diseaseList/pages/addDisease' // Add Diagnosis URL
-                        }}>
-                            <div className="inline-flex">
-                                <IoIosAddCircleOutline className="my-1 mr-1"/>
-                                <span>Add Diagnosis</span>
-                            </div>
-                        </Link>
-                    </Button>
+                    <div className="flex gap-x-2">
+                        <Button className="text-white item-right bg-primary hover:ring dark:bg-primary dark:hover:ring duration-200 rounded-lg text-sm ml-2 p-2">       
+                            <Link href={{
+                                pathname:'/diseaseList/pages/addDisease' // Add Diagnosis URL
+                            }}>
+                                <div className="inline-flex">
+                                    <IoIosAddCircleOutline className="my-1 mr-1"/>
+                                    <span>Add Diagnosis</span>
+                                </div>
+                            </Link>
+                        </Button>
+                        <Dropdown>
+                            <DropdownTrigger className="hidden sm:flex">
+                                <Button
+                                endContent={<BsChevronDown className="text-small" />}
+                                className="bg-primary text-white"
+                                size="md"
+                                variant="flat"
+                                >
+                                Columns
+                                </Button>
+                            </DropdownTrigger>
+                            <DropdownMenu
+                                disallowEmptySelection
+                                aria-label="Table Columns"
+                                closeOnSelect={false}
+                                selectedKeys={visibleColumns}
+                                onSelectionChange={setVisibleColumns}
+                                selectionMode="multiple"
+                            >
+                                {current_columns.map((column) => (
+                                <DropdownItem key={column}>
+                                    {column.toUpperCase()}
+                                </DropdownItem>
+                                ))}
+                            </DropdownMenu>
+                        </Dropdown>
+                    </div>
                 </div>
                 <Divider className="bg-primary"/>
 
                 <Table  
+                    removeWrapper
                     aria-label="Diagnosis Table"
                     sortDescriptor={sortDescriptor}
                     onSortChange={setSortDescriptor}
                 >
-                    <TableHeader>
-                        <TableColumn className="text-slate-900 dark:text-primary-foreground" allowsSorting>DISEASE NAME</TableColumn>
-                        <TableColumn className="text-slate-900 dark:text-primary-foreground">ICD CODE</TableColumn>
-                        <TableColumn className="text-slate-900 dark:text-primary-foreground">CATEGORY</TableColumn>
-                        <TableColumn className="text-slate-900 dark:text-primary-foreground" allowsSorting>STATUS</TableColumn>
-                        <TableColumn className="text-slate-900 dark:text-primary-foreground">ACTION</TableColumn>
+                    <TableHeader columns={headerColumns}>
+                        {(headerColumns).map((column) => (
+                            <TableColumn
+                                key={column}
+                                allowsSorting
+                            >
+                                {column.toUpperCase()}
+                            </TableColumn>
+                        ))}
                     </TableHeader>
-                    <TableBody emptyContent={"No Diagnoses found"} dxData={sortedItems}>
-                        { 
-                            dxData.filter((item) => {// Search Function
-                                return search === '' ? item : item.nameStd.toLowerCase().includes(search.toLowerCase())
-                            }).map((dx) => (  
-                            <TableRow key={dx._id}>     
-                                <TableCell>
-                                    <span className="dark:text-primary-foreground">{dx.nameStd}</span>
-                                </TableCell>
-                                <TableCell>
-                                    <span className="dark:text-primary-foreground">{dx.icd10}</span>
-                                </TableCell> 
-                                <TableCell>
-                                    <span className="dark:text-primary-foreground">{dx.diseaseClass}</span>
-                                </TableCell>    
-                                <TableCell>  
-                                    {
-                                        dx.publish ?
-                                        <span className="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-1 rounded-full">
-                                            <span className="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
-                                            Published
-                                            <span className="sr-only">Published</span>
-                                        </span>
-                                        :
-                                        <span className="inline-flex items-center bg-yellow-100 text-yellow-600 text-xs font-medium mr-2 px-2.5 py-1 rounded-full">
-                                            <span className="w-2 h-2 mr-1 bg-yellow-500 rounded-full"></span>
-                                            Draft
-                                            <span className="sr-only">Draft</span>
-                                        </span>
-                                    }
-                                </TableCell> 
-                                <TableCell>
-                                    <div>
-                                        <Dropdown
-                                            showArrow
-                                        >
-                                            <DropdownTrigger>
-                                                <Button isIconOnly size="sm" variant="light"> 
-                                                    <VerticalDotsIcon/>
-                                                </Button>
-                                            </DropdownTrigger>
-                                            <DropdownMenu variant="faded" aria-label="Dropdown menu with icons">
-                                            <DropdownSection showDivider>
-                                                <DropdownItem
-                                                    key="edit"
-                                                    description="Allows you to edit or view diagnosis"
-                                                    startContent={<BsFillPencilFill className={iconClasses}/>}
-                                                >
-                                                    <Link href={{
-                                                            pathname: `/diseaseList/pages/updateDisease/${dx._id}`,
-                                                            query: encodeURI(dx) // Update Diagnosis URL
-                                                    }}>
-                                                        Edit Diagnosis
-                                                    </Link>
-                                                </DropdownItem>
-                                            </DropdownSection> 
-                                            <DropdownSection title="Danger Zone">
-                                                <DropdownItem
-                                                    key="delete"
-                                                    className="text-danger"
-                                                    color="danger"
-                                                    description="Permanently Delete Diagnosis"
-                                                    startContent={<MdDelete className={cn(iconClasses, "text-danger")}/>}
-                                                    onClick={() => {
-                                                        setShowDeleteModal(true);
-                                                        setModalData(dx);
-                                                    }}
-                                                >
-                                                    Delete Diagnosis
-                                                </DropdownItem> 
-                                            </DropdownSection>
-                                            </DropdownMenu>
-                                        </Dropdown>
-                                    </div>
-                            </TableCell>
-                            </TableRow> 
-                        ))
-                    }
-                </TableBody> 
+
+                    <TableBody emptyContent={"No diagnoses found"} items={sortedItems}>
+                        {dxData.filter((item) => {// Search Function
+                            return search === '' ? item : item.nameStd.toLowerCase().includes(search.toLowerCase())
+                        }).map((dx) => (
+                            <TableRow key={dx._id}>
+                                {(columnName) => <TableCell>{renderCell(dx, columnName)}</TableCell>}
+                            </TableRow>
+                        ))}
+                    </TableBody>
                 </Table>
             </div>
             <DeleteModal 

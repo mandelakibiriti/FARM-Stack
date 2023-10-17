@@ -55,8 +55,8 @@ export default function DiagnosisDetailsForm() {
     const [loading, setLoading] = useState(true);
  
     return(
-        <div>
-            <nav className="fixed shadow-lg w-full bg-white">
+        <div className="dark:bg-black">
+            <nav className="fixed shadow-md w-full bg-white dark:bg-gray-800">
                 <div className="flex justify-end mr-20 p-5 gap-x-4">
                     <button 
                         form="dxForm"
@@ -89,7 +89,7 @@ export default function DiagnosisDetailsForm() {
                     })} */}
                     <div className="grid gap-4 p-4"> 
                         <div className="grid gap-3 mb-6 p-4 rounded-lg">
-                            <label htmlFor="nameStd" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">nameStd</label>
+                            <label htmlFor="nameStd" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">nameStd</label>
                             <input 
                                 type="text" 
                                 id="nameStd"
@@ -100,7 +100,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.nameStd && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="icd10" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">icd10</label>
+                            <label htmlFor="icd10" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">icd10</label>
                             <input 
                                 id="icd10"
                                 type="text"     
@@ -111,7 +111,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.icd10 && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="diagnosisId" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">diagnosisId</label>
+                            <label htmlFor="diagnosisId" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">diagnosisId</label>
                             <input 
                                 id="diagnosisId"
                                 type="text" 
@@ -122,7 +122,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.diagnosisId && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="diseaseClass" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">diseaseClass</label>
+                            <label htmlFor="diseaseClass" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">diseaseClass</label>
                             <input 
                                 id="diseaseClass"
                                 type="text" 
@@ -133,7 +133,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.diseaseClass && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="definition" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">definition</label>
+                            <label htmlFor="definition" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">definition</label>
                             <textarea 
                                 id="definition"
                                 type="text" 
@@ -144,7 +144,7 @@ export default function DiagnosisDetailsForm() {
                             </textarea>
                             {errors.definition && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="background" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">background</label>
+                            <label htmlFor="background" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">background</label>
                             <textarea 
                                 type="text" 
                                 {...register("background", {required:true})}
@@ -154,7 +154,7 @@ export default function DiagnosisDetailsForm() {
                             </textarea>
                             {errors.background && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="etiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">etiology</label>
+                            <label htmlFor="etiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">etiology</label>
                             <textarea 
                                 id="etiology"
                                 type="text" 
@@ -165,7 +165,7 @@ export default function DiagnosisDetailsForm() {
                             </textarea>
                             {errors.etiology && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="epidemiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">epidemiology</label>
+                            <label htmlFor="epidemiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">epidemiology</label>
                             <input
                                 id="epidemiology" 
                                 type="text" 
@@ -176,7 +176,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.epidemiology && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="pathophysiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">pathophysiology</label>
+                            <label htmlFor="pathophysiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">pathophysiology</label>
                             <textarea 
                                 id="pathophysiology"
                                 type="text" 
@@ -187,7 +187,7 @@ export default function DiagnosisDetailsForm() {
                             </textarea>
                             {errors.pathophysiology && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="workup" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">workup</label>
+                            <label htmlFor="workup" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">workup</label>
                             <textarea 
                                 id="workup"
                                 type="text" 
@@ -199,7 +199,7 @@ export default function DiagnosisDetailsForm() {
                             {errors.workup && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
 
-                            <label htmlFor="examinations" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">examinations</label>
+                            <label htmlFor="examinations" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">examinations</label>
                             <textarea 
                                 id="examinations"
                                 type="text" 
@@ -210,7 +210,7 @@ export default function DiagnosisDetailsForm() {
                             </textarea>
                             {errors.examinations && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="vitalStatus" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">vitalStatus</label>
+                            <label htmlFor="vitalStatus" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">vitalStatus</label>
                             <input 
                                 id="vitalStatus"
                                 type="text" 
@@ -221,7 +221,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.vitalStatus && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="laboratoryTest" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">laboratoryTest</label>
+                            <label htmlFor="laboratoryTest" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">laboratoryTest</label>
                             <input 
                                 id="laboratoryTest"
                                 type="text" 
@@ -237,7 +237,7 @@ export default function DiagnosisDetailsForm() {
                             This will render a read-only field. If the field should be mutable use `defaultChecked`. 
                             Otherwise, set either `onChange` or `readOnly`. */}
                             <fieldset className="mt-1 block">
-                                <legend className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-300 pb-2 font-medium">Chronicity Status</legend>
+                                <legend className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-300 pb-2 font-medium dark:text-white">Chronicity Status</legend>
 
                                 <input 
                                     type="checkbox" 
@@ -262,7 +262,7 @@ export default function DiagnosisDetailsForm() {
                             </fieldset>
                             <span className="text-indigo-500 font-medium text-sm">Choose at least one option</span>
                             
-                            <label htmlFor="pharmacologicalTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">pharmacologicalTreatments</label>
+                            <label htmlFor="pharmacologicalTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">pharmacologicalTreatments</label>
                             <input 
                                 type="text" 
                                 id="pharmacologicalTreatments"
@@ -273,7 +273,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.pharmacologicalTreatments && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="interventionalTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">interventionalTreatments</label>
+                            <label htmlFor="interventionalTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">interventionalTreatments</label>
                             <input 
                                 type="text" 
                                 id="interventionalTreatments"
@@ -284,7 +284,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.interventionalTreatments && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="lifestyleTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">lifestyleTreatments</label>
+                            <label htmlFor="lifestyleTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">lifestyleTreatments</label>
                             <input 
                                 type="text" 
                                 id="lifestyleTreatments"
@@ -295,7 +295,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.lifestyleTreatments && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="prevention" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">prevention</label>
+                            <label htmlFor="prevention" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">prevention</label>
                             <input 
                                 type="text"
                                 id="prevention" 
@@ -306,7 +306,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.prevention && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="differentialDx" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">differentialDx</label>
+                            <label htmlFor="differentialDx" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">differentialDx</label>
                             <input 
                                 type="text" 
                                 id="differentialDx"
@@ -317,7 +317,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.differentialDx && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="coMorbidities" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">coMorbidities</label>
+                            <label htmlFor="coMorbidities" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">coMorbidities</label>
                             <input 
                                 type="text"
                                 id="coMorbidities" 
@@ -328,7 +328,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.coMorbidities && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="patientInfo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">patientInfo</label>
+                            <label htmlFor="patientInfo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">patientInfo</label>
                             <input 
                                 type="text" 
                                 id="patientInfo"
@@ -339,7 +339,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.patientInfo && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="references" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">references</label>
+                            <label htmlFor="references" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">references</label>
                             <input 
                                 type="text"
                                 id="references" 
@@ -350,7 +350,7 @@ export default function DiagnosisDetailsForm() {
                             </input>
                             {errors.references && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="citations" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">citations</label>
+                            <label htmlFor="citations" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">citations</label>
                             <input 
                                 type="text" 
                                 id="citations"
@@ -365,7 +365,7 @@ export default function DiagnosisDetailsForm() {
                             This will render a read-only field. If the field should be mutable use `defaultChecked`. 
                             Otherwise, set either `onChange` or `readOnly`. */}
                             <fieldset className="mt-1 block mb-2">
-                                <legend className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-300 pb-2 font-medium">published status</legend>
+                                <legend className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-300 pb-2 font-medium dark:text-white">published status</legend>
 
                                 <input 
                                     id="draft" 
