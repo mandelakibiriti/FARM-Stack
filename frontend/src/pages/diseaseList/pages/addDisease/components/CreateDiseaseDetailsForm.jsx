@@ -56,18 +56,18 @@ export default function DiagnosisDetailsForm() {
  
     return(
         <div className="dark:bg-black">
-            <nav className="fixed shadow-md w-full bg-white dark:bg-gray-800">
+            <nav className="fixed shadow-md w-full bg-white dark:bg-black">
                 <div className="flex justify-end mr-20 p-5 gap-x-4">
                     <button 
                         form="dxForm"
                         type="submit"
-                        className="ml-2 px-4 py-2 text-white bg-indigo-900 rounded-full hover:bg-blue-800 focus:outline-none focus:shadow-outline"
+                        className="ml-2 px-4 py-2 text-white bg-primary rounded-full hover:bg-blue-800 focus:outline-none focus:shadow-outline"
                     >
                         { loading ?  "Add Diagnosis" :  <Loading/>  }           
                     </button>
 
                     <Link href={'/diseaseList'}>
-                        <button className="px-4 py-2 text-white bg-rose-600 rounded-full hover:bg-rose-800 focus:outline-none focus:shadow-outline">
+                        <button className="px-4 py-2 text-white bg-danger rounded-full hover:bg-rose-800 focus:outline-none focus:shadow-outline">
                             Cancel 
                         </button>
                     </Link>     
@@ -89,144 +89,144 @@ export default function DiagnosisDetailsForm() {
                     })} */}
                     <div className="grid gap-4 p-4"> 
                         <div className="grid gap-3 mb-6 p-4 rounded-lg">
-                            <label htmlFor="nameStd" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">nameStd</label>
+                            <label htmlFor="nameStd" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">nameStd</label>
                             <input 
                                 type="text" 
                                 id="nameStd"
                                 {...register("nameStd", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Diagnosis name as per ICD 10" 
                             >
                             </input>
                             {errors.nameStd && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="icd10" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">icd10</label>
+                            <label htmlFor="icd10" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">icd10</label>
                             <input 
                                 id="icd10"
                                 type="text"     
                                 {...register("icd10", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="ICD 10 classes as per WHO" 
                             >    
                             </input>
                             {errors.icd10 && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="diagnosisId" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">diagnosisId</label>
+                            <label htmlFor="diagnosisId" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">diagnosisId</label>
                             <input 
                                 id="diagnosisId"
                                 type="text" 
                                 {...register("diagnosisId", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Diagnosis Id that is classified on the symptom checker" 
                             >
                             </input>
                             {errors.diagnosisId && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="diseaseClass" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">diseaseClass</label>
+                            <label htmlFor="diseaseClass" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">diseaseClass</label>
                             <input 
                                 id="diseaseClass"
                                 type="text" 
                                 {...register("diseaseClass", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Disease Class based on category of the disease" 
                             >
                             </input>
                             {errors.diseaseClass && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="definition" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">definition</label>
+                            <label htmlFor="definition" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">definition</label>
                             <textarea 
                                 id="definition"
                                 type="text" 
                                 {...register("definition", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Description of definition of the disease" 
                             >
                             </textarea>
                             {errors.definition && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="background" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">background</label>
+                            <label htmlFor="background" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">background</label>
                             <textarea 
                                 type="text" 
                                 {...register("background", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Brief pathophysiology description ie. diagnosis caused by this...results in symptoms that..." 
                             >
                             </textarea>
                             {errors.background && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="etiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">etiology</label>
+                            <label htmlFor="etiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">etiology</label>
                             <textarea 
                                 id="etiology"
                                 type="text" 
                                 {...register("etiology", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Causes and Risk Factors" 
                             >
                             </textarea>
                             {errors.etiology && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="epidemiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">epidemiology</label>
+                            <label htmlFor="epidemiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">epidemiology</label>
                             <input
                                 id="epidemiology" 
                                 type="text" 
                                 {...register("epidemiology", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Incidence and Prevalence parameters" 
                             >
                             </input>
                             {errors.epidemiology && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="pathophysiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">pathophysiology</label>
+                            <label htmlFor="pathophysiology" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">pathophysiology</label>
                             <textarea 
                                 id="pathophysiology"
                                 type="text" 
                                 {...register("pathophysiology", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Description of effects on normal physiology" 
                             >
                             </textarea>
                             {errors.pathophysiology && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="workup" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">workup</label>
+                            <label htmlFor="workup" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">workup</label>
                             <textarea 
                                 id="workup"
                                 type="text" 
                                 {...register("workup", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Description of diagnostic tests" 
                             >
                             </textarea>
                             {errors.workup && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
 
-                            <label htmlFor="examinations" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">examinations</label>
+                            <label htmlFor="examinations" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">examinations</label>
                             <textarea 
                                 id="examinations"
                                 type="text" 
                                 {...register("examinations", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Key distinct primary clinical examination findings on physical examination, history and diagnosticss" 
                             >
                             </textarea>
                             {errors.examinations && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="vitalStatus" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">vitalStatus</label>
+                            <label htmlFor="vitalStatus" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">vitalStatus</label>
                             <input 
                                 id="vitalStatus"
                                 type="text" 
                                 {...register("vitalStatus", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3"
+                                className="mt11 block w-full bg-gray-52 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring primary p-3 dark:bg-gray-900 dark:text-white"
                                 placeholder="Vital sign findings and their relevant values " 
                             >
                             </input>
                             {errors.vitalStatus && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="laboratoryTest" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">laboratoryTest</label>
+                            <label htmlFor="laboratoryTest" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">laboratoryTest</label>
                             <input 
                                 id="laboratoryTest"
                                 type="text" 
                                 {...register("laboratoryTest", {required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Set of tests required to diagnose the condition" 
                             >
                             </input>
@@ -237,125 +237,125 @@ export default function DiagnosisDetailsForm() {
                             This will render a read-only field. If the field should be mutable use `defaultChecked`. 
                             Otherwise, set either `onChange` or `readOnly`. */}
                             <fieldset className="mt-1 block">
-                                <legend className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-300 pb-2 font-medium dark:text-white">Chronicity Status</legend>
+                                <legend className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-300 dark:border-gray-900 pb-2 font-medium dark:text-primary-foreground">Chronicity Status</legend>
 
                                 <input 
                                     type="checkbox" 
                                     {...register("isAcute")}
                                     id="isAcute" 
-                                    className="peer/acute mr-2 mb-0.5 border-slate-300 text-sky-400 focus:ring-sky-300 peer/acute"/>
+                                    className="peer/acute mr-2 mb-0.5 border-slate-300 dark:border-gray-900 text-sky-400 focus:ring-sky-300 peer/acute"/>
                                 <label htmlFor="isAcute" className="peer-checked/acute:text-sky-500 text-sm font-medium">Acute</label>
                                 
                                 <input 
                                     type="checkbox" 
                                     {...register("isAcuteonChronic")}
                                     id="isAcuteonChronic" 
-                                    className="peer/acuteOnChronic mr-2 mb-0.5 ml-4 border-slate-300 text-sky-400 focus:ring-sky-300"/>
+                                    className="peer/acuteOnChronic mr-2 mb-0.5 ml-4 border-slate-300 dark:border-gray-900 text-sky-400 focus:ring-sky-300"/>
                                 <label htmlFor="isAcuteonChronic" className="peer-checked/acuteOnChronic:text-sky-500 text-sm font-medium">Acute on Chronic</label>
 
                                 <input 
                                     type="checkbox" 
                                     {...register("isChronic")}
                                     id="isChronic" 
-                                    className="peer/chronic mr-2 mb-0.5 ml-4 border-slate-300 text-sky-400 focus:ring-sky-300"/>
+                                    className="peer/chronic mr-2 mb-0.5 ml-4 border-slate-300 dark:border-gray-900 text-sky-400 focus:ring-sky-300"/>
                                 <label htmlFor="isChronic" className="peer-checked/chronic:text-sky-500 text-sm font-medium">Chronic</label>
                             </fieldset>
-                            <span className="text-indigo-500 font-medium text-sm">Choose at least one option</span>
+                            <span className="text-indigo-500 dark:text-primary font-medium text-sm">Choose at least one option</span>
                             
-                            <label htmlFor="pharmacologicalTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">pharmacologicalTreatments</label>
+                            <label htmlFor="pharmacologicalTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">pharmacologicalTreatments</label>
                             <input 
                                 type="text" 
                                 id="pharmacologicalTreatments"
                                 {...register("pharmacologicalTreatments",{required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Medication required to manage the condition" 
                             >
                             </input>
                             {errors.pharmacologicalTreatments && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="interventionalTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">interventionalTreatments</label>
+                            <label htmlFor="interventionalTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">interventionalTreatments</label>
                             <input 
                                 type="text" 
                                 id="interventionalTreatments"
                                 {...register("interventionalTreatments",{required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Surgical or procedural modes of management" 
                             >
                             </input>
                             {errors.interventionalTreatments && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="lifestyleTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">lifestyleTreatments</label>
+                            <label htmlFor="lifestyleTreatments" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">lifestyleTreatments</label>
                             <input 
                                 type="text" 
                                 id="lifestyleTreatments"
                                 {...register("lifestyleTreatments",{required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Patient education methods of management" 
                             >
                             </input>
                             {errors.lifestyleTreatments && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="prevention" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">prevention</label>
+                            <label htmlFor="prevention" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">prevention</label>
                             <input 
                                 type="text"
                                 id="prevention" 
                                 {...register("prevention",{required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Public health preventive strategies"
                             >
                             </input>
                             {errors.prevention && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="differentialDx" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">differentialDx</label>
+                            <label htmlFor="differentialDx" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">differentialDx</label>
                             <input 
                                 type="text" 
                                 id="differentialDx"
                                 {...register("differentialDx",{required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Other diseases that may cause similar symptomatology" 
                             >
                             </input>
                             {errors.differentialDx && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="coMorbidities" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">coMorbidities</label>
+                            <label htmlFor="coMorbidities" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">coMorbidities</label>
                             <input 
                                 type="text"
                                 id="coMorbidities" 
                                 {...register("coMorbidities",{required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Risk factors for a condition" 
                             >
                             </input>
                             {errors.coMorbidities && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
                             
-                            <label htmlFor="patientInfo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">patientInfo</label>
+                            <label htmlFor="patientInfo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">patientInfo</label>
                             <input 
                                 type="text" 
                                 id="patientInfo"
                                 {...register("patientInfo",{required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Patient summary description" 
                             >
                             </input>
                             {errors.patientInfo && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="references" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">references</label>
+                            <label htmlFor="references" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">references</label>
                             <input 
                                 type="text"
                                 id="references" 
                                 {...register("references",{required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Referenced materials" 
                             >
                             </input>
                             {errors.references && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
 
-                            <label htmlFor="citations" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">citations</label>
+                            <label htmlFor="citations" className="block mb-2 text-sm font-medium text-gray-900 dark:text-primary-foreground">citations</label>
                             <input 
                                 type="text" 
                                 id="citations"
                                 {...register("citations",{required:true})}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Relevant citations" 
                             >
                             </input>
@@ -365,25 +365,25 @@ export default function DiagnosisDetailsForm() {
                             This will render a read-only field. If the field should be mutable use `defaultChecked`. 
                             Otherwise, set either `onChange` or `readOnly`. */}
                             <fieldset className="mt-1 block mb-2">
-                                <legend className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-300 pb-2 font-medium dark:text-white">published status</legend>
+                                <legend className="block mb-2 text-sm font-medium text-gray-900 dark:text-black border-b border-slate-300 dark:border-gray-900 pb-2 font-medium dark:text-primary-foreground">published status</legend>
 
                                 <input 
                                     id="draft" 
-                                    className="form-radio mr-2 mb-0.5 border-slate-300 text-sky-400 focus:ring-sky-300" 
+                                    className="form-radio mr-2 mb-0.5 border-slate-300 dark:border-gray-900 text-sky-400 focus:ring-sky-300" 
                                     type="radio"
                                     value="false"
                                     {...register("publish", {required: true})}
                                 />
-                                <label htmlFor="draft" className="peer-checked/draft:text-sky-500 text-sm font-medium">Draft</label>
+                                <label htmlFor="draft" className="peer-checked/draft:text-sky-500 text-sm font-medium dark:text-primary-foreground">Draft</label>
 
                                 <input 
                                     id="published" 
-                                    className="form-radio mr-2 mb-0.5 ml-4 border-slate-300 text-sky-400 focus:ring-sky-300" 
+                                    className="form-radio mr-2 mb-0.5 ml-4 border-slate-300 dark:border-gray-900 text-sky-400 focus:ring-sky-300" 
                                     type="radio"
                                     value="true"
                                     {...register("publish", {required: true})}
                                 />
-                                <label htmlFor="published" className="peer-checked/published:text-sky-500 text-sm font-medium">Published</label>
+                                <label htmlFor="published" className="peer-checked/published:text-sky-500 text-sm font-medium dark:text-primary-foreground">Published</label>
                             </fieldset>
                             {errors.publish && <span className="text-indigo-500 font-medium text-sm">Choose at least one option</span>}
                         </div>

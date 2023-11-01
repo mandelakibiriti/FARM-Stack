@@ -57,7 +57,7 @@ function Sidebar ({children}) {
     return (
         <div className="flex">
             
-            <div className={`h-screen z-40 fixed bg-slate-200 dark:bg-gray-900 p-5 duration-500 ${open ? "w-72" : "w-20"}`}>
+            <div className={`h-screen z-40 fixed bg-slate-200 dark:bg-gray-900 dark:border-r-1 dark:border-gray-600 p-5 duration-500 ${open ? "w-72" : "w-20"}`}>
             
                 <div className="inline-flex cursor-pointer" onClick={() => setOpen(!open)}>
                     <SiAlwaysdata className={`text-accent text-4xl block duration-500 ${!open && "rotate-[360deg] ml-2 text-4xl"}`}/>

@@ -4,7 +4,7 @@ import DiseaseList from "@/pages/diseaseList/components/DiseaseList"
 
 export default function Diseases({server_data}) {
     return (
-        <main className='bg-gray-100 dark:bg-background min-h-screen'>
+        <main className='bg-white dark:bg-background h-screen'>
             <Header/>
             <DiseaseList dxData={server_data}/>
         </main>

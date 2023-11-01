@@ -4,7 +4,7 @@ import { getAllDxHandler } from "../../../api/dxAllData"
 
 export default function MedicalPlan({server_data}) {
     return (
-        <main className='bg-background dark:bg-background min-h-screen'>
+        <main className='bg-gray-100 dark:bg-background min-h-screen'>
             <CreateMedicalPlanForm dxPlan={server_data}/>
         </main>
     )

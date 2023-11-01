@@ -48,7 +48,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
   
     return(
         <div className="dark:bg-black">
-            <nav className="fixed shadow-lg w-full bg-white dark:bg-gray-800">
+            <nav className="fixed shadow-lg w-full bg-white dark:bg-black">
                 <div className="flex flex-wrap space-x-4 p-4">
                     <button 
                         form="dxForm"
@@ -56,18 +56,17 @@ export default function DiagnosisDetailsForm({ dxData }) {
                         onClick={()=>{
                             setLoading(false);
                         }}
-                        className="px-6 text-white bg-indigo-900 rounded-full hover:bg-blue-800"
+                        className="px-6 text-white bg-primary rounded-full hover:bg-blue-800"
                     >
                         { loading ?  "Update" :  <Loading/>  }                
                     </button>
-                    <button className="px-6 py-2 text-white bg-rose-600 rounded-full hover:bg-rose-800 focus:outline-none focus:shadow-outline">
+                    <button className="px-6 py-2 text-white bg-danger rounded-full hover:bg-rose-800 focus:outline-none focus:shadow-outline">
                         <Link href={'/diseaseList'}>
                             Cancel 
                         </Link> 
                     </button>
                     <div className="grid lg:grid-cols-3 grid-cols-2">
                         <span className="px-4 py-2.5 text-indigo-900 dark:text-white">{dxData.nameStd}</span>
-                        
                             {
                                 dxData.publish ?
                                 <span className="inline-flex items-center text-green-600 dark:text-green-200 text-sm font-medium px-5">
@@ -103,7 +102,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.nameStd}
                                 {...register("nameStd")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Diagnosis name as per ICD 10" 
                             >
                             </input>
@@ -115,7 +114,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 {...register("icd10",{
                                     setValueAs: v => v.split(",")
                                 })}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="ICD 10 classes as per WHO" 
                             >    
                             </input>
@@ -125,7 +124,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.diagnosisId}
                                 {...register("diagnosisId")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Diagnosis Id that is classified on the symptom checker" 
                             >
                             </input>
@@ -135,7 +134,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.diseaseClass}
                                 {...register("diseaseClass")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Disease Class based on category of the disease" 
                             >
                             </input>
@@ -145,7 +144,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.definition}
                                 {...register("definition")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Description of definition of the disease" 
                             >
                             </textarea>
@@ -155,7 +154,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.background}
                                 {...register("background")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3 pl-[10]" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 pl-[10] dark:bg-gray-900 dark:text-white" 
                                 placeholder="Brief pathophysiology description ie. diagnosis caused by this...results in symptoms that..." 
                             >
                             </textarea>
@@ -165,7 +164,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.etiology}
                                 {...register("etiology")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Causes and Risk Factors" 
                             >
                             </textarea>
@@ -175,7 +174,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.epidemiology}
                                 {...register("epidemiology")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Incidence and Prevalence parameters" 
                             >
                             </input>
@@ -185,7 +184,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.pathophysiology}
                                 {...register("pathophysiology")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Description of effects on normal physiology" 
                             >
                             </textarea>
@@ -195,7 +194,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.workup}
                                 {...register("workup")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Description of diagnostic tests" 
                             >
                             </textarea>
@@ -205,7 +204,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.examinations}
                                 {...register("examinations")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Key distinct primary clinical examination findings on physical examination, history and diagnosticss" 
                             >
                             </textarea>
@@ -215,7 +214,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.vitalStatus}
                                 {...register("vitalStatus")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3"
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white"
                                 placeholder="Vital sign findings and their relevant values " 
                             >
                             </input>
@@ -225,7 +224,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.laboratoryTest}
                                 {...register("laboratoryTest")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Set of tests required to diagnose the condition" 
                             >
                             </input>
@@ -242,7 +241,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                     {...register("isAcute")}
                                     defaultChecked={dxData.isAcute}
                                     id="acute" 
-                                    className="peer/acute mr-2 mb-0.5 border-slate-300 text-sky-400 focus:ring-sky-300 peer/acute"/>
+                                    className="peer/acute mr-2 mb-0.5 border-slate-300 dark:border-gray-900 text-sky-400 focus:ring-sky-300 peer/acute"/>
                                 <label htmlFor="acute" className="peer-checked/acute:text-sky-500 text-sm font-medium">Acute</label>
                                 
                                 <input 
@@ -250,7 +249,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                     {...register("isAcuteonChronic")}
                                     id="acuteOnChronic" 
                                     defaultChecked={dxData.isAcuteonChronic}
-                                    className="peer/acuteOnChronic mr-2 mb-0.5 ml-4 border-slate-300 text-sky-400 focus:ring-sky-300"/>
+                                    className="peer/acuteOnChronic mr-2 mb-0.5 ml-4 border-slate-300 dark:border-gray-900 text-sky-400 focus:ring-sky-300"/>
                                 <label htmlFor="acuteOnChronic" className="peer-checked/acuteOnChronic:text-sky-500 text-sm font-medium">Acute on Chronic</label>
 
                                 <input 
@@ -258,7 +257,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                     {...register("isChronic")}
                                     id="chronic" 
                                     defaultChecked={dxData.isChronic}
-                                    className="peer/chronic mr-2 mb-0.5 ml-4 border-slate-300 text-sky-400 focus:ring-sky-300"/>
+                                    className="peer/chronic mr-2 mb-0.5 ml-4 border-slate-300 dark:border-gray-900 text-sky-400 focus:ring-sky-300"/>
                                 <label htmlFor="chronic" className="peer-checked/chronic:text-sky-500 text-sm font-medium">Chronic</label>
 
                             </fieldset>
@@ -268,7 +267,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.pharmacologicalTreatments}
                                 {...register("pharmacologicalTreatments")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Medication required to manage the condition" 
                             >
                             </input>
@@ -278,7 +277,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.interventionalTreatments}
                                 {...register("interventionalTreatments")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Surgical or procedural modes of management" 
                             >
                             </input>
@@ -288,7 +287,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.lifestyleTreatments}
                                 {...register("lifestyleTreatments")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Patient education methods of management" 
                             >
                             </input>
@@ -298,7 +297,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.prevention}
                                 {...register("prevention")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Public health preventive strategies"
                             >
                             </input>
@@ -308,7 +307,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.differentialDx}
                                 {...register("differentialDx")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Other diseases that may cause similar symptomatology" 
                             >
                             </input>
@@ -318,7 +317,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.coMorbidities}
                                 {...register("coMorbidities")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Risk factors for a condition" 
                             >
                             </input>
@@ -328,7 +327,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.patientInfo}
                                 {...register("patientInfo")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Patient summary description" 
                             >
                             </input>
@@ -338,7 +337,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.references}
                                 {...register("references")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Referenced materials" 
                             >
                             </input>
@@ -348,7 +347,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
                                 type="text" 
                                 defaultValue={dxData.citations}
                                 {...register("citations")}
-                                className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                className="mt-1 block w-full bg-gray-50 shadow-sm border-slate-300 dark:border-gray-900 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-primary-500 focus:border-primary-500 p-3 dark:bg-gray-900 dark:text-white" 
                                 placeholder="Relevant citations" 
                             >
                             </input>
@@ -361,7 +360,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
 
                                 <input 
                                     id="draft" 
-                                    className="form-radio mr-2 mb-0.5 border-slate-300 text-sky-400 focus:ring-sky-300" 
+                                    className="form-radio mr-2 mb-0.5 border-slate-300 dark:border-gray-900 text-sky-400 focus:ring-sky-300" 
                                     type="radio"
                                     value="false"
                                     defaultChecked={!dxData.publish}
@@ -371,7 +370,7 @@ export default function DiagnosisDetailsForm({ dxData }) {
 
                                 <input 
                                     id="published" 
-                                    className="form-radio mr-2 mb-0.5 ml-4 border-slate-300 text-sky-400 focus:ring-sky-300" 
+                                    className="form-radio mr-2 mb-0.5 ml-4 border-slate-300 dark:border-gray-900 text-sky-400 focus:ring-sky-300" 
                                     type="radio"
                                     value="true"
                                     defaultChecked={dxData.publish}

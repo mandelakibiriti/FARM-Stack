@@ -1,18 +1,16 @@
 import Link from "next/link";
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { IoIosAddCircleOutline} from "react-icons/io";
-import { BsFillPencilFill, BsChevronDown } from "react-icons/bs";
+import { BsChevronDown } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 import { ClipboardListIcon } from "@heroicons/react/outline";
-import { Title, Icon, Divider } from "@tremor/react";
+import { Title, Icon } from "@tremor/react";
 import { 
-    Chip, cn, Button,
-    Table, TableHeader, TableColumn, TableBody, TableRow, TableCell,
+    Chip, cn, Button, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell,
     DropdownTrigger, Dropdown, DropdownMenu, DropdownSection, DropdownItem } from "@nextui-org/react";
 import DeleteModal from "@/pages/diseaseList/components/DeleteModal";
 import { VerticalDotsIcon } from "./VerticalDots";
 import { CheckIcon } from "./CheckIcon";
-import { header } from "@/pages/dashboard/lib/data";
 
 export default function DiseaseList({dxData}) {
     // Delete Modal
@@ -35,7 +33,7 @@ export default function DiseaseList({dxData}) {
     // Columns Header
     const current_columns = Object.keys(dxData[0]);
     current_columns.splice(30, 0, "action");
-    const default_columns = ['nameStd', 'icd10', 'diagnosisId', 'diseaseClass', 'publish', 'createDate','action'];
+    const default_columns = ['nameStd', 'icd10', 'diagnosisId', 'diseaseClass', 'publish','action'];
     const [visibleColumns, setVisibleColumns] = useState(default_columns);
 
     // Manage state of columns
@@ -119,8 +117,7 @@ export default function DiseaseList({dxData}) {
                 return (
                     <div className="flex justify-center">
                         <Dropdown
-                            className="bg-background border-1 border-default-200"
-                            showArrow
+                            className="bg-background dark:bg-gray-800 border-1 border-default-200"
                         >
                             <DropdownTrigger>
                                 <Button isIconOnly radius="full" size="sm" variant="light">
@@ -133,7 +130,6 @@ export default function DiseaseList({dxData}) {
                                         key="edit"
                                         description="Allows you to edit or view diagnosis"
                                         textValue="edit"
-                                        startContent={<BsFillPencilFill className={iconClasses} />}
                                     >
                                         <Link href={{
                                             pathname: `/diseaseList/pages/updateDisease/${dx._id}`,
@@ -166,17 +162,24 @@ export default function DiseaseList({dxData}) {
             case "publish":
                 return(
                     cellValue ?
-                    <span className="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-1 rounded-full">
-                        <span className="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+                    <Chip
+                    className="capitalize border-none gap-1 text-gray"
+                    color="success"
+                    size="sm"
+                    variant="dot"
+                    >
                         Published
-                        <span className="sr-only">Published</span>
-                    </span>
+                    </Chip>
+                    
                     :
-                    <span className="inline-flex items-center bg-yellow-100 text-yellow-600 text-xs font-medium mr-2 px-2.5 py-1 rounded-full">
-                        <span className="w-2 h-2 mr-1 bg-yellow-500 rounded-full"></span>
+                    <Chip
+                    className="capitalize border-none gap-1 text-gray"
+                    color="warning"
+                    size="sm"
+                    variant="dot"
+                    >
                         Draft
-                        <span className="sr-only">Draft</span>
-                    </span>
+                    </Chip>
                 );
             case "createDate":
                 let date = new Date(cellValue);
@@ -207,6 +210,16 @@ export default function DiseaseList({dxData}) {
         });
     },[sortDescriptor, dxData]);
 
+    // Table Custom Styling
+    const classNames = useMemo(
+        () => ({
+            wrapper: ["dark:bg-gray-900", "border-t-4","border-primary"],
+            th: ["bg-transparent", "text-black", "dark:text-white", "border-b-2", "dark:border-white", "pb-8", "pt-4"],
+            tr: ["border-b", "border-divider"],
+            td: ["p-4"]
+        })
+    )
+
     return (
         <div>
             <div className="gap-4 p-4">
@@ -219,10 +232,10 @@ export default function DiseaseList({dxData}) {
                     </input>
                 </div>
             </div>
-            <div className="m-4 w-1/1">
+            <div className="m-6">
                 <div className="flex justify-between">
-                    <div className="flex gap-x-2">
-                    <Icon icon={ClipboardListIcon} size="lg" color="blue"/>
+                    <div className="flex gap-x-4">
+                    <Icon variant="light" icon={ClipboardListIcon} size="lg" color="blue"/>
                     <Title className="mt-2">Number of Diagnoses</Title>
                     <Chip variant="solid" className="mt-2">
                         <span>{dxData.length}</span>
@@ -242,10 +255,10 @@ export default function DiseaseList({dxData}) {
                         <Dropdown>
                             <DropdownTrigger className="hidden sm:flex">
                                 <Button
-                                endContent={<BsChevronDown className="text-small" />}
-                                className="bg-primary text-white"
-                                size="md"
-                                variant="flat"
+                                    endContent={<BsChevronDown className="text-small" />}
+                                    className="bg-primary text-white"
+                                    size="md"
+                                    variant="flat"
                                 >
                                 Columns
                                 </Button>
@@ -257,6 +270,7 @@ export default function DiseaseList({dxData}) {
                                 selectedKeys={visibleColumns}
                                 onSelectionChange={setVisibleColumns}
                                 selectionMode="multiple"
+                                className="dark:bg-gray-800"
                             >
                                 {current_columns.map((column) => (
                                 <DropdownItem key={column}>
@@ -267,15 +281,17 @@ export default function DiseaseList({dxData}) {
                         </Dropdown>
                     </div>
                 </div>
-                <Divider className="bg-primary"/>
 
-                <Table  
-                    removeWrapper
+                <Table
+                    classNames={classNames}
+                    className="mt-6"
                     aria-label="Diagnosis Table"
                     sortDescriptor={sortDescriptor}
                     onSortChange={setSortDescriptor}
                 >
-                    <TableHeader columns={headerColumns}>
+                    <TableHeader 
+                        columns={headerColumns}
+                    >
                         {(headerColumns).map((column) => (
                             <TableColumn
                                 key={column}

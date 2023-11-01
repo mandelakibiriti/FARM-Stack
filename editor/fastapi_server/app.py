@@ -7,7 +7,7 @@ from .routers import api,db
 app = FastAPI()
 mongodb_client = AsyncIOMotorClient(settings.DB_URI)
 
-origins = ['http://localhost:3000']
+origins = ['http://localhost:3000'] 
 app.add_middleware(
     CORSMiddleware,
     allow_origins = origins,

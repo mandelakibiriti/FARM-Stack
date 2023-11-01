@@ -6,7 +6,6 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import DataTable from "./components/DataTable";
 import PieChart from "./components/PieChat";
 import { topCard_items, header, hospitals, statusOptions } from "./lib/data";
-
 export default function Dashboard() {
   const Items = topCard_items;
 
@@ -49,6 +48,22 @@ export default function Dashboard() {
               <div className="inline-flex">
                 <IoIosAddCircleOutline className="my-1 mr-2" />
                 <span>Add Cluster</span>
+              </div>
+            </Link>
+          </button>
+          
+          <button
+            type="button"
+            className="text-white bg-primary hover:ring dark:bg-primary dark:hover:ring duration-200 font-sm rounded-lg text-sm my-2 p-2"
+          >
+            <Link
+              href={{
+                pathname: "/dashboard/pages/health_resource",
+              }}
+            >
+              <div className="inline-flex">
+                <IoIosAddCircleOutline className="my-1 mr-2" />
+                <span>Add Health Resource</span>
               </div>
             </Link>
           </button>

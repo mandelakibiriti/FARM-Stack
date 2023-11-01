@@ -37,18 +37,18 @@ export default function CreateClusterForm() {
 
     return(
         <div>
-            <nav className="fixed shadow-lg w-full bg-background dark:bg-background dark:border-b navbar z-30">
+            <nav className="fixed shadow-lg w-full bg-background dark:bg-background navbar z-30">
                 <div className="flex justify-end mr-20 p-5 gap-x-4">
                     <button 
                         form="dxForm"
                         type="submit"
-                        className="px-4 py-2 text-primary-foreground bg-primary rounded-full hover:bg-blue-800 focus:outline-none focus:shadow-outline"
+                        className="px-4 py-2 text-primary-foreground bg-primary rounded-full hover:bg-blue-800 focus:shadow-outline"
                     >
                         { loading ?  "Save Cluster" :  <Loading/>  }           
                     </button> 
 
                     <Link href={'/dashboard'}>
-                        <button className="px-4 py-2 text-primary-foreground bg-rose-600 rounded-full hover:bg-rose-800 focus:outline-none focus:shadow-outline">
+                        <button className="px-4 py-2 text-primary-foreground bg-rose-600 rounded-full hover:bg-rose-800 focus:shadow-outline">
                             Cancel 
                         </button>
                     </Link>                            
@@ -73,7 +73,7 @@ export default function CreateClusterForm() {
                                         type="text" 
                                         id="cluster_id"
                                         {...register("cluster_id", {required:true})}
-                                        className="mt-1 mb-8 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                        className="mt-1 mb-8 block w-full shadow-sm border-slate-300 dark:border-gray-900 dark:bg-gray-900 dark:text-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 p-3" 
                                         placeholder="Cluster Identifier" 
                                     >
                                     </input>
@@ -84,7 +84,7 @@ export default function CreateClusterForm() {
                                         type="text" 
                                         id="cluster_name"
                                         {...register("cluster_name", {required:true})}
-                                        className="mt-1 mb-8 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                        className="mt-1 mb-8 block w-full shadow-sm border-slate-300 dark:border-gray-900 dark:bg-gray-900 dark:text-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 p-3" 
                                         placeholder="Cluster Name" 
                                     >
                                     </input>
@@ -95,7 +95,7 @@ export default function CreateClusterForm() {
                                         type="text" 
                                         id="service_offered"
                                         {...register("service_offered", {required:true})}
-                                        className="mt-1 mb-8 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                        className="mt-1 mb-8 block w-full shadow-sm border-slate-300 dark:border-gray-900 dark:bg-gray-900 dark:text-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 p-3" 
                                         placeholder="Services Offered" 
                                     >
                                     </input>
@@ -106,7 +106,7 @@ export default function CreateClusterForm() {
                                         type="text" 
                                         id="location"
                                         {...register("location", {required:true})}
-                                        className="mt-1 mb-8 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                        className="mt-1 mb-8 block w-full shadow-sm border-slate-300 dark:border-gray-900 dark:bg-gray-900 dark:text-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 p-3" 
                                         placeholder="Cluster Location" 
                                     >
                                     </input>
@@ -117,7 +117,7 @@ export default function CreateClusterForm() {
                                         type="text" 
                                         id="facility_names"
                                         {...register("facility_names", {required:true})}
-                                        className="mt-1 mb-8 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                        className="mt-1 mb-8 block w-full shadow-sm border-slate-300 dark:border-gray-900 dark:bg-gray-900 dark:text-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 p-3" 
                                         placeholder="Facilities in cluster" 
                                     >
                                     </input>
@@ -128,7 +128,7 @@ export default function CreateClusterForm() {
                                         type="text" 
                                         id="notes"
                                         {...register("notes", {required:true})}
-                                        className="mt-1 block w-full bg-gray-50 border-2 shadow-sm border-slate-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                                        className="mt-1 block w-full shadow-sm border-slate-300 dark:border-gray-900 dark:bg-gray-900 dark:text-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 p-3" 
                                     >
                                     </textarea>
                                     {errors.notes && <span className="text-indigo-500 font-medium text-sm">This field is required</span>}
@@ -142,7 +142,7 @@ export default function CreateClusterForm() {
                             <AiOutlineFileJpg className="text-primary dark:text-primary-foreground text-3xl"/>
                             <span className="ml-2 text-primary dark:text-primary-foreground font-bold text-xl">Upload Cluster Documents</span>
                         </div>
-                        <div className="rounded-lg h-4/5 lg:h-96 w-11/12 p-4 bg-card dark:bg-card border">
+                        <div className="rounded-lg h-4/5 lg:h-96 w-11/12 p-4 bg-primary-foreground dark:bg-gray-900 dark:border-gray-900 border">
                             <div className="flex flex-col items-center my-20">
                                 <AiOutlineCloudUpload className="text-primary text-8xl"/>
                                 <p className="text-sm p-2 text-center text-gray-500 dark:text-white">Attach documents / images .png, .pdf, .docx or .doc format</p>
