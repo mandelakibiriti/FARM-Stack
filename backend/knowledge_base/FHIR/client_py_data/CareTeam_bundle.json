@@ -1,0 +1,565 @@
+{
+  "resourceType": "Bundle",
+  "id": "515e3905-00bb-493c-adc0-4f32bdd1c523",
+  "meta": {
+    "lastUpdated": "2023-05-02T08:48:02.535+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://hapi.fhir.org/baseR4/CareTeam?_include=*"
+    },
+    {
+      "relation": "next",
+      "url": "https://hapi.fhir.org/baseR4?_getpages=515e3905-00bb-493c-adc0-4f32bdd1c523&_getpagesoffset=20&_count=20&_pretty=true&_include=*&_bundletype=searchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/va-team-visn6-vamc1-pc",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "va-team-visn6-vamc1-pc",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-01T17:59:48.291+00:00",
+          "source": "#qsmu4cjPakjrXiTn"
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Hampton, VA, VAMC, Primary Care PACT</div></div>"
+        },
+        "name": "Primary Care PACT",
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "446050000",
+                    "display": "Primary care physician"
+                  }
+                ],
+                "text": "Primary Care Physician"
+              }
+            ],
+            "member": {
+              "reference": "Practitioner/va-prac-visn6-francis",
+              "display": "Dr. Francis"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/242830",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "242830",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-08T11:34:20.043+00:00",
+          "source": "#BhG6VG0Csl20X34l"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/244248",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "244248",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T07:01:30.357+00:00",
+          "source": "#qLQJqpeXI2FoNc1s"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/244722",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "244722",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T07:10:18.997+00:00",
+          "source": "#uOL1G5WMVuyecCS9"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/244723",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "244723",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T07:10:19.360+00:00",
+          "source": "#HMXLsUT6HnT002zL"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/244900",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "244900",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T07:16:21.796+00:00",
+          "source": "#nru2pocIR7y1jAyG"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/244901",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "244901",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T07:16:22.147+00:00",
+          "source": "#BTcI3YH6JH2StHkG"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/245189",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "245189",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T07:28:43.724+00:00",
+          "source": "#AttherXEzxJHFxSf"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/245259",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "245259",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T07:32:53.964+00:00",
+          "source": "#RZs0UJAM36q0os0b"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/245337",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "245337",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T09:27:17.283+00:00",
+          "source": "#JdNgQ6NHnYbnjL1T"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/245388",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "245388",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T09:36:28.108+00:00",
+          "source": "#P3ngiGLvBQlgx6FY"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/245458",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "245458",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T09:37:59.635+00:00",
+          "source": "#cPFZ7MeFeWhUTRCA"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/245529",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "245529",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T09:39:42.379+00:00",
+          "source": "#qBrwKcc3BTChbelh"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/245600",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "245600",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T09:40:53.408+00:00",
+          "source": "#D0TH8lvCgSql0BUf"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/245849",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "245849",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T09:45:09.406+00:00",
+          "source": "#U0mevgEyuZC1fzwN"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/246048",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "246048",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T09:48:44.545+00:00",
+          "source": "#32RxT5SXbVklrxVv"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/246120",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "246120",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T09:53:14.735+00:00",
+          "source": "#rwAz6AjCKBsFuSaX"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/246275",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "246275",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T09:57:36.254+00:00",
+          "source": "#yIhEJRUxjKfm6UoR"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/246533",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "246533",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T10:01:43.791+00:00",
+          "source": "#0NItLAjOoVINef2V"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/CareTeam/246774",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "246774",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-12-09T10:06:41.153+00:00",
+          "source": "#2rPJAZoOao2X88ul"
+        },
+        "identifier": [
+          {
+            "use": "official"
+          },
+          {
+            "system": "http://www.bmc.nl/portal/medstatements",
+            "value": "12345689"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://hapi.fhir.org/baseR4/Practitioner/va-prac-visn6-francis",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "va-prac-visn6-francis",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-11-01T17:59:47.136+00:00",
+          "source": "#dIV1hbVnTZpub9If",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner"
+          ]
+        },
+        "active": true,
+        "name": [
+          {
+            "text": "Dr. Francis, MD",
+            "family": "Francis",
+            "prefix": [
+              "Dr."
+            ],
+            "suffix": [
+              "MD"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "000-722-9961",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "dr.francis@woohoo.com"
+          }
+        ],
+        "gender": "female",
+        "photo": [
+          {
+            "contentType": "image/jpeg",
+            "data": "/9j/4AAQSkZJRgABAQAAkACQAAD/2wBDAAICAgICAgMCAgMEAwMDBAUEBAQEBQcFBQUFBQcIBwcHBwcHCAgICAgICAgKCgoKCgoLCwsLCw0NDQ0NDQ0NDQ3/2wBDAQICAgMDAwYDAwYNCQcJDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ3/wAARCADeARwDASIAAhEBAxEB/8QAHgABAAAHAQEBAAAAAAAAAAAAAAECBQYHCAkEAwr/xABKEAABAgQEAwQFCQUFBgcAAAABAAIDBAURBhIhMQdBURMiYXEIFDJCgSNSYoKRobHB0SQzcuHwCRWi0/Fjg5KTssIWNENzhLPS/8QAGwEBAAEFAQAAAAAAAAAAAAAAAAECBAUGBwP/xAA0EQACAQMDAgQEBQMFAQAAAAAAAQIDBBEFEiExQQYTIlEUYYGRBzJxobEVwdEjQ1Ji8PH/2gAMAwEAAhEDEQA/AO/iIiAIiIAiIgCIiAIigRzQEUUoF1Ei6EkUUGqDkBMi+ajYoTgnRSWKjc7KMkYJkUtrbqN1IwRREQgIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiICUk3Uw1Uh3QGyE4J1A7IDdRQdCDVFFLmQYyTIpbu5K36ziWl0KA6NUozYbW77np0B6qic4xWZPBVGnKTxHkrpD76BRBiX1GnmtW8S+lTgGgRzAEcPI8Ig5D/ZnqsD429Oan0aXZ/dkn2sR17/AChFrEW3gnkVbSv6P/L7F/R0q6qdInR4ubzQOBK4uzfp142qD3RJNvYhvu3hu/GCkv6bfEKMwvhm4Fr/ALrn/uVaT1u3jw8l8vDd012O0VmnXdSuBbYtHmuUVD9NfFrLOiyvrQG47RjOv+yWcsLemhh+YjslsWSvqLn887onX5kLyVVPW7Wb27sfqeVbw/eU1ucc/ob2Bzip73Vq4YxjQMWSTZyiTLY7HC+xbzI94DoVcoaQcyycJKSynkw84OLxJYZ9CbKK+RLr6r6DZTkpa4IoiKSAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAgRdQyqZEwTkksVPfkh0XzQnqRc8NNivLNTkrJQnTM1EDGN3J+xfWPFbBYYjt26rnD6S3HFj5h1BpEe8vBv2kUC2e4huGhZcWNxusffXsLan5k+vZF/p2n1Lup5cPqzMHFz0nKLhVrpWkRw940zWP0eRhnquZvEbjxinE0aJEjzbiw8rNHzejB0WGpusTuJKw+cm3F8Jh263FuVuYVu168eO+EDcQ7a+YC0y4v61zP1vHyOgWekULWGYLL9yy5nEFQqteEJ0QuzHX4Nv08FXK3UYU3FIz5xCtnG1rgWVsUmV7CvMcdCwOzHzYbaKgQIkYVF0SIe64974DRE1n08YL5JrllWjQ48hEZEhmwN83j0/Fe5sePAPrcibPNvHw5qvRpAzlN7FmkSELtPW5uVbFJj/ACvYO7sN99elr/mqN6fUiVPHJf0pENRl2zEN+WZGx/ltsrmoWKJiHGMjVDnI52AvueQWPqDAyx2ypOjr/cCVWIzGRIDXOdla6/aPttY6aeKspyXQ94xyuTcrhvjeZwlHbUcN1AysQf8ApZO0DvaG7wRzK6Y8JOOlKxpLNkKrGEGoN0N7nPfMeTA0WAXB2iVOYZDDMxbGg7je+a/5LI0ni6Kww4LYjmzJN4cQaZspudLWFhor+w1WpbvbHlexi9S0OlcR3vh+5+iQPY8XabqBvyWtno68W6fxHwjLwYkUGqSwIjM1uLvfl1ytae63ktltLW2W/UK8K1NVInN7i3nQqOnPqiU+C+Zueajs7wX1BXseBMiIhSEREAREQBERAEREAREQBFAmyluUJwTopMxUwN0IIoiICTcqa1ilraqQu3J2CDJrP6SHE52B8NPlJB+WcnBZh/gdDvu0jZy4643qEQMixYrjnB7xOvtWW4XpF4lbi7iy6ly7s0OlXz+HbQIZHIdPFaQYva6fhx4bNXRHMt9Ui/4LnuvXLqXO3sjp/hyzjRtlLHMup4KNT/VaLcjvi5ieF3Gytn1cTLcx1MY6/VWRak10CjT0SENY4g5PqkXVBodNdNRzCAv2dvvusYquMtmfVNNYLJZRnCPMzRGtm/hbqqHTsOGoAxGC7evlfx8Fn2NRMpjQgLOIFvs818uGGHjMS0/KRm3dByW+sXHqrNXkvVIvlZJ7VLoY9l5OH/dzI3vw7h3xNgrKqFJEOPkh6MPP7PFZgNJdJViLTZhvyccjL9Vt1TpyiFoLXt1h+18duaindPPJFS0y9vsWbTqe8Re3aNWbfEWSLBbJVN0nMi8CLbOOlhcba7q/pGVaHxoTR7OVU+vUaLMQYk21ve7t/gQOqqlW9WDxlb4WShSMm5tQhxT3jEvm5WsNFecWRbMSmdkO0ST2dfbtD0XnpMKHMQxHbu61/hcLItHk4T54wpjQTA7/ANRptsvFVGqmWekqadM9PC/G9Z4X4tlsSSMYiDmIiNsLWLHM5h3zui7qYVxFT8WUOVrtOeHwJlpLSL6lpLTuAdx0X5/o8ONJPEOot/ZSTn+j83a5NzZdI/QwxxMwJOYwHV4t3Q8vqYNtnGLFfqB5blbtoN9tkqUnw/5NC8TafmHnpcr+DoGApVEHN5Id1uBoyJ0REKAiIgCIiAIiIAiIgCIiAkO6gpyLqXKVDKkyCmao5Qo7KnuG+xC4UCeilRVx5KZcE99bLxzb+xlI0TbK0r2qi155h0eYeOTfzUZ4ZVFZkkcYMVxHw8WYvxRHd7bpQA+TQz+tFgB7DEnpZrx+87Q/YLrLXFqe7Cm1LsTf1l8O/wBV7fBY8fDeXSxt7Adb4hcuvHuquT92df09qNLHyX8HnmWOi0qTgn3u0v8AAqOCpR8Sdc/k633A+KhUZlnay8sDYMz3+OqreDuzZNjMbZNvG4KsqifRGVp8R3Mv+PSC6aDmtsXc/Iea+vDmmNkMW1CnRxb1vs+z8cjHE81eMKKHScw4i5YG2+JWPqrWX0p8rWpf97Kud2n1yGjkeRVtSUd+1mRalKDa7Hn4hYefKT7ZgNs+ET/iDfFUONSHT8v63C1D/aHkbDmtlsdUmHiPD0tXJIZmR2kgjnlLWncjp0Wq0GtRcPTzpeY0hxDz8B5Hqqvh3GptPOtVcoebHqfKBSzL1uW7QfJxc+f6rdPvVyRafDjsdKBlnPH4arxTdWkpprLvs5p7uh5kK/XvhRYzo7NnBuX4CxXtO1a9SLJV9zwzBFGpczKTMWA4dxhH33Ky1IyTTEZMt2fe58tF9DJw2zz8g0mRr9QL3YZiNnsNxS4/KQyL+F3lUui2ssnzMcFpYsjSEnPTEvPC0KJky78gDyvzV8+j5jF2HMWSL5uLlhsc8Mfb2czXg6AG97rH3GmR9bw9KTMLSJBES/xcwfksH8MsTdtFhwJl1nsdp9rjyCy1s3Tiqi7Mw15BV6bpy78H6apaM2PAZGYbtc0EFTkm/gsZ8IKkKtw8pM612fO2Lc+URw/JZRGi6TSmpwU/c5LVg4VJQ9giIqzzCIiAIiIAiIgCIiAIiIAiIgCIiAhYKB31UykO6mJEidW7igkUCbc35o/EKvndUDE4Jw/Ngb5PzXnL8rPWmvWjgVxoqJYRKQTcOiOv/wATSvXMsdDkZKORbtA+58tFbmNWGsVioQB3nyURlx/HY+HRXdiCJDh4clI40yh3/UAuZXsdq+512x5jhGMKxMOM7FfC0EPLc9bgfYqpQ6q2BUIEZps05rnyB8F9oVPhx4M9MPFyBDWJXVGZhRXMgkhrTpp/JWNNb1yZxrEUjfLh9DZiGkxWt70UW0+s7y5BW1jPDppDY7JhtoUXL2n1bW2J5lYb4RcVX4ZrjIU+bQIp1J+i13Rp5lb+ScPC/EimjtbPbFBs7vC1j0GX5qlWLqerpgrV5Gi8yWUzDno/40gVOnTWCq1p2WUQHHX2jEe7RoHhuVjnjrw5nad2s3KtLoZsYbhYfMv7xWdMLcBJTDeJWVmnxvZJIbY82lvN56rYPElBkKtTHSFRhh92+PgeR8FfeU5LlYwWlW5pU6uYPMZdvY4uQaxMMIiRjYQtD8Vl6Qxo0U9rS7vM2+J8ljbiRheYouMZ+hyv7m7DYD6DXdT16qiU2XjTcjBiQLviPzZmnu2sTbUry5fCKZJRll9DY6jVxlRLyHZXQh3Tv7QN+Sp+DK6JV9Tky68O8LX7T0VrYOoeI4MjEjRpMZiO5eKwcyOqt2l0vEdJExGnpfs+0LdQ9rtiehPVJ5VPlHnujKphM2CxbKsqmEpt4F3Q2ty/FwXOKm1eNS6k17TZ7HHMPttyXSTD09Kz1MECNq17SHDXW17LnRxSo0TCmLIhiw+xgzDvkhfNmytbfmbWurnTGqmYssb5ql6mfoP9CTGrcUcJZOAX5ossH3HTNGjeA5BbnEnmuLX9m9jqLKYiqeEJqJ8m7seyb9SYe7Zv5rtMQCLrfdNnuopLtwcx1mi6d1L58/cnREV8YwIiIAiIgCIiAIiIAiIgCIiAIiIApXKZSkKUQwfnKmVeGJmmTEI6ZmFVTYKwuJFQiU3BtQmoZyuaxuvm4Dp4rzqPbFyPahFzqRgurZwPqcvHk+MmIZKNf1PPAzuaMw/c3G1zurjxTEhwqK2XPsw76ebgV8uF/Fp+BOJVRhVEico9UiMEeGWhtuyhvy97I53tO5WW4eN+F2AMQOh1egSmYzgzMaIkTUsDQfacLbFc/vbZ115tJ/T9Tpltd/CVPJrx4918v4NQMG0OZrAfFijLKuAzXtra9uYOhCtbE9HpUjOzEtTIIe7u65jpoDzKzliSSnqHBZKRGkOhBwhgW0vYna991gbAcvLQsaPnMTwy+FqGg3Frw3D3PGy8rS0pS9MngzFa9reWp0VksCBQ5OrzTD/4o9Tfc3hepF/+K46LaTh5MQcFRGmLiQxGN9seqkWvmt87qsUYe4M1afxQ6ffP5KO1wLJfsmmwLTfv582rtVsFi/hK4x4lUo0v6jIPa3PAz9psAB3nOze1crI1qFLZtg+hZW1zWk81El/75my2FuJFFm3QiJkPES+Q5Xa2vf3dFcmNsbUyU+RgPzxYg2sRbbw1utLODVFiQsRSMhNRC+G0xe6RbdrzvdbWcSMHU+XgyuIJCF2cSVzZ+8XZs+Vo3NtPJay7u6cJyWNsX8847malbW8akFUzua+mTT7HUF8GsevU6R7aajZiX57bNAGh02WkGKsb8TYVcNKdDMq5h9kNhPtdoduG/muykKiU6oyQnXQgYzxrvpY2625LG1RwU2LUnzol29q+3yumlhba/TRbPYeXCG5LJhrxSqelywc5Jqc4iQ8PQa3VWEScW93gwwW2dl9lveNz4LInC+crkzNdi8GLLx/auANg7wvutsn8HBVqjDfUY3bQ2XsMmUajoHjor5PD2Uw8+AIcAGG7NYXtm/xG1rq3unFrpyTbRhDjfko+G8C0eDQob4kIQZhmY+0XbuP0rbLSn0hcAVfFmJZeIIBilhdkALW5bthg8xe9l0JoeHGUiM6OWEuicrnlfxPVWniCYlpDFEFkxCDmRybHplYPNWVvU8t70sHpTsHOTU3nJhT0TMG1bBnGeRgzUIshPzW1B2l4nQnmV3SaLtt4BaT8MKDJT+L5WqsaLws1iPpQ3DqFuvcNFrrbtCqSdGW73NL8YuDvIqKw1FZPqiIs6aiEREAREQBERAEREAREQBERAEREBDMFFSHdTjRCXgkzFWnjeWbOYWnpdwzB7W3HWzgrqOg1XknWtjycWE7YtKpqLMGj0py2VFL2Pz6VrB1IotdiTsVvZ983F3HfQcz1Ww2G8TVbDTWCnxbS7PZBDT7V7+0CdytZPSJrMzROI1Xk2/8Alw+DlHmyGTyPMrOVLmGzWD5KZB+UiB1/g9czlKUOj5XB2928JxhuWdyz9+TZKnSVKxZKQok6wettv3rnW56Cw2C8tX4SUuNCMz2TWRRzvvsPndFirDb6y94hwXlt/wCE9Vn6kYSqFSgtE3Nkg8so8ehCindTqelxy/cVrCVDmM8L2wWXQcP0ahtMFjBm56u038T1VwVmJRpyT9RixNXbizuRBCyVJ8O6PJsDovfd17w/7lZeOZKQodPizUBtiy3Mncgc79VdVXcKG3GEY+FOlVn+Z5+xhehSDafiqFMQxZ7ibjpZhAW1VUlxO0ZjHsztI1F7cwtW8GxTN1YzEc8xb7CtvIcLtqSMuoA/NW1hb4hKn2LnUqmyUJPqjGlOfUaYz1OSkhMQRu7tA2/PY67leyZgVlx7SWkcpPLtGn8V5ZwTctEdMSx1b5fmvTTMcPhvZBqPdLr2OmtvIL1o+lbHJpIiVDenUhFNv9Txw5fFsWIMsjkPzu0YfuVWGH6nMR2zdYjdq6HfK3KBa4sfZKyXT6vJTMIPaRr5/ovNVpqWEMllvv8ABXDtYuO9TyWlKu93l+Wl8/8A6YeqhyzBawbfoFQp+ky9Rc6LMbi2XT+fgqnUpgetkjbl9i90hBhxB2hGY9NlaUmmmn0L65zTqRkn2Lw4Z4gpNDxFI0R7gZmb7Sw10yNc7oRseq3LsMt1yYrFdFD494bZCd3Q6Z7T4y4tyPVdZYERsWXY8bOaFt+gtOk4+zOceK05XSq+6PSiIs6auEREAREQBERAEREAREQBERAERBqgJXKa90Ul0JSyTEA7r4RmfJxD9E/gp9Sbqn1mOZalR4w91v4lUyfGfYmPLwcAuJjaRWeMuJMNVuH2jYbpbKbuFrwQ/wB23MDmsh4SlY8th59LmjcSluyHg9xJ2/MrWn0gK+6jcVprF0I3a2I3ONs3ybIY5Ha/RZqpWPaDNmUqEvMNMKYDs413aLDcdVzO5hJzdSK4eTtOmXMVSjSm+Ul+xsLhqK2HEaWn+tVsdhuoF+UZ/u81qXS5t8s8Q/ifjqsoU/EUKQgCI99iOev6Lwt5uDyZ+6Sr02bNVGvykpLntCM39eC1m4r4hcaWYryRCvqd/eb0F14IdbjVaMYseJccht+nReyIYE5D7OPZzOl1eVrtyRhra0hRllcswwzGtNw5O9vEjkNNtMp6eR6raLD3FyQmqVDhsiB7SDpqOZ+isMVLBGF52740Ma+L/wBVceGMCYMp+W++ul4nj9JUUJuP5VgvLi3Vb1SR6HY0q9eqxlabImJLuOsXOBbS+zgOYV71ShS1QlDBecsRo0dqbE67XHRfCLiGTp3yFOgAsboNT+YVpV7HtSpzHOhSDojvm57dPolVOnJvZgqlTlHso/Ut+DjqqYNqbaXVrljickbTvWFzoGm1rgbrIsLHUvPN7kYO8LW/Ja2YV4kzvFjEU5hibpJgwpcsD3mJe2ZpePcad29VdkvwxjUqvRZinRyyV7vyVr27vUuJ31XlUjUpPae9GrQqcyXqMmPqHrMQkHc7q8ZDEdJkmPhzMdrXQx3gb3F72WOWSHYMfc91jSSVzkqL6pijHNeqb47vVc0uG220ZlO1juFNGLUXJmGv5qc1BGzE5XW17iSa7CiZxAiNyOtb2mBp5Dp0Xb6gRxHpEtEvfOzT4L8+GEm/3XiFsrENhFII+q0nxXcXgfXHVzAshMPOZ7Q+/wDzHjoOi2PQKyU5QNI8U0HshNduDMyIi2s0kIiIAiIgCIiAIiIAiIgCKBNlLmKE4JiLqAupkQZ7ECbKRFOBZCehEaKyuIM/CpmE5+aiOyhrG/e4D81el9VrR6TWJWUrBEaRY60WYAt9V8M9D1Vpf11Rt51H2RdafQda5hTXdnAvjextSgzE2/V5cdfrNC0vl6jN0mchPgxXNY11yL3/AFW5fE5/y7pRx01v/hK0pqrHQpmNKu9ppFvuK1LSVmLizfdSeMSXGDsZw8xCMV4Up1Za7NEmGvDvDI4tHIdOiz3hWgy1fljBmNT015E9COi5u+iXjoOc7Cc7EsYtuwvyt2r3cufiV0uw/FfTZxkeHpDd+hHj1WLvKPl1XHsbNYXrqW0X3wWLxEw5VGUaclMOzPqtRaGdi7IH+80nRxy+zfdYY4KSHEarTbqdjSeLYzDq0w4WxzndlhsBzW4GL5Jsy5s3C3d/ILEVSpkSznQG9472Nr2tzVVC6jFbascouo23m/kntl+xsZK8G2TDJOYhTbQyOH3Fvm/XVwwODQZCEeNOgPh/RHM2+etUpCtzstGl/Worofq+bJz9rfYLOlDq9Cq0myWm4jopN7jvt5k8rdFk7d0ZflRb1tJ1eEd7uMr5LJkieHD7CUvFM1+1zUrkuwdo3NnI5i40BVMr3EykZvVKLKNa4iwdcnkOTm+asiuzUjDyytLls51uS8+B95U6nUR0eYM3OG0TSzbbctwVXWuVS9CwRR0Gi18TdzlJrs33/QqlDpUvKvjToY1sWZsYjgLXy3AVafCbLyznkav3PkV62QgxuQLyVF925TsFhaz8x5ZHmpvK4MO8Qa/AwthWeqsd2XsmtDj/ABODRyPVaCcL4jahhuanImr4zwSfKI4BXf6bnE6HJUuDgiSiWizt+2t7vZugxG7t5jxWJ+ClUEfCz4ZPebluPrvV/XoeXZ7zExuozu9meiMv1RzYFbk48LRwLh9rQF1p9FOpxIlInqSXXEqIVh/7hiOXIytRmsqsrFPs96/2BdAvRZxWZfErJd7rQ5z2/wDdsiW5Ly0mvtuoSffgttet/Ms5ruuTpfmKnGq+AJdtzX1aLBdFaOXkyIigBSgWKmRCchERCAiIgCIiAlI5qVfRQsEKlIDZRUpFlLeyEMmyqZSNeCEuBqSjHUle4MOY7Bc9fSKrZxDXzIQzeDKA3+uxh6DmFuxjatto1AjzjzZwADfi4Doeq5ucVJ5tIpcw9zrzsW2b7W26jYrVvEdwnFUO3V/2+5tPhq3e91116I5W8SZh8ednXtNjDLLfHKFq3i2WEKpQozdM97/ABbT45knNl48YDWIQfOxCwrWqOZludzbiHv8AG3isVptVReTZ9To7qe0tDCFZnsO1UVKQcWvhFpBFtLgg7joV2b4VcQqbjjDsrUpaIDEcCHs17uVzm75W3vlXHoQqZJ0aI1x/ao1tNe7ld9moV+8GcVVTAtZg1IRiyTik9o2wI0DwOTju7kstU0yd1TnKHZZMfb6krWpGm+jO4MGYbPSJgPPfh7fEq140oHG4Gh3CsTDuNJWr02DPSkS7yD8dSOYCvynViWizAY49x+/wHktUqwa4ZuVKqm+T3SlLl4jbPZcKvydIhMeBLwrHzP6qoU+IxsTKRpyWRqbDhGzyBlVxQTfQqdzUpptMt6BQJh0DO7fyH6r4tknwInfP3LLznSr5WzLX579VjmoRYUB5c8iwV3cUUzGUrmVTmR4u7DGd2ysHEVcl5OHFih4u0Xt9ngrc4jcSadh2VMGHEzR3+y0A8i36J5FarT+I6vW2x5iYJbDttod9OQHRWcqb28Hptbbb6HODjvV6pjDiLU8QPB7CM6GIeoNskNjDyHMdFfPACoRGzszSorrdrkyg/RD3FejDkpK1DE1WwtPjPFhuhWab6Zml/L9VdbcBxsHVGnYrgi0q4xO21Hc9xumYk3J6Lfda0pR0ylcUvySX2a7GhaXep6lKlUfqT/blGaMVEw4cF53h3v8AEhbJcBsSvZVPVs1ntczL4XD78lrdjaG71djoeofYj4ZVWMF4h/ubEbZhps2O5mX6gIPI9Vzmm9u2aN7r03VhKPufogldYbT9EfgvUrMwfWYdXlHOYb5GQ7/EHwCvADurqUJqUUzj04tSwydFAbKKrKAiIgCksVOiEp4A0REQgIiIAilJTMhOCJ2XyOq+26gBZCCAGll8wcu+i+g0uVYuN8Vy+GKS+YJDozx8mNr2IB5HkV41q0aUHUn0R60qUqk1CK5ZiDi5iOE+eZLF37NKZu0+lnDSOV9CudPEapvqkaPFBu3S3+EdB0Wecc4lfUIfZtfd7ie0PXYjkFg6DQpzEtWhy8GGezJPe000v1HRc41C4lc1ZY6tnStIt42tLMu3/v3NWqngefqzHxXNPYw9SdOfxB3CwvVaIacyNMzWkJlrjz05FdnafwvgzsqJCnwLQS05n356nYuB3XIT0qJGoYJrE1h6acWPli3MLDvZxDcNr7X6rO6dpFbZ0LG+1mk37GrczCbUJmJDg+08j7lmuWwXHjYWf2be+ACP+PzWLuGMsKtPPmXi7QR+Dh+S3vwzR5eblvVgBlI2+3xXYvDOixVD/UXXqc11rVJOpug+hgrhlxHnqRCNPmYnehG1tOZcfmrZWicZpCUjMhT5397Xx6NWk+O6LMYXxpHlIYysJbY/UB8eqqUIR48MRNbhcl1jT1b3k6M10bOs6NffEWsK3ukdZMOcQ6TVpZkWUjh466jr1A6LLNFxZBfaGYot/r4LitTqxV6bFDpeI5pHPT8FlemcRsbQ4LWQJoj6rD+LVjPKUeYmajXUuGdXKnjiVpsu9744DRuf5WWs+L+L0WeiOl6U/tSfeGnTkWrVH1zE1fjh9Sm3RL/RaPwt0WZMJ4bY1jTEZr5+fira4rcHtRoQT5KZApVTrU8Z6pOMR42vYcrciByVdnJB7IT4bhYussrSlIhwQCQqFVZAtfnA7v8Aoseqsnwe1ZRSaRzmqchHoHpBTbmCzZsw7fUlh59VfnF2NVqS2WjQCfUZknthYW7mTL1PtHkq7xcpLJPifJTbBZ8TPY+UFg6rJ+IMNQsYcPnNDc0VoBb/AMwE8x81dy8N0VqHh2ray6rlfqkcV8QS+A1iFyujfP1ZQWzDaph2BNRu93TY/Wtyt0VuU5/YzUhGdydEP2KXh9UW1HDb6bG1jSWn/G9x8BsEeC18WGNwR2fh1XErm3lByh7M6vRqqUIyXdHYD0XeJgxFNztIius94hBt/oiIT7o6Ld6+gtsuGPA/iFM4ZxdLTo7jAbOGmt2PHQ9V29pk/AqknCnpZ+aHEbcHy0P3rctCu/NobJdUc+8Q2HkV90VwypjZQcVECyg4LOmvLqGqZSN00Q7qUiGydFAG6ioARQJsmYICKX5KRztF88xv4KcA+9rqGUKKkJLSqWyUTE2UoOqZg4aFWliXF9Lw3JvizcUZwO62x11HQHqqKtWNOO6TwiunTlN7YrLKzVKzJUeViTU7EDGMA++w5A9VohxAxjNYxrUUQ3lsBpHZMGvui+tgeS9eIqrinG81EjRHkSbiMjbN0ta/Jp3CuTAnDcTE06Ym258trX05Ho5azdVK99Ly4RxD39zabS3o2MfNqPMv4MOU/Bs9X3l2UtYbd/Q3t4XHRZxw1w6gyzIUq2H2mW9ztvc/OWepTC9Nk4bYZYDl23H5quwIMODpCFlf2eiRp+qfLLW81ypVW2PCKTJ0CHKy7Gs2ZsPPfmuN/wDal8O4ojUbF1Mlz2c76x6wQduzEsxt7n8l21hkAZVi/ixw7ofEjB85huuS4jworLtuXCxa5r/dLTu0c1s9rONKSi1x0NcquU0+T8sXBl7IFRiykTQ938Hlbp4ZqDpSqQyT3HfkCtNcT0SZ4bcTJilxAYboESzhvo6GCObuTls/IzLY8rCjwT7Wo+C6hoDjK22+xqGq7o1kXnxpwK2sS0HEEoy7od81udyxvzh06LFtIw46L8nl2/n4rb/CsVtZoDIccZ7g76e8f0VLgYXlJWeewMsCRYa9PNc5/EfRZ7f6lRXHCl/n+zOi/h9rVNP+m1n6usfn8v8ABrbM4OitfmZDJ/rzVapmF4waLst/XmtxadhORmYIBhD7/wBVUxgiWh6dlZv9eK4951TG0623SXqNeKLRhCa0PZr/AKrMmH5NrMrSLf0VdTMMyzCLMsB5/qroptBgtsWttb+uq89kpdSZV444PH6lmh5BoVRKlTi9gh5brKbaU2HDuB/X2qnRqbckkXA2KmNu+xZVLpY4OcnHFpdjiivbuwx83xhsWauGjmR5SJIxvZygD45isZcdJVrcfyLmCwBif/WxXngSahS8dszEeIcIbk7cwu6/hpj4WpFnI/xDi3OmzCs5KxMC8RJuViQ7Ssct1vp+7v8ASO7lVqnIugVF0NneboWnrcAlbT4rwLS8a02NFYxsSYaGljw49RfTMBs1a/UaA6PLx6VPD9vp9gL8+0JPLT2Vz7xnpMrW7qOC4fP0Zt/hTVI3NrCMnz0+xTp6cFLmJebpjc0Ft+1ANuQA1Ou/RdUPRb460atUGHhuqzAhTMAWYCCfadEcdQwDYDmuXdOMOVmLTsO8u/R7b7721Gu6mm5KLQ5ps3Q4pEVmuQePiSeRK0vT72drU3o2XVrGneUvLlwz9EEvUJWchiJKxQ4Hn/qvZrudVw5whxxx7Q40EwZ5zYUI96Hkhm978y09V094Q8ZZfGNKgwqo/JOWObS99XdGAbBbrYa1SuZbEsM5/qOg1rSKnlNGxahYLzQo7I2sJ9x5L0g/as10MERRSXKmF91AIqFgoogPllPLVS2K+6WupyD53uLBUuq1mTo8D1idiZGfwk9OgPVVbK3ovLNSErOQzCmGZ2ncXI/NUS3Y4K47c+roYNq/Ees1QulcPS5YzbtszTfb3XNHQqy2YMj1WOJmuRjGedbWy/8AS4eC2Tl8MUSUblgS+UD6Tj+a9go9OG0L7z+qtoWqlLdXef4L53qgttFY/kxJIYak5ZrQxmg23/VXjT4LZdzwwWbpZXgKdJjaH95/VTNkZVvsstfxP6q/i4RWIosZVJSeWy3crnakqOQ8lcgloI2b96eqwPm/eU3kOXGCgtFiCvs9rXtIPMFVj1WB837yo+rQen3qJSyUI/OL/aMcMzhbifDxNJwiyWqRJuNR8lCgN+cTuegWNOH0eJP0OE54PfBynyc66/RtxE4J8NeKsvDlcd0gVKHBvkHbRYVsxaTrDe0+6FZNM9E/gPR5cStPw2IUNt7N9amDvrziHqts0PxHTsvTVi2sdjEahpsq/MHhnJnhpV4UGjRmx7t7IXJsdO849FgOtek/EiYzZDpUAupkq4h+tu1zMHzoWYZXX8133h+jTwYgykeSh0C0GZy9o31mPrlNxr2lwrGb6EXo0MeYjcIgOOpPrs3/AJyyNbxZaVMxdNuL6p45/c8LfSJ05b93qXKa7M5z4J9InBU+IfrV4LuZtEPXpDWxdMxzhiuhsSRmQ4O2GVw/EDoto4Hofej3L/ucLhv/AMyZ/wA1VOF6K3AyBbssPFtuk3M/5q1C807w3W9VKlOD+WMfZtmz2uva3Se2dSM4/Pr91g1gl4lLn5mJKSkfPGhWzsDTpmFxrsVc0lSXwXjMP6+1bTUXgdwyw9NtnqTSexjN2d28Z24I2c8jYq7TgfDBNzJ6/wAb/wD9LVb/AEOh5i+Dk9v/AGxnP0NhtvE9SVNxuo8/L2+pqZHlB2WgVPiyMIQHPOpttstxjgrDRblMpp/G/wDVeSc4eYSn4fZTUlnb07R4/Byt6WiyUvVLC+/+CZeIIJemLf7HDbjBhuqVrHUtFp8HPChl+Z2ZoteG3kSOi1c9IPE83h6kSmA6U5z5iaz9tGAyluR0OKNCDyJGhX6Mo/o58IJiOJiNQ80RuoPrMf8AzFb9b9EvgHiKqurVYwyJicdYGJ61Mt2aGjRsUDYDkt70q7tNOoeTR3PPVvC+3P8Ac1jVbq41CpGdVJbei6/c/PZ6M/FzFOF8XyNIq0R8zS5ouaWlrW5bMiHcNLjdx6rdD0jsFz2B6wzGVKgHs+6XNBGuZsNnMn5x5Lp5TvRC9H2kxYceQwuIT4RJYfW5k2J84qyvX+GGCMUSH92VunCZl7AZDEiN2II1a4HcBTr19a30IqnF5XXJ4aS6tpVlN9H7HDqTpUGuT0vIubpFBJOvIZvDorxfwyrM9NMkZRv7TCvkHd72YX5usLBdaoHo98JJaII0Ghhr27H1iMf+9XNB4VYFl4rI0Km5Xw/ZPaxNL/WXNafhup/uSRvdXxXTa9EWmcp6XwkxJIRYb8SUYmHfvP7Zvw0Y7yW8XC7CFIpsFk3SYfZB49jvHbMN3HzW0YolMEMQuwGUbC5/VTQaNTZcWhQQ0eZ/VZqw0ija1N8Of1MLfa5UuqeySwWeYMSAQ+GTdVySrDhZkxy97+QCrhkJQ+595/VSGmSRN+z+8rNynGXUwOD7QpmDGbZj7k+C+weNl5IdOk4TszGWPmf1XtDQ0ZRsvEkiiIgP/9k="
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}
