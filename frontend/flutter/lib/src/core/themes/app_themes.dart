@@ -1,26 +1,102 @@
 import 'package:flutter/material.dart';
 
-/// all custom application theme
-class AppTheme {
-  /// default application theme
-  static ThemeData get dark => ThemeData(
-    useMaterial3: true,
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.blue,
-      brightness: Brightness.dark,
+// Light Theme
+ThemeData lightTheme = ThemeData(
+  brightness: Brightness.light,
+  useMaterial3: true,
+  
+  textTheme: const TextTheme(
+    // Title
+    titleSmall: TextStyle(fontFamily: 'Raleway'),
+    titleMedium: TextStyle(
+      fontFamily: 'Raleway',
+      fontSize: 20,
     ),
-  );
-  static ThemeData get light => ThemeData(
-    useMaterial3: true,
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.lightBlue,
-      brightness: Brightness.light
+    titleLarge: TextStyle(
+      fontFamily: 'Roboto',
     ),
-  );
+    // Display
+    displayLarge: TextStyle(
+      fontSize: 72,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Raleway',
+    ),
+    displayMedium: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Raleway',
+    ),
+    displaySmall: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 32,
+      fontFamily: 'Raleway',
+    ),
+    // Body
+    bodyLarge: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Roboto',
+    ),
+    bodySmall: TextStyle(
+      fontFamily: 'Raleway',
+    ),
+    // Label
+    labelMedium: TextStyle(fontFamily: 'Raleway'),
+  ),
+  // Color Theme
+  primarySwatch: Colors.cyan,
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: Colors.cyan,
+    brightness: Brightness.light,
+    primaryContainer: Colors.grey[300],
+  ),
+  iconTheme: const IconThemeData(color: Colors.cyan),
+);
 
-  // you can add other custom theme in this class like  light theme, dark theme ,etc.
-
-  // example :
-  // static ThemeData get light => ThemeData();
-  // static ThemeData get dark => ThemeData();
-}
+// Dark theme
+ThemeData darkTheme = ThemeData(
+  brightness: Brightness.dark,
+  useMaterial3: true,
+  textTheme: const TextTheme(
+    // Title
+    titleSmall: TextStyle(fontFamily: 'Raleway'),
+    titleMedium: TextStyle(
+      fontFamily: 'Raleway',
+      fontSize: 20,
+    ),
+    titleLarge: TextStyle(
+      fontFamily: 'Roboto',
+    ),
+    // Display
+    displayLarge: TextStyle(
+      fontSize: 72,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Raleway',
+    ),
+    displayMedium: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Raleway',
+    ),
+    displaySmall: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 32,
+      fontFamily: 'Raleway',
+    ),
+    // Body
+    bodyLarge: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Roboto',
+    ),
+    bodySmall: TextStyle(
+      fontFamily: 'Raleway',
+    ),
+    // Label
+    labelMedium: TextStyle(fontFamily: 'Raleway'),
+  ),
+  // Color Theme
+  primarySwatch: Colors.cyan,
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: Colors.cyan,
+    brightness: Brightness.dark,
+    primaryContainer: Colors.black,
+  ),
+  iconTheme: const IconThemeData(color: Colors.cyan),
+);

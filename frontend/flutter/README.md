@@ -16,6 +16,7 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 ## Folder Structure
+[Flutter Clean Architecture | TDD](https://www.dbestech.com/tutorials/flutter-bloc-clean-architecture-and-tdd)
 ```bash
 /frontend
 └── /lib # Root directory for Dart source code

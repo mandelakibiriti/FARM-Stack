@@ -4,22 +4,29 @@ import 'package:universal_platform/universal_platform.dart';
 const bool kIsWeb = bool.fromEnvironment('dart.library.js_util');
 
 class ScreenSize {
+  static double isScreenHeight(BuildContext context) {
+    return MediaQuery.of(context).size.height;
+  }
+
+  static double isScreenWidth(BuildContext context) {
+    return MediaQuery.of(context).size.width;
+  }
+
   // Use .shortestSide to detect device type regardless of orientation
   static bool smallPhone(BuildContext context) {
-    var screenWidth = MediaQuery.of(context).size.shortestSide; 
-    return screenWidth <= 300;
+    return isScreenWidth(context) <= 300;
   }
+
   static bool largePhone(BuildContext context) {
-    var screenWidth = MediaQuery.of(context).size.shortestSide; 
-    return screenWidth <= 600;
+    return isScreenWidth(context) <= 600;
   }
+
   static bool tablet(BuildContext context) {
-    var screenWidth = MediaQuery.of(context).size.shortestSide; 
-    return screenWidth <= 900;
+    return isScreenWidth(context) <= 900;
   }
+
   static bool desktop(BuildContext context) {
-    var screenWidth = MediaQuery.of(context).size.shortestSide; 
-    return screenWidth > 900;
+    return isScreenWidth(context) > 900;
   }
 }
 
