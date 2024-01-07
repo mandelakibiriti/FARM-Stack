@@ -31,6 +31,7 @@ dependencies:
   equatable:
   google_nav_bar:
   provider:
+  dartz: ^0.10.1
   flutter:
     sdk: flutter
 
@@ -40,6 +41,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   universal_platform: ^1.0.0+1
   go_router: ^13.0.0
+  fl_chart: ^0.66.0
 
 dev_dependencies:
   flutter_test:

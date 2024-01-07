@@ -34,7 +34,38 @@ class _ConsultPageState extends State<ConsultsPage> {
       minImageWidth: 240,
       maxImageWidth: 300);
 
-  final dataCard = const DataCard(childWidget: Text('My Card'));
+  // Placeholder Data
+  static List dataDetails = [
+    {
+      "title": "Consults",
+      "value": "200",
+      "description": "Total consults provided",
+      "diff": "20%",
+      "increase": "true",
+    },
+    {
+      "title": "Providers",
+      "value": "40",
+      "description": "Total providers signed up",
+      "diff": "0%",
+      "increase": "none",
+    },
+    {
+      "title": "Referrals",
+      "value": "12",
+      "description": "Total number of referrals",
+      "diff": "10%",
+      "increase": "true",
+    },
+    {
+      "title": "Complaints",
+      "value": "12",
+      "description": "Total number of complaints",
+      "diff": "2%",
+      "increase": "false",
+    }
+  ];
+
   final dataTile = const DataTile(childWidget: Text('My Tile'));
 
   /*            *\           
@@ -45,7 +76,8 @@ class _ConsultPageState extends State<ConsultsPage> {
         length: 2,
         child: Scaffold(
           backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-          body: Column(children: [
+          body: Column(
+            children: [
             // Header Card
             Center(
                 child: Container(
@@ -59,8 +91,19 @@ class _ConsultPageState extends State<ConsultsPage> {
                   child: headerCard),
             )),
 
+            // Drop Downs
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                DropdownButton(items: null, onChanged: null),
+                DropdownButton(items: null, onChanged: null)
+              ],
+            ),
             // Tabs
-            TabBar(tabs: [
+            TabBar(
+              dividerColor: Theme.of(context).colorScheme.primaryContainer,
+              tabs: [
               Tab(
                   text: 'Summary',
                   icon: Icon(
@@ -74,26 +117,28 @@ class _ConsultPageState extends State<ConsultsPage> {
               )
             ]),
             Expanded(
-                child: TabBarView(children: [
-              // Cards
-              GridView.builder(
-                  itemCount: 8, //Length of Array
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 1),
+              child: TabBarView(
+                children: [
+                // Cards
+                GridView.builder(
+                  itemCount: dataDetails.length, //Length of Array
+                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                    maxCrossAxisExtent: ScreenSize.isScreenWidth(context)*0.5,
+                    childAspectRatio: ScreenSize.isScreenHeight(context)/(ScreenSize.isScreenHeight(context)*0.8)
+                  ),
                   itemBuilder: (context, index) {
                     return DataCard(
-                        childWidget:
-                            dataCard //Setup key widgets in cards and relevant imports
-                        );
-                  }),
-
-              // Tiles
-              ListView.builder(
+                      elemPadding: 8,
+                      childData: dataDetails[index], //Setup key widgets in cards and relevant imports
+                    );
+                }),
+                // Tiles
+                ListView.builder(
                   itemCount: 5, //Length of Map
                   itemBuilder: (context, index) {
                     return DataTile(childWidget: dataTile);
-                  })
-            ]))
+              })
+            ])),
           ]),
         ));
   }
@@ -119,32 +164,36 @@ class _ConsultPageState extends State<ConsultsPage> {
                   child: headerCard),
             )),
             // Tabs
-            TabBar(tabs: [
-              Tab(
-                  text: 'Summary',
-                  icon: Icon(
-                    Icons.add_chart_rounded,
-                    color: Theme.of(context).iconTheme.color,
-                  )),
-              Tab(
-                text: 'Details',
-                icon: Icon(Icons.table_chart_rounded,
-                    color: Theme.of(context).iconTheme.color),
-              )
-            ]),
+            TabBar(
+                dividerColor: Theme.of(context).colorScheme.primaryContainer,
+                tabs: [
+                  Tab(
+                      text: 'Summary',
+                      icon: Icon(
+                        Icons.add_chart_rounded,
+                        color: Theme.of(context).iconTheme.color,
+                      )),
+                  Tab(
+                    text: 'Details',
+                    icon: Icon(Icons.table_chart_rounded,
+                        color: Theme.of(context).iconTheme.color),
+                  )
+                ]),
             Expanded(
                 child: TabBarView(children: [
               // Cards
               GridView.builder(
-                  itemCount: 8, //Length of Array
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
+                  itemCount: dataDetails.length, //Length of Array
+                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                    maxCrossAxisExtent: ScreenSize.isScreenWidth(context)*0.45,
+                    childAspectRatio: ScreenSize.isScreenHeight(context)/(ScreenSize.isScreenHeight(context)*0.6)
                   ),
                   itemBuilder: (context, index) {
+                    // return const Graph();
                     return DataCard(
-                        childWidget:
-                            dataCard //Setup key widgets in cards and relevant imports
-                        );
+                      elemPadding: 8,
+                      childData: dataDetails[index], //Setup key widgets in cards and relevant imports
+                    );
                   }),
 
               // Tiles

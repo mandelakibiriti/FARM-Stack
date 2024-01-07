@@ -14,6 +14,7 @@ class ScreenSize {
 
   // Use .shortestSide to detect device type regardless of orientation
   static bool smallPhone(BuildContext context) {
+    // Screensizes like iphoneSE min size is 320px
     return isScreenWidth(context) <= 300;
   }
 

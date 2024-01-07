@@ -42,13 +42,14 @@ ThemeData lightTheme = ThemeData(
     labelMedium: TextStyle(fontFamily: 'Raleway'),
   ),
   // Color Theme
-  primarySwatch: Colors.cyan,
+  cardColor: Colors.blueGrey[50],
+  primarySwatch: Colors.blue,
   colorScheme: ColorScheme.fromSeed(
-    seedColor: Colors.cyan,
+    seedColor: Colors.blue,
     brightness: Brightness.light,
     primaryContainer: Colors.grey[300],
   ),
-  iconTheme: const IconThemeData(color: Colors.cyan),
+  iconTheme: const IconThemeData(color: Colors.blue),
 );
 
 // Dark theme
@@ -92,11 +93,11 @@ ThemeData darkTheme = ThemeData(
     labelMedium: TextStyle(fontFamily: 'Raleway'),
   ),
   // Color Theme
-  primarySwatch: Colors.cyan,
+  primarySwatch: Colors.blue,
   colorScheme: ColorScheme.fromSeed(
-    seedColor: Colors.cyan,
+    seedColor: Colors.blue,
     brightness: Brightness.dark,
     primaryContainer: Colors.black,
   ),
-  iconTheme: const IconThemeData(color: Colors.cyan),
+  iconTheme: const IconThemeData(color: Colors.blue),
 );

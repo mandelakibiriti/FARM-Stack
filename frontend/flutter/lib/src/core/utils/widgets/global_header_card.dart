@@ -14,7 +14,9 @@ class HeaderCard extends StatelessWidget {
       required this.date,
       required this.imageLocation,
       required this.minImageWidth,
-      required this.maxImageWidth});
+      required this.maxImageWidth}
+  );
+  
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
@@ -28,11 +30,11 @@ class HeaderCard extends StatelessWidget {
               gradient: LinearGradient(
                 colors: [
                   Theme.of(context).colorScheme.brightness == Brightness.light
-                      ? Theme.of(context).primaryColor
-                      : Theme.of(context).colorScheme.onPrimary,
+                      ? Theme.of(context).colorScheme.primary // light theme
+                      : Theme.of(context).colorScheme.onPrimary, // dark theme
                   Theme.of(context).colorScheme.brightness == Brightness.light
-                      ? Theme.of(context).colorScheme.background
-                      : Theme.of(context).colorScheme.onSecondary,
+                      ? Theme.of(context).colorScheme.onPrimary // light theme
+                      : Theme.of(context).colorScheme.onSecondary, // dark theme
                 ],
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
@@ -69,9 +71,9 @@ class HeaderCard extends StatelessWidget {
       ScreenSize.largePhone(context) | ScreenSize.smallPhone(context)
           ? const SizedBox.shrink()
           : Positioned(
-              bottom: ScreenSize.tablet(context)
-                  ? ScreenSize.isScreenHeight(context) * -0.06
-                  : -90,
+              bottom: ScreenSize.isScreenHeight(context) < 700
+                  ? ScreenSize.isScreenHeight(context) * -0.15
+                  : -95,
               right: -40,
               child: Image.asset(
                 imageLocation, // image Asset parameter
